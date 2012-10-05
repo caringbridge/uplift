@@ -1,0 +1,13 @@
+{
+    "name": "caringbridge/blog",
+    "description": "CaringBridge Uplift Blog",
+    "license": "Proprietary",
+    "homepage": "http://www.caringbridge.org",
+    "repositories": [
+        { "type": "composer", "url": "http://packages.caringbridge.org" },
+        { "packagist": false }
+    ],
+    "require": {
+        "caringbridge/brand": "dev-master"
+    }
+}
