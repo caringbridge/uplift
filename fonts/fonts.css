@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'locator-display';
+    src: url('LocatorDisplayWebRegular.eot') format('eot');
+    src: url('LocatorDisplayWebRegular.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorDisplayWebRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator-display-bold';
+    src: url('LocatorDisplayWebBold.eot') format('eot');
+    src: url('LocatorDisplayWebBold.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorDisplayWebBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator-display-light';
+    src: url('LocatorDisplayWebLight.eot') format('eot');
+    src: url('LocatorDisplayWebLight.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorDisplayWebLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator-bold';
+    src: url('LocatorWebBold.eot') format('eot');
+    src: url('LocatorWebBold.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorWebBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator-medium';
+    src: url('LocatorWebMedium.eot') format('eot');
+    src: url('LocatorWebMedium.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorWebMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator';
+    src: url('LocatorWebRegular.eot') format('eot');
+    src: url('LocatorWebRegular.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorWebRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'locator-light';
+    src: url('LocatorWebLight.eot') format('eot');
+    src: url('LocatorWebLight.eot?ie-hack=true') format('embedded-opentype'),
+         url('LocatorWebLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

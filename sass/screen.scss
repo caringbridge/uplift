@@ -3,5 +3,230 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "brand";
+@function asset-path($path, $type) {
+    @return url("../" + $type + "/" + $path);
+}
+
+@function image-path($path) {
+    @return asset-path($path, "img");
+}
+
+@function font-path($path) {
+    @return "../fonts/" + $path;
+}
+
+@function brand-asset-path($path, $type) {
+    @return url("../vendor/caringbridge/brand/public/" + $type + "/" + $path);
+}
+
+@import "variables";
+@import "compass";
+@import "bootstrap";
+/* END - Required Order! */
+
+@import url('../fonts/fonts.css');
+
 @import "bootstrap-responsive";
+@import "compass/typography/lists/inline-list";
+
+/* Additional files below: */
+@import "icons";
+@import "type";
+
+@import "buttons";
+
+body {
+    color: $abbey;
+    padding-bottom: 5em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: locator, Arial, Helvetica, Verdana, sans-serif;
+}
+
+
+div.container-fluid {
+    max-width: 960px;
+    min-width: 311px; /* width of logo plus left and right margin */
+    margin: 0 auto;
+}
+
+@mixin pull-left {
+    float:left;
+}
+
+.clearfix {
+    @include pie-clearfix;
+}
+
+.page {
+    background: none repeat scroll 0 0 $white;
+    box-shadow: 0 0 9px 4px #ccc;
+    position: relative; /* Allow z-index to work */
+    z-index: 100; /* Allows box shadow to spread to surrounding divs */
+}
+
+.header {
+    @include pie-clearfix;
+
+    nav#global {
+        @include pie-clearfix;
+        background: #eee;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        color: #437ccb;
+        margin: 0 0 1em;
+    
+        ul#global-access {
+            @include inline-list;
+            @include pull-left;
+            
+            li a {
+                color: #437CC8;
+                display: inline-block;
+                padding: 0.4em 0.8em;
+                text-decoration: none;
+            }
+            
+            li a:hover {
+                background-color: #ccc;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    div#caringbridge_header_logo {
+        @include pull-left;
+        margin: 0 13px 13px 0;
+        
+        a.brand {
+            display: inline-block;
+            margin: 6.5px 6.5px 6.5px 13px;
+        }
+    }
+    
+    .btn-donate {
+        @include btn-donate;
+    }
+}
+
+nav#hybrid_site_navigation {
+    @include pie-clearfix;
+    margin-left:13px;
+    padding-bottom:9px;
+    
+    ul#primarynav {
+        @include inline-list;
+        @include pie-clearfix;
+        padding-left: 0;
+        
+        li {
+            a {
+                color: $indigo;
+                font-family: locator,Arial,Helvetica,sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                padding: 3px 1em 3px 0;
+                text-transform: lowercase;
+                text-decoration: none;
+            }
+            a:hover {
+                color: $violetEggplant;
+            }
+        }
+    }
+}
+
+article {
+    h1 {
+        color: $violetEggplant;
+        font-size: 22px;
+        
+        a {
+            color: $violetEggplant;
+        }
+    }
+}
+
+p.comment-form-comment {
+    textarea#comment {
+        width: 100%;
+    }
+}
+
+footer#brand-footer {
+    @include pie-clearfix;
+    
+    nav#fat-footer {
+        .fat-footer-links {
+            display: inline-block;
+            margin: 0 0.5em 1em 0;
+            text-transform: lowercase;
+            vertical-align: top;
+            
+            h4 {
+                color: #545559;
+                font-size: 18px;
+                line-height: 18px;
+                a {
+                    color: $indigo;
+                }
+            }
+            ul {
+                margin: 0;
+                list-style: none;
+            }
+            
+            a {
+                display: block;
+                padding: 1px 13px;
+            }
+        }
+    }
+    
+    ul#social-media {
+        @include inline-list;
+        float: right;
+        
+        a {
+            background-color: transparent;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            display: block;
+            float: left;
+            height: 32px;
+            margin: 0 2px;
+            width: 32px;
+            
+            span {
+                display: none;
+            }
+        }
+        
+        a.facebook {
+            background-image: brand-asset-path('icon-facebook.png', 'images/icons');
+        }
+        
+        a.twitter {
+            background-image: brand-asset-path('icon-twitter.png', 'images/icons');
+        }
+        
+        a.googleplus {
+            background-image: brand-asset-path('icon-googleplus.png', 'images/icons');
+        }
+        
+        a.youtube {
+            background-image: brand-asset-path('icon-youtube.png', 'images/icons');
+        }
+        
+    }
+    
+    ul.privacy-seals {
+        float: left;
+        @include inline-list;
+        li a {
+            padding: 0 1em 0 0;
+            text-decoration: none;
+        }
+    }
+}

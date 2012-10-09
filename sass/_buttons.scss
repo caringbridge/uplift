@@ -1,0 +1,39 @@
+/** Mixins **/
+
+@import "compass/css3/transition";
+
+@mixin btn {
+    @include transition(all 0.05s linear 0s);
+    background: none repeat scroll 0 0 #EDE3CC;
+    border: 0 none;
+    @include border-radius(8px);
+    box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
+    padding: 0.5em 1em;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+@mixin btn-primary {
+    @include btn;
+    background: none repeat scroll 0 0 #CA3162;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+    
+@mixin btn-donate {
+    @include btn-primary;
+    margin: 18px 1em;
+    padding-left: 53px;
+    position: relative;
+    font-weight: bold;
+    
+    i.icon-flower {
+        background: url("../img/donate-btn-flower.png") no-repeat scroll center center transparent;
+        display: inline-block;
+        height: 68px;
+        left: 3px;
+        margin-top: -34px;
+        position: absolute;
+        top: 50%;
+        width: 47px;
+    }
+}
