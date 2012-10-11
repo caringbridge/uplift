@@ -3,7 +3,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span8">
-            <img src="http://blog.devsvd.cbeagan.org/wp-content/themes/blog/img/uplift-logo.svg" alt="Uplift Logo">
+            <img src="<?php bloginfo('template_directory'); ?>/img/uplift-logo.svg" alt="Uplift Logo">
             <?php if ( have_posts() ): ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <hr>
