@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     
     <!--	<footer>
     		&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.
@@ -98,4 +98,4 @@
             </li>
         </ul>
     </footer>
-</div> <!-- div.container-fluid -->
+</div> <!-- div.container -->
