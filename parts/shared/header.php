@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container">
     <div class="page">
         <header class="header clearfix">
             <nav id="global" class="clear-fix">
@@ -36,4 +36,4 @@
             </nav>
         
     </div> <!-- div.page -->
-</div> <!-- div.container-fluid -->
+</div> <!-- div.container -->
