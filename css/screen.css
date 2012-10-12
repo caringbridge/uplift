@@ -7739,7 +7739,70 @@ p.comment-form-comment textarea#comment {
   width: 100%;
 }
 
-/* line 157, ../sass/screen.scss */
+/** Sidebar **/
+/* line 165, ../sass/screen.scss */
+#sidebar {
+  padding: 1em;
+}
+/* line 167, ../sass/screen.scss */
+#sidebar ul {
+  margin: 0;
+  list-style: none;
+}
+/* line 171, ../sass/screen.scss */
+#sidebar ul li {
+  margin-bottom: 1em;
+  /** Twitter Widget **/
+}
+/* line 174, ../sass/screen.scss */
+#sidebar ul li h1, #sidebar ul li h2, #sidebar ul li h3 {
+  font-family: 'locator-display';
+  font-size: 13px;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+/* line 184, ../sass/screen.scss */
+#sidebar ul li form#searchform input[type=text] {
+  width: auto;
+  display: block;
+}
+/* line 190, ../sass/screen.scss */
+#sidebar ul li .textwidget {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background-color: white;
+  padding: 1em;
+}
+/* line 194, ../sass/screen.scss */
+#sidebar ul li .tagcloud {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background-color: white;
+  padding: 1em;
+}
+/* line 199, ../sass/screen.scss */
+#sidebar ul li .TBW_Status {
+  padding: 0;
+  margin: 0;
+}
+/* line 204, ../sass/screen.scss */
+#sidebar ul li .TBW_Picture {
+  display: none !important;
+}
+/* line 208, ../sass/screen.scss */
+#sidebar ul li .TBW_Data {
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  background-color: white;
+  padding: 1em;
+  margin-left: 0 !important;
+}
+
+/* line 216, ../sass/screen.scss */
 footer#brand-footer {
   *zoom: 1;
 }
@@ -7749,34 +7812,34 @@ footer#brand-footer:after {
   display: table;
   clear: both;
 }
-/* line 161, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links {
   display: inline-block;
   margin: 0 0.5em 1em 0;
   text-transform: lowercase;
   vertical-align: top;
 }
-/* line 167, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 {
   color: #545559;
   font-size: 18px;
   line-height: 18px;
 }
-/* line 171, ../sass/screen.scss */
+/* line 230, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 a {
   color: #437cc8;
 }
-/* line 175, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links ul {
   margin: 0;
   list-style: none;
 }
-/* line 180, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links a {
   display: block;
   padding: 1px 13px;
 }
-/* line 187, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 footer#brand-footer ul#social-media {
   list-style-type: none;
   float: right;
@@ -7787,7 +7850,7 @@ footer#brand-footer ul#social-media, footer#brand-footer ul#social-media li {
   padding: 0px;
   display: inline;
 }
-/* line 191, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 footer#brand-footer ul#social-media a {
   background-color: transparent;
   background-position: 0 0;
@@ -7798,27 +7861,27 @@ footer#brand-footer ul#social-media a {
   margin: 0 2px;
   width: 32px;
 }
-/* line 201, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 footer#brand-footer ul#social-media a span {
   display: none;
 }
-/* line 206, ../sass/screen.scss */
+/* line 265, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.facebook {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-facebook.png");
 }
-/* line 210, ../sass/screen.scss */
+/* line 269, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.twitter {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-twitter.png");
 }
-/* line 214, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.googleplus {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-googleplus.png");
 }
-/* line 218, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.youtube {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-youtube.png");
 }
-/* line 224, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals {
   float: left;
   list-style-type: none;
@@ -7829,7 +7892,7 @@ footer#brand-footer ul.privacy-seals, footer#brand-footer ul.privacy-seals li {
   padding: 0px;
   display: inline;
 }
-/* line 227, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals li a {
   padding: 0 1em 0 0;
   text-decoration: none;

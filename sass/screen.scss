@@ -154,6 +154,65 @@ p.comment-form-comment {
     }
 }
 
+/** Sidebar **/
+
+@mixin sidebar-box {
+    @include border-radius(1em);
+    background-color: $white;
+    padding: 1em;
+}
+
+#sidebar {
+    padding: 1em;
+    ul {
+        margin: 0;
+        list-style:none;
+        
+        li {
+            margin-bottom: 1em;
+            
+            h1, h2, h3 {
+                font-family: 'locator-display';
+                font-size: 13px;
+                line-height: 1.2em;
+                margin: 0;
+                padding: 0;
+            }
+            
+            
+            form#searchform {
+                input[type=text] {
+                    width: auto;
+                    display: block;
+                }
+            }
+            
+            .textwidget {
+                @include sidebar-box;
+            }
+            
+            .tagcloud {
+                @include sidebar-box;
+            }
+        
+            /** Twitter Widget **/
+            .TBW_Status {
+                padding: 0;
+                margin: 0;
+            }
+        
+            .TBW_Picture {
+                display:none !important;
+            }
+            
+            .TBW_Data {
+                @include sidebar-box;
+                margin-left: 0 !important;
+            }
+        }
+    }
+}
+
 footer#brand-footer {
     @include pie-clearfix;
     
