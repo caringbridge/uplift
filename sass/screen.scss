@@ -157,13 +157,17 @@ p.comment-form-comment {
 /** Sidebar **/
 
 @mixin sidebar-box {
-    @include border-radius(1em);
+    @include border-radius(10px);
     background-color: $white;
     padding: 1em;
 }
 
 #sidebar {
-    padding: 1em;
+	background-color: #f8971d url(../img/sidebar-BG.png) bottom center no-repeat;
+	@include background(url(../img/sidebar-BG.png) bottom center no-repeat, linear-gradient(left,  #f8971d 0%,#f4b34d 96%,#f8971d 100%) );
+	@include border-bottom-radius(10px);
+	min-height:655px;
+	padding: 1em;
     ul {
         margin: 0;
         list-style:none;
@@ -212,6 +216,7 @@ p.comment-form-comment {
         }
     }
 }
+
 
 footer#brand-footer {
     @include pie-clearfix;
