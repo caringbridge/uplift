@@ -34,6 +34,7 @@
 @import "type";
 
 @import "buttons";
+@import "images";
 
 body {
     color: $abbey;
@@ -44,12 +45,6 @@ h1,h2,h3,h4,h5,h6 {
     font-family: locator, Arial, Helvetica, Verdana, sans-serif;
 }
 
-
-div.container-fluid {
-    max-width: 960px;
-    min-width: 311px; /* width of logo plus left and right margin */
-    margin: 0 auto;
-}
 
 @mixin pull-left {
     float:left;
@@ -140,17 +135,66 @@ nav#hybrid_site_navigation {
 /**** Uplift header ****/
 #uplift-header {
     margin-top: 15px;
+
+    .uplift-logo-container {
+        line-height: 68px;
+        vertical-align: baseline;
+    }
+
+    .widgets {
+        line-height: 68px;
+        font-size: 13px;
+        font-family: locator-display, Arial, Helvetica, sans-serif;
+        text-align: right;
+        vertical-align: bottom;
+        
+        a {
+            @include inline-block;
+            background-color: transparent;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            height: 32px;
+            margin: 0 0 0 1ex;
+            width: 32px;
+
+            span {
+                display: none;
+            }
+        }
+
+        a.facebook {
+            background-image: brand-asset-path('icon-facebook.png', 'images/icons');
+        }
+
+        a.twitter {
+            background-image: brand-asset-path('icon-twitter.png', 'images/icons');
+        }
+
+        a.googleplus {
+            background-image: brand-asset-path('icon-googleplus.png', 'images/icons');
+        }
+
+        a.youtube {
+            background-image: brand-asset-path('icon-youtube.png', 'images/icons');
+        }
+    }
 }
 
 article {
     h1 {
         color: $violetEggplant;
         font-size: 22px;
+        line-height: 1.2em;
+        margin: 0;
         
         a {
             color: $violetEggplant;
         }
     }
+}
+
+p.byline {
+    font-style: italic;
 }
 
 p.comment-form-comment {
