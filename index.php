@@ -1,5 +1,7 @@
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<div class="home" id="blog-content-body">
+
 <div class="container">
     <div class="row">
         <div class="span8">
@@ -63,4 +65,8 @@
         </div>
     </div> <!-- div.row -->
 </div>
+
+</div>
+
+
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
