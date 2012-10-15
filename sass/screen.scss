@@ -137,6 +137,17 @@ nav#hybrid_site_navigation {
     }
 }
 
+#blog-content-body {
+	background-color: #fff url(../img/blog-BG-repeater.png) bottom left repeat-x;
+	@include background(url(../img/blog-BG-repeater.png) bottom left repeat-x, #fff );
+	min-height: 1040px;
+}
+
+hr {
+	border:0;
+}
+
+
 article {
     h1 {
         color: $violetEggplant;
@@ -163,11 +174,13 @@ p.comment-form-comment {
 }
 
 #sidebar {
-	background-color: #f8971d url(../img/sidebar-BG.png) bottom center no-repeat;
-	@include background(url(../img/sidebar-BG.png) bottom center no-repeat, linear-gradient(left,  #f8971d 0%,#f4b34d 96%,#f8971d 100%) );
+	background-color: #f8971d url(../img/sidebar-BG.png) bottom center repeat-x;
+	@include background(url(../img/sidebar-BG.png) bottom center repeat-x, linear-gradient(left,  #f8971d 0%,#f4b34d 96%,#f8971d 100%) );
 	@include border-bottom-radius(10px);
 	min-height:655px;
 	padding: 1em;
+	margin:0 12px 0 0;
+	
     ul {
         margin: 0;
         list-style:none;
@@ -216,6 +229,20 @@ p.comment-form-comment {
         }
     }
 }
+
+
+#searchsubmit {
+	@include btn-primary;
+	
+}
+
+
+
+
+
+
+
+
 
 
 footer#brand-footer {

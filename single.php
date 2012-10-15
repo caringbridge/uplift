@@ -12,6 +12,9 @@
 
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+
+<div class="home" id="blog-content-body">
+
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span8">
@@ -36,6 +39,8 @@
             <?php get_sidebar(); ?>
         </div>
     </div> <!-- div.row-fluid -->
+</div>
+
 </div>
 
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>

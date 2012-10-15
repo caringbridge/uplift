@@ -1,5 +1,7 @@
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
 
+<div class="home" id="blog-content-body">
+
 <div class="container">
     <div class="row">
         <div class="span8">
@@ -45,9 +47,13 @@
             <h2>No posts to display</h2>
             <?php endif; ?>
         </div>
-        <div class="span3 offset1" style="background:#ff0;">
+        <div class="span3 offset1">
             <?php get_sidebar(); ?>
         </div>
     </div> <!-- div.row -->
 </div>
+
+</div>
+
+
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
