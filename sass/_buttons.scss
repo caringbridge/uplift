@@ -37,3 +37,15 @@
         width: 47px;
     }
 }
+
+.btn {
+    @include btn;
+}
+
+.btn-primary {
+    @include btn-primary;
+}
+
+.btn-donate {
+    @include btn-donate;
+}
