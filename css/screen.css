@@ -7886,14 +7886,21 @@ article h1 {
 article h1 a {
   color: #a21984;
 }
+/* line 219, ../sass/screen.scss */
+article h2 {
+  color: #f8971d;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin: 0;
+}
 
-/* line 221, ../sass/screen.scss */
+/* line 228, ../sass/screen.scss */
 p.comment-form-comment textarea#comment {
   width: 100%;
 }
 
 /** Sidebar **/
-/* line 235, ../sass/screen.scss */
+/* line 242, ../sass/screen.scss */
 #sidebar {
   background-color: #f8971d url(../img/sidebar-BG.png) bottom center repeat-x;
   background: url(../img/sidebar-BG.png) bottom center repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8971d), color-stop(96%, #f4b34d), color-stop(100%, #f8971d));
@@ -7911,34 +7918,34 @@ p.comment-form-comment textarea#comment {
   padding: 1em;
   margin: 0 12px;
 }
-/* line 243, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 #sidebar ul {
   margin: 0;
   list-style: none;
 }
-/* line 247, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 #sidebar ul li {
   margin-bottom: 1em;
   /** Twitter Widget **/
 }
-/* line 250, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 #sidebar ul li h1, #sidebar ul li h2, #sidebar ul li h3 {
   font-family: 'locator-display';
   font-size: 18px;
   line-height: 32px;
   margin: 0 0 0 12px;
 }
-/* line 259, ../sass/screen.scss */
+/* line 266, ../sass/screen.scss */
 #sidebar ul li .searchFormContainer {
   text-align: right;
 }
-/* line 263, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 #sidebar ul li .screen-reader-text {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
 }
-/* line 270, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 #sidebar ul li form#searchform input[type=text] {
   width: 95%;
   display: block;
@@ -7948,7 +7955,7 @@ p.comment-form-comment textarea#comment {
   font-family: locator, Arial, Helvetica, Verdana, sans-serif;
   padding: 5px;
 }
-/* line 279, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 #sidebar ul li .textwidget {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -7957,7 +7964,7 @@ p.comment-form-comment textarea#comment {
   padding: 1em 4%;
   width: auto;
 }
-/* line 283, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 #sidebar ul li .tagcloud {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -7966,13 +7973,13 @@ p.comment-form-comment textarea#comment {
   padding: 1em 4%;
   width: auto;
 }
-/* line 289, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 #sidebar ul li.TwitterBadgeWidget {
   background: url(../img/twitBird.png) 95% 100% no-repeat;
   padding: 0 0 40px 0;
   margin: 36px 0 0 0;
 }
-/* line 297, ../sass/screen.scss */
+/* line 304, ../sass/screen.scss */
 #sidebar ul li .TBW_Narrow, #sidebar ul li .TBW_Wide {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -7981,26 +7988,26 @@ p.comment-form-comment textarea#comment {
   padding: 1em 4%;
   width: auto;
 }
-/* line 301, ../sass/screen.scss */
+/* line 308, ../sass/screen.scss */
 #sidebar ul li .TBW_Status {
   padding: 0;
   margin: 0;
 }
-/* line 306, ../sass/screen.scss */
+/* line 313, ../sass/screen.scss */
 #sidebar ul li .TBW_Picture {
   display: none !important;
 }
-/* line 310, ../sass/screen.scss */
+/* line 317, ../sass/screen.scss */
 #sidebar ul li .TBW_Data {
   margin-left: 0 !important;
 }
-/* line 315, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 #sidebar ul li .TBW_Follow {
   font-family: 'locator-display';
   font-weight: bold;
 }
 
-/* line 327, ../sass/screen.scss */
+/* line 334, ../sass/screen.scss */
 #searchsubmit {
   -webkit-transition: all 0.05s linear;
   -webkit-transition-delay: 0s;
@@ -8021,7 +8028,7 @@ p.comment-form-comment textarea#comment {
   margin-right: 3%;
 }
 
-/* line 332, ../sass/screen.scss */
+/* line 339, ../sass/screen.scss */
 footer#brand-footer {
   *zoom: 1;
 }
@@ -8031,34 +8038,34 @@ footer#brand-footer:after {
   display: table;
   clear: both;
 }
-/* line 336, ../sass/screen.scss */
+/* line 343, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links {
   display: inline-block;
   margin: 0 0.5em 1em 0;
   text-transform: lowercase;
   vertical-align: top;
 }
-/* line 342, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 {
   color: #545559;
   font-size: 18px;
   line-height: 18px;
 }
-/* line 346, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 a {
   color: #437cc8;
 }
-/* line 350, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links ul {
   margin: 0;
   list-style: none;
 }
-/* line 355, ../sass/screen.scss */
+/* line 362, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links a {
   display: block;
   padding: 1px 13px;
 }
-/* line 362, ../sass/screen.scss */
+/* line 369, ../sass/screen.scss */
 footer#brand-footer ul#social-media {
   list-style-type: none;
   float: right;
@@ -8069,7 +8076,7 @@ footer#brand-footer ul#social-media, footer#brand-footer ul#social-media li {
   padding: 0px;
   display: inline;
 }
-/* line 366, ../sass/screen.scss */
+/* line 373, ../sass/screen.scss */
 footer#brand-footer ul#social-media a {
   background-color: transparent;
   background-position: 0 0;
@@ -8077,30 +8084,30 @@ footer#brand-footer ul#social-media a {
   display: block;
   float: left;
   height: 32px;
-  margin: 0;
+  margin: 0 1ex 0 0;
   width: 32px;
 }
-/* line 376, ../sass/screen.scss */
+/* line 383, ../sass/screen.scss */
 footer#brand-footer ul#social-media a span {
   display: none;
 }
-/* line 381, ../sass/screen.scss */
+/* line 388, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.facebook {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-facebook.png");
 }
-/* line 385, ../sass/screen.scss */
+/* line 392, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.twitter {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-twitter.png");
 }
-/* line 389, ../sass/screen.scss */
+/* line 396, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.googleplus {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-googleplus.png");
 }
-/* line 393, ../sass/screen.scss */
+/* line 400, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.youtube {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-youtube.png");
 }
-/* line 399, ../sass/screen.scss */
+/* line 406, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals {
   float: left;
   list-style-type: none;
@@ -8111,7 +8118,7 @@ footer#brand-footer ul.privacy-seals, footer#brand-footer ul.privacy-seals li {
   padding: 0px;
   display: inline;
 }
-/* line 402, ../sass/screen.scss */
+/* line 409, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals li a {
   padding: 0 1em 0 0;
   text-decoration: none;

@@ -215,6 +215,13 @@ article {
             color: $violetEggplant;
         }
     }
+
+    h2 {
+        color: $treePoppy;
+        font-size: 18px;
+        line-height:1.2em;
+        margin: 0;
+    }
 }
 
 p.comment-form-comment {
@@ -370,7 +377,7 @@ footer#brand-footer {
             display: block;
             float: left;
             height: 32px;
-            margin: 0;
+            margin: 0 1ex 0 0;
             width: 32px;
             
             span {
