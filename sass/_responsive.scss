@@ -1,0 +1,19 @@
+@media (min-width: 768px) and (max-width: 979px) {
+    #uplift-header .widgets strong {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #uplift-header .widgets {
+        line-height: 32px;
+        text-align: left;
+        strong {
+            display: block !important;
+        }
+    }
+
+    #happy-little-trees {
+        display: none;
+    }
+}

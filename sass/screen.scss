@@ -134,6 +134,7 @@ nav#hybrid_site_navigation {
 /**** Uplift header ****/
 #uplift-header {
     margin-top: 15px;
+    margin-bottom: 2em;
 
     .uplift-logo-container {
         line-height: 68px;
@@ -179,10 +180,10 @@ nav#hybrid_site_navigation {
     }
 }
 
-#blog-content-body {
+#happy-little-trees {
 	background-color: #fff url(../img/blog-BG-repeater.png) bottom left repeat-x;
 	@include background(url(../img/blog-BG-repeater.png) bottom left repeat-x, #fff );
-	min-height: 1040px;
+    height: 309px;
 }
 
 hr {
@@ -190,11 +191,12 @@ hr {
 }
 
 article {
+    margin: 0 0 2em 0;
     h1 {
         color: $violetEggplant;
         font-size: 22px;
         line-height: 1.2em;
-        margin: 0;
+        margin: 0 0 0;
         
         a {
             color: $violetEggplant;
@@ -333,7 +335,7 @@ footer#brand-footer {
             display: block;
             float: left;
             height: 32px;
-            margin: 0 2px;
+            margin: 0;
             width: 32px;
             
             span {
@@ -368,3 +370,5 @@ footer#brand-footer {
         }
     }
 }
+
+@import "responsive";
