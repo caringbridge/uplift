@@ -11,13 +11,10 @@
 ?>
 
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-
-<div class="home" id="blog-content-body">
-
-<div class="container-fluid">
-    <div class="row-fluid">
+<div class="container">
+    <div class="row">
         <div class="span8">
+            <?php get_template_parts(array('parts/shared/uplift-logo')); ?>
             <?php if ( have_posts() ): ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <hr>
@@ -25,7 +22,11 @@
                         <h1>
                             <?php the_title(); ?>
                         </h1>
-            			<!-- <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date(); ?> <?php the_time(); ?></time> <?php comments_popup_link('Leave a Comment', '1 Comment', '% Comments'); ?> -->
+                        <p class="byline">
+                            by <?php the_author_posts_link(); ?> &#183;
+                            <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time> &#183;
+                            Find plugin for views
+                        </p>
             			<div><?php the_post_thumbnail(); ?></div>
                         <?php the_content(); ?>
             		</article>
@@ -41,8 +42,7 @@
     </div> <!-- div.row-fluid -->
 </div>
 
-</div>
-
+<div id="happy-little-trees"></div>
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
 
 

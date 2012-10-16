@@ -137,32 +137,64 @@ nav#hybrid_site_navigation {
     }
 }
 
+/**** Uplift header ****/
+#uplift-header {
+    margin-top: 15px;
+    margin-bottom: 2em;
 
+    .uplift-logo-container {
+        line-height: 68px;
+        vertical-align: baseline;
+    }
 
+    .widgets {
+        line-height: 68px;
+        font-size: 13px;
+        font-family: locator-display, Arial, Helvetica, sans-serif;
+        text-align: right;
+        vertical-align: bottom;
+        
+        a {
+            @include inline-block;
+            background-color: transparent;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            height: 32px;
+            margin: 0 0 0 1ex;
+            width: 32px;
 
-
-
-#blog-content-body {
-	background-color: #fff url(../img/blog-BG-repeater.png) bottom left repeat-x;
-	@include background(url(../img/blog-BG-repeater.png) bottom left repeat-x, #fff );
-	min-height: 1040px;
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
-
+#happy-little-trees {
+    background-color: #fff url(../img/blog-BG-repeater.png) bottom left repeat-x;
+    @include background(url(../img/blog-BG-repeater.png) bottom left repeat-x, #fff );
+    height: 309px;
+}
 
 hr { /**hides light grey horizontal rules from brand style sheets.**/
 	border:0;
 }
 
-
-
-
+section.author-info {
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
 
 article {
+    margin: 0 0 2em 0;
     h1 {
         color: $violetEggplant;
         font-size: 22px;
-        
+        line-height: 1.2em;
+        margin: 0 0 0;
         a {
             color: $violetEggplant;
         }
@@ -217,8 +249,7 @@ p.comment-form-comment {
 	            white-space: nowrap;
 	            overflow: hidden;
 	       }
-            
-            
+
             form#searchform {
                 input[type=text] {
                     width:95%;
@@ -228,9 +259,7 @@ p.comment-form-comment {
                     padding:5px;
                 }
             }
-            
-         
-            
+
             .textwidget {
                 @include sidebar-box;
             }
@@ -284,15 +313,6 @@ p.comment-form-comment {
 	margin-right:3%;
 }
 
-
-
-
-
-
-
-
-
-
 footer#brand-footer {
     @include pie-clearfix;
     
@@ -334,7 +354,7 @@ footer#brand-footer {
             display: block;
             float: left;
             height: 32px;
-            margin: 0 2px;
+            margin: 0;
             width: 32px;
             
             span {
@@ -369,3 +389,5 @@ footer#brand-footer {
         }
     }
 }
+
+@import "responsive";
