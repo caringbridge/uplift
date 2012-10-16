@@ -6234,6 +6234,78 @@ h4, h4 > a, h4 > a:hover {
 }
 
 /** Mixins **/
+/* line 41, ../sass/_buttons.scss */
+.btn {
+  -webkit-transition: all 0.05s linear;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.05s linear 0s;
+  -o-transition: all 0.05s linear 0s;
+  transition: all 0.05s linear 0s;
+  background: none repeat scroll 0 0 #EDE3CC;
+  border: 0 none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* line 45, ../sass/_buttons.scss */
+.btn-primary {
+  -webkit-transition: all 0.05s linear;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.05s linear 0s;
+  -o-transition: all 0.05s linear 0s;
+  transition: all 0.05s linear 0s;
+  background: none repeat scroll 0 0 #EDE3CC;
+  border: 0 none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+  background: none repeat scroll 0 0 #CA3162;
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* line 49, ../sass/_buttons.scss */
+.btn-donate {
+  -webkit-transition: all 0.05s linear;
+  -webkit-transition-delay: 0s;
+  -moz-transition: all 0.05s linear 0s;
+  -o-transition: all 0.05s linear 0s;
+  transition: all 0.05s linear 0s;
+  background: none repeat scroll 0 0 #EDE3CC;
+  border: 0 none;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
+  padding: 0.5em 1em;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
+  background: none repeat scroll 0 0 #CA3162;
+  color: #FFFFFF;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  margin: 18px 1em;
+  padding-left: 53px;
+  position: relative;
+  font-weight: bold;
+}
+/* line 29, ../sass/_buttons.scss */
+.btn-donate i.icon-flower {
+  background: url("../img/donate-btn-flower.png") no-repeat scroll center center transparent;
+  display: inline-block;
+  height: 68px;
+  left: 3px;
+  margin-top: -34px;
+  position: absolute;
+  top: 50%;
+  width: 47px;
+}
+
 /* line 38, ../sass/screen.scss */
 body {
   color: #545559;
@@ -6412,35 +6484,36 @@ nav#hybrid_site_navigation ul#primarynav li a:hover {
   color: #a21984;
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 #blog-content-body {
   background-color: white url(../img/blog-BG-repeater.png) bottom left repeat-x;
   background: url(../img/blog-BG-repeater.png) bottom left repeat-x, white;
   min-height: 1040px;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 hr {
+  /**hides light grey horizontal rules from brand style sheets.**/
   border: 0;
 }
 
-/* line 152, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 article h1 {
   color: #a21984;
   font-size: 22px;
 }
-/* line 156, ../sass/screen.scss */
+/* line 166, ../sass/screen.scss */
 article h1 a {
   color: #a21984;
 }
 
-/* line 163, ../sass/screen.scss */
+/* line 173, ../sass/screen.scss */
 p.comment-form-comment textarea#comment {
   width: 100%;
 }
 
 /** Sidebar **/
-/* line 176, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 #sidebar {
   background-color: #f8971d url(../img/sidebar-BG.png) bottom center repeat-x;
   background: url(../img/sidebar-BG.png) bottom center repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8971d), color-stop(96%, #f4b34d), color-stop(100%, #f8971d));
@@ -6456,67 +6529,98 @@ p.comment-form-comment textarea#comment {
   border-bottom-right-radius: 10px;
   min-height: 655px;
   padding: 1em;
-  margin: 0 12px 0 0;
+  margin: 0 12px;
 }
-/* line 184, ../sass/screen.scss */
+/* line 195, ../sass/screen.scss */
 #sidebar ul {
   margin: 0;
   list-style: none;
 }
-/* line 188, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 #sidebar ul li {
   margin-bottom: 1em;
   /** Twitter Widget **/
 }
-/* line 191, ../sass/screen.scss */
+/* line 202, ../sass/screen.scss */
 #sidebar ul li h1, #sidebar ul li h2, #sidebar ul li h3 {
   font-family: 'locator-display';
-  font-size: 13px;
-  line-height: 1.2em;
-  margin: 0;
-  padding: 0;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 0 12px;
 }
-/* line 201, ../sass/screen.scss */
+/* line 211, ../sass/screen.scss */
+#sidebar ul li .searchFormContainer {
+  text-align: right;
+}
+/* line 215, ../sass/screen.scss */
+#sidebar ul li .screen-reader-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* line 223, ../sass/screen.scss */
 #sidebar ul li form#searchform input[type=text] {
-  width: auto;
+  width: 95%;
   display: block;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-family: locator, Arial, Helvetica, Verdana, sans-serif;
+  padding: 5px;
 }
-/* line 207, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 #sidebar ul li .textwidget {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   background-color: white;
-  padding: 1em;
+  padding: 1em 4%;
+  width: auto;
 }
-/* line 211, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 #sidebar ul li .tagcloud {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   background-color: white;
-  padding: 1em;
+  padding: 1em 4%;
+  width: auto;
 }
-/* line 216, ../sass/screen.scss */
-#sidebar ul li .TBW_Status {
-  padding: 0;
-  margin: 0;
+/* line 244, ../sass/screen.scss */
+#sidebar ul li.TwitterBadgeWidget {
+  background: url(../img/twitBird.png) 95% 100% no-repeat;
+  padding: 0 0 40px 0;
+  margin: 36px 0 0 0;
 }
-/* line 221, ../sass/screen.scss */
-#sidebar ul li .TBW_Picture {
-  display: none !important;
-}
-/* line 225, ../sass/screen.scss */
-#sidebar ul li .TBW_Data {
+/* line 252, ../sass/screen.scss */
+#sidebar ul li .TBW_Narrow, #sidebar ul li .TBW_Wide {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   background-color: white;
-  padding: 1em;
+  padding: 1em 4%;
+  width: auto;
+}
+/* line 256, ../sass/screen.scss */
+#sidebar ul li .TBW_Status {
+  padding: 0;
+  margin: 0;
+}
+/* line 261, ../sass/screen.scss */
+#sidebar ul li .TBW_Picture {
+  display: none !important;
+}
+/* line 265, ../sass/screen.scss */
+#sidebar ul li .TBW_Data {
   margin-left: 0 !important;
 }
+/* line 270, ../sass/screen.scss */
+#sidebar ul li .TBW_Follow {
+  font-family: 'locator-display';
+  font-weight: bold;
+}
 
-/* line 234, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 #searchsubmit {
   -webkit-transition: all 0.05s linear;
   -webkit-transition-delay: 0s;
@@ -6534,9 +6638,10 @@ p.comment-form-comment textarea#comment {
   background: none repeat scroll 0 0 #CA3162;
   color: #FFFFFF;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  margin-right: 3%;
 }
 
-/* line 248, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 footer#brand-footer {
   *zoom: 1;
 }
@@ -6546,34 +6651,34 @@ footer#brand-footer:after {
   display: table;
   clear: both;
 }
-/* line 252, ../sass/screen.scss */
+/* line 300, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links {
   display: inline-block;
   margin: 0 0.5em 1em 0;
   text-transform: lowercase;
   vertical-align: top;
 }
-/* line 258, ../sass/screen.scss */
+/* line 306, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 {
   color: #545559;
   font-size: 18px;
   line-height: 18px;
 }
-/* line 262, ../sass/screen.scss */
+/* line 310, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links h4 a {
   color: #437cc8;
 }
-/* line 266, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links ul {
   margin: 0;
   list-style: none;
 }
-/* line 271, ../sass/screen.scss */
+/* line 319, ../sass/screen.scss */
 footer#brand-footer nav#fat-footer .fat-footer-links a {
   display: block;
   padding: 1px 13px;
 }
-/* line 278, ../sass/screen.scss */
+/* line 326, ../sass/screen.scss */
 footer#brand-footer ul#social-media {
   list-style-type: none;
   float: right;
@@ -6584,7 +6689,7 @@ footer#brand-footer ul#social-media, footer#brand-footer ul#social-media li {
   padding: 0px;
   display: inline;
 }
-/* line 282, ../sass/screen.scss */
+/* line 330, ../sass/screen.scss */
 footer#brand-footer ul#social-media a {
   background-color: transparent;
   background-position: 0 0;
@@ -6595,27 +6700,27 @@ footer#brand-footer ul#social-media a {
   margin: 0 2px;
   width: 32px;
 }
-/* line 292, ../sass/screen.scss */
+/* line 340, ../sass/screen.scss */
 footer#brand-footer ul#social-media a span {
   display: none;
 }
-/* line 297, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.facebook {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-facebook.png");
 }
-/* line 301, ../sass/screen.scss */
+/* line 349, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.twitter {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-twitter.png");
 }
-/* line 305, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.googleplus {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-googleplus.png");
 }
-/* line 309, ../sass/screen.scss */
+/* line 357, ../sass/screen.scss */
 footer#brand-footer ul#social-media a.youtube {
   background-image: url("../vendor/caringbridge/brand/public/images/icons/icon-youtube.png");
 }
-/* line 315, ../sass/screen.scss */
+/* line 363, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals {
   float: left;
   list-style-type: none;
@@ -6626,7 +6731,7 @@ footer#brand-footer ul.privacy-seals, footer#brand-footer ul.privacy-seals li {
   padding: 0px;
   display: inline;
 }
-/* line 318, ../sass/screen.scss */
+/* line 366, ../sass/screen.scss */
 footer#brand-footer ul.privacy-seals li a {
   padding: 0 1em 0 0;
   text-decoration: none;

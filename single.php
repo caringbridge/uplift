@@ -35,7 +35,7 @@
             <h2>No posts to display</h2>
             <?php endif; ?>
         </div>
-        <div class="span3 offset1" style="background:#ff0;">
+        <div class="span3 offset1">
             <?php get_sidebar(); ?>
         </div>
     </div> <!-- div.row-fluid -->

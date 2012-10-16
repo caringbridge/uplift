@@ -45,6 +45,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
+div.container-fluid {
+    max-width: 960px;
+    min-width: 311px; /* width of logo plus left and right margin */
+    margin: 0 auto;
+}
+
 @mixin pull-left {
     float:left;
 }
@@ -131,53 +137,10 @@ nav#hybrid_site_navigation {
     }
 }
 
-/**** Uplift header ****/
-#uplift-header {
-    margin-top: 15px;
 
-    .uplift-logo-container {
-        line-height: 68px;
-        vertical-align: baseline;
-    }
 
-    .widgets {
-        line-height: 68px;
-        font-size: 13px;
-        font-family: locator-display, Arial, Helvetica, sans-serif;
-        text-align: right;
-        vertical-align: bottom;
-        
-        a {
-            @include inline-block;
-            background-color: transparent;
-            background-position: 0 0;
-            background-repeat: no-repeat;
-            height: 32px;
-            margin: 0 0 0 1ex;
-            width: 32px;
 
-            span {
-                display: none;
-            }
-        }
 
-        a.facebook {
-            background-image: brand-asset-path('icon-facebook.png', 'images/icons');
-        }
-
-        a.twitter {
-            background-image: brand-asset-path('icon-twitter.png', 'images/icons');
-        }
-
-        a.googleplus {
-            background-image: brand-asset-path('icon-googleplus.png', 'images/icons');
-        }
-
-        a.youtube {
-            background-image: brand-asset-path('icon-youtube.png', 'images/icons');
-        }
-    }
-}
 
 #blog-content-body {
 	background-color: #fff url(../img/blog-BG-repeater.png) bottom left repeat-x;
@@ -185,25 +148,25 @@ nav#hybrid_site_navigation {
 	min-height: 1040px;
 }
 
-hr {
+
+
+hr { /**hides light grey horizontal rules from brand style sheets.**/
 	border:0;
 }
+
+
+
+
 
 article {
     h1 {
         color: $violetEggplant;
         font-size: 22px;
-        line-height: 1.2em;
-        margin: 0;
         
         a {
             color: $violetEggplant;
         }
     }
-}
-
-p.byline {
-    font-style: italic;
 }
 
 p.comment-form-comment {
@@ -217,7 +180,8 @@ p.comment-form-comment {
 @mixin sidebar-box {
     @include border-radius(10px);
     background-color: $white;
-    padding: 1em;
+    padding: 1em 4%;
+    width:auto;
 }
 
 #sidebar {
@@ -226,7 +190,7 @@ p.comment-form-comment {
 	@include border-bottom-radius(10px);
 	min-height:655px;
 	padding: 1em;
-	margin:0 12px 0 0;
+	margin:0 12px;
 	
     ul {
         margin: 0;
@@ -237,19 +201,35 @@ p.comment-form-comment {
             
             h1, h2, h3 {
                 font-family: 'locator-display';
-                font-size: 13px;
-                line-height: 1.2em;
-                margin: 0;
-                padding: 0;
+                font-size: 18px;
+                line-height: 32px;
+                margin:0 0 0 12px;
+               
             }
+            
+            
+            .searchFormContainer {
+	            text-align:right;
+            }
+            
+            .screen-reader-text {
+	            text-indent: 100%;
+	            white-space: nowrap;
+	            overflow: hidden;
+	       }
             
             
             form#searchform {
                 input[type=text] {
-                    width: auto;
+                    width:95%;
                     display: block;
+                    @include border-radius(10px);
+                    font-family: locator, Arial, Helvetica, Verdana, sans-serif;
+                    padding:5px;
                 }
             }
+            
+         
             
             .textwidget {
                 @include sidebar-box;
@@ -260,6 +240,19 @@ p.comment-form-comment {
             }
         
             /** Twitter Widget **/
+            
+            &.TwitterBadgeWidget {
+	           background: url(../img/twitBird.png) 95% 100% no-repeat;
+	           padding:0 0 40px 0;
+	           margin: 36px 0 0 0;
+	           
+	        }
+            
+
+            .TBW_Narrow, .TBW_Wide {
+	            @include sidebar-box;
+	        }
+            
             .TBW_Status {
                 padding: 0;
                 margin: 0;
@@ -270,9 +263,17 @@ p.comment-form-comment {
             }
             
             .TBW_Data {
-                @include sidebar-box;
+               
                 margin-left: 0 !important;
             }
+            
+            .TBW_Follow {
+	            font-family: 'locator-display';
+	            font-weight:bold;
+	       
+	            
+            }
+           
         }
     }
 }
@@ -280,7 +281,7 @@ p.comment-form-comment {
 
 #searchsubmit {
 	@include btn-primary;
-	
+	margin-right:3%;
 }
 
 
