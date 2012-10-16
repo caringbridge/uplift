@@ -167,6 +167,22 @@ nav#hybrid_site_navigation {
                 display: none;
             }
         }
+
+        a.facebook {
+            background-image: brand-asset-path('icon-facebook.png', 'images/icons');
+        }
+
+        a.twitter {
+            background-image: brand-asset-path('icon-twitter.png', 'images/icons');
+        }
+
+        a.googleplus {
+            background-image: brand-asset-path('icon-googleplus.png', 'images/icons');
+        }
+
+        a.youtube {
+            background-image: brand-asset-path('icon-youtube.png', 'images/icons');
+        }
     }
 }
 
