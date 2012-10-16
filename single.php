@@ -11,13 +11,10 @@
 ?>
 
 <?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
-
-
-<div class="home" id="blog-content-body">
-
-<div class="container-fluid">
-    <div class="row-fluid">
+<div class="container">
+    <div class="row">
         <div class="span8">
+            <?php get_template_parts(array('parts/shared/uplift-logo')); ?>
             <?php if ( have_posts() ): ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <hr>
@@ -35,14 +32,13 @@
             <h2>No posts to display</h2>
             <?php endif; ?>
         </div>
-        <div class="span3 offset1" style="background:#ff0;">
+        <div class="span3 offset1">
             <?php get_sidebar(); ?>
         </div>
     </div> <!-- div.row-fluid -->
 </div>
 
-</div>
-
+<div id="happy-little-trees"></div>
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
 
 
