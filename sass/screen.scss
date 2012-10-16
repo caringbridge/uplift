@@ -190,6 +190,14 @@ hr {
 	border:0;
 }
 
+section.author-info {
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
 article {
     margin: 0 0 2em 0;
     h1 {
@@ -244,7 +252,6 @@ p.comment-form-comment {
                 margin: 0;
                 padding: 0;
             }
-            
             
             form#searchform {
                 input[type=text] {

@@ -11,7 +11,9 @@
                             <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a>
                         </h1>
                         <p class="byline">
-                        by <?php the_author_posts_link(); ?> &#183; <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_date('F j, Y'); ?></time> &#183; Find plugin for views
+                            by <?php the_author_posts_link(); ?> &#183;
+                            <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time> &#183;
+                            Find plugin for views
                         </p>
 
                         <div class="row">
@@ -34,8 +36,8 @@
                                 </div>
                             <?php endif ?>
             			</div>
-            		</article>
-            <?php endwhile; ?>
+                    </article>
+                <?php endwhile; ?>
             <?php else: ?>
             <h2>No posts to display</h2>
             <?php endif; ?>
