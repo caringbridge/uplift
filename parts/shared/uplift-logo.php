@@ -1,6 +1,6 @@
 <div id="uplift-header" class="row">
     <div class="span4 uplift-logo-container">
-        <a href="/"><img src="<?php bloginfo('template_directory'); ?>/img/uplift-logo.png" alt="Uplift Logo"></a>
+    <a href="/"><img src="<?php bloginfo('template_directory'); ?>/img/uplift-logo.png" alt="Uplift Logo" data-svg="<?php bloginfo('template_directory'); ?>/img/uplift-logo.svg"></a>
     </div>
     <div class="span4 widgets">
         <span><strong>Share our blog:</strong></span>
