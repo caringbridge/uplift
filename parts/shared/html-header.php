@@ -10,6 +10,18 @@
     <link href="<?php bloginfo('template_directory'); ?>/css/screen.css" media="screen" rel="stylesheet">
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
+    <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.js"></script>
     <?php wp_head(); ?>
+    <script>
+        // This belongs in a separate file, but I need a path that comes
+        // from calling a PHP function.
+        jQuery(document).ready(function() {
+            if (Modernizr.svg) {
+                var svgPath = "<?php echo get_stylesheet_directory_uri(); ?>/img/uplift-logo.svg";
+                jQuery('.uplift-logo-container a img').attr('src', svgPath);
+            }
+        });
+    </script>
 </head>
 <body <?php body_class(); ?>>
