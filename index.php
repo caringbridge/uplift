@@ -12,10 +12,8 @@
                         </h1>
                         <p class="byline">
                             by <?php the_author_posts_link(); ?> &#183;
-                            <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time> &#183;
-                            Find plugin for views
+                            <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>
                         </p>
-
                         <div class="row">
                             <?php if (has_post_thumbnail()): ?>
                                 <div class="span2 hidden-phone thumbnail-container">
@@ -48,9 +46,6 @@
     </div> <!-- div.row -->
 </div>
 
-<div class="home" id="happy-little-trees">
-
-</div>
-
+<div class="home" id="happy-little-trees"></div>
 
 <?php get_template_parts(array('parts/shared/footer', 'parts/shared/html-footer')); ?>
