@@ -13,6 +13,10 @@
         }
     }
 
+    #sidebar {
+        @include border-radius(10px);
+    }
+
     #happy-little-trees {
         display: none;
     }

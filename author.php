@@ -30,8 +30,7 @@
                         </h1>
                         <p class="byline">
                         by <?php the_author_posts_link(); ?> &#183;
-                        <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time> &#183;
-                        Find plugin for views
+                        <time datetime="<?php the_time( 'Y-m-d' ); ?>" pubdate><?php the_time('F j, Y'); ?></time>
                         </p>
     
                         <div class="row">

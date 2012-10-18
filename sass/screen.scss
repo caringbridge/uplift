@@ -196,6 +196,40 @@ hr { /**hides light grey horizontal rules from brand style sheets.**/
 	border:0;
 }
 
+section.author-info {
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
+article {
+    margin: 0 0 2em 0;
+    h1 {
+        color: $violetEggplant;
+        font-size: 22px;
+        line-height: 1.2em;
+        margin: 0 0 0;
+        a {
+            color: $violetEggplant;
+        }
+    }
+
+    h2 {
+        color: $treePoppy;
+        font-size: 18px;
+        line-height:1.2em;
+        margin: 0;
+    }
+}
+
+p.comment-form-comment {
+    textarea#comment {
+        width: 100%;
+    }
+}
+
 /** Sidebar **/
 
 @mixin sidebar-box {
@@ -443,7 +477,7 @@ footer#brand-footer {
             display: block;
             float: left;
             height: 32px;
-            margin: 0;
+            margin: 0 1ex 0 0;
             width: 32px;
             
             span {
