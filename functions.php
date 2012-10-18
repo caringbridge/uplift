@@ -36,8 +36,9 @@ function starkers_comment( $comment, $args, $depth ) {
 	<li>
 		<article id="comment-<?php comment_ID() ?>">
 			<?php echo get_avatar( $comment ); ?>
-			<h4><?php comment_author_link() ?></h4>
-			<time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time>
+			<h4><?php comment_author_link() ?> &bull; </h4> 
+			<time><?php comment_date() ?> at <?php comment_time() ?></time>
+			<!-- <time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time> -->
 			<?php comment_text() ?>
 		</article>
 	<?php endif; ?>

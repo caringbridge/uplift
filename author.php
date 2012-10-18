@@ -60,7 +60,7 @@
                 <h2>No posts to display for <?php echo get_the_author() ; ?></h2>	
             <?php endif; ?>
         </div>
-        <div class="span3 offset1">
+        <div class="span4">
             <?php get_sidebar(); ?>
         </div>
     </div>

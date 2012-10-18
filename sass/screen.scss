@@ -196,33 +196,6 @@ hr { /**hides light grey horizontal rules from brand style sheets.**/
 	border:0;
 }
 
-section.author-info {
-    h1 {
-        font-size: 20px;
-        line-height: 30px;
-        margin: 0;
-    }
-}
-
-article {
-    margin: 0 0 2em 0;
-    h1 {
-        color: $violetEggplant;
-        font-size: 22px;
-        line-height: 1.2em;
-        margin: 0 0 0;
-        a {
-            color: $violetEggplant;
-        }
-    }
-}
-
-p.comment-form-comment {
-    textarea#comment {
-        width: 100%;
-    }
-}
-
 /** Sidebar **/
 
 @mixin sidebar-box {
@@ -282,6 +255,7 @@ p.comment-form-comment {
             
             .tagcloud {
                 @include sidebar-box;
+                font-family: locator, Arial, Helvetica, Verdana, sans-serif;
             }
         
             /** Twitter Widget **/
@@ -328,6 +302,105 @@ p.comment-form-comment {
 	@include btn-primary;
 	margin-right:3%;
 }
+
+
+
+
+/** Home Page Article Styles **/
+
+
+section.author-info {
+    h1 {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 0;
+    }
+}
+
+article {
+    margin: 0 0 2em 0;
+    h1 {
+        color: $violetEggplant;
+        font-size: 22px;
+        line-height: 1.2em;
+        margin: 0 0 0;
+        a {
+            color: $violetEggplant;
+        }
+    }
+}
+
+p.comment-form-comment {
+    textarea#comment {
+        width: 100%;
+    }
+}
+
+
+
+/** Single Page Article Styles **/
+
+
+#comments {
+	font-family: locator, Arial, Helvetica, Verdana, sans-serif;
+	font-size:16px;
+	line-height: 18px;
+	
+
+
+    h1 {
+	    display:none;
+	    }
+
+    img {
+	display:none;
+	}
+	
+	h4, time {
+		display: inline;
+		font-size: 18px;
+		color:#fff;
+		font-weight: normal;
+		font-style: italic;
+	}
+	
+
+    ol {
+	@include border-radius(10px);
+	background-color: $downy;
+	padding:1em;
+	margin:0;
+	list-style: none;
+	}
+
+    p {
+	background-color: #fff;
+	padding:1em;
+	}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer#brand-footer {
     @include pie-clearfix;
