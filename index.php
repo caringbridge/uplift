@@ -5,6 +5,21 @@
         <div class="span8">
             <?php get_template_parts(array('parts/shared/uplift-logo')); ?>
             <?php if ( have_posts() ): ?>
+            
+            
+            
+            
+            <?php $args = array(
+            'numberposts' => -1,
+	'post_type' => 'post',
+	'post_status' => 'publish'
+);
+
+
+
+
+$total_posts = count(get_posts($args)); $n=0; ?>
+            
                 <?php while ( have_posts() ) : the_post(); ?>
             		<article>
                         <h1>
@@ -34,6 +49,10 @@
                                 </div>
                             <?php endif ?>
             			</div>
+            			
+            			<?php  $n++;
+            			if ($n < $total_posts) echo "<hr />" . $n . "of" . $total_posts ; ?>
+            			
                     </article>
                 <?php endwhile; ?>
             <?php else: ?>

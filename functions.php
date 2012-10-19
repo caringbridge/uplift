@@ -23,6 +23,13 @@ function script_enqueuer() {
     wp_enqueue_style( 'screen' );
 }	
 
+
+function new_excerpt_length($length) {
+    return 100;
+}
+add_filter('excerpt_length', 'new_excerpt_length');
+
+
 /**
  * Custom callback for outputting comments 
  *

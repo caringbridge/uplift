@@ -17,10 +17,15 @@
             <?php get_template_parts(array('parts/shared/uplift-logo')); ?>
             <?php if ( have_posts() ): the_post(); ?>
                 <?php if ( get_the_author_meta( 'description' ) ) : ?>
+                
+                
                     <section class="author-info well">
+                    <?php echo get_avatar( get_the_author_email() ); ?>
                         <h1><?php echo get_the_author(); ?></h1>
                     <?php the_author_meta( 'description' ); ?>
+                    
                     </section>
+    
                 <?php endif; ?>
     
                 <?php rewind_posts(); while ( have_posts() ) : the_post(); ?>

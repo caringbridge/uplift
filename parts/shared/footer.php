@@ -3,8 +3,8 @@
     <!--	<footer>
     		&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>. All rights reserved.
     	</footer> -->
-    <hr>
-    <footer data-ga-label-prefix="Footer - " id="brand-footer">
+  &nbsp;
+      <footer data-ga-label-prefix="Footer - " id="brand-footer">
         <nav id="fat-footer">
             <div class="fat-footer-links">
                 <h4><a href="http://www.caringbridge.org" class="normal-case">CaringBridge</a></h4>
