@@ -1,0 +1,9 @@
+.h2 {
+    @extend h2; /** Cheater Class for Blog Titles on index.php and single.php **/
+}
+.h3 {
+  @extend h3; /** Cheater Class for Comments Heading **/
+}
+.h4 {
+  @extend h4;
+}
