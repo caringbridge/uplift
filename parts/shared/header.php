@@ -87,7 +87,7 @@
                             <img src="<?php bloginfo('template_directory'); ?>/img/logo-caringbridge-large.png" alt="CaringBridge.org" />
                         </a>
                         <div class="pull-right">
-                            <a href="#" class="btn btn-donate">
+                            <a href="https://www.caringbridge.org/redirect-donation/1101" class="btn btn-donate">
                             <i class="flower"></i>Donate Now</a>
                         </div>
                     </div>
