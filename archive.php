@@ -1,20 +1,10 @@
-<?php
-/**
- * The template for displaying Archive pages.
- *
- * Used to display archive-type pages if nothing more specific matches a query.
- * For example, puts together date-based pages if no date.php file exists.
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * Please see /external/starkers-utilities.php for info on get_template_parts() 
- *
- * @package 	WordPress
- * @subpackage 	Starkers
- * @since 		Starkers 4.0
- */
-?>
-<?php get_template_parts( array( 'parts/shared/html-header', 'parts/shared/header' ) ); ?>
+<?php get_template_parts( array('parts/shared/header') ); ?>
+
+    <div class="container clearfix">
+        <div class="row">
+            <div class="span8">
+                <?php get_template_parts(array('parts/shared/uplift-logo')); ?>
+
 
 <?php if ( have_posts() ): ?>
 
@@ -43,4 +33,18 @@
 <h2>No posts to display</h2>	
 <?php endif; ?>
 
-<?php get_template_parts( array( 'parts/shared/footer','parts/shared/html-footer' ) ); ?>
+       </div>
+
+            <div class="span4">
+                <?php get_sidebar(); ?>
+            
+            
+                 <div class="rssButton">
+                    <a href="<?php bloginfo('rss2_url'); ?>">Uplift RSS Feed<img src="<?php bloginfo('template_directory'); ?>/img/rss-feed-icon.png" alt="Uplift RSS Feed Icon"></a>
+                 </div>
+            </div><!-- div .span4 -->
+
+        </div><!-- div.row -->
+    </div>
+
+    <div class="home" id="happy-little-trees"></div><?php get_template_parts(array('parts/shared/footer') ); ?>

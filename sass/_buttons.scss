@@ -4,7 +4,7 @@
 
 @mixin btn {
     @include transition(all 0.05s linear 0s);
-    background: none repeat scroll 0 0 #EDE3CC;
+    background: none repeat scroll 0 0 $parchment;
     border: 0 none;
     @include border-radius(8px);
     box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
@@ -12,11 +12,18 @@
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
 }
 
+
+
 @mixin btn-primary {
     @include btn;
-    background: none repeat scroll 0 0 #CA3162;
+    background: none repeat scroll 0 0 $hibiscus;
     color: #FFFFFF;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+
+a.btn-primary:hover {
+	background-color: #a1274e;
 }
     
 @mixin btn-donate {

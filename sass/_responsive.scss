@@ -1,23 +1,27 @@
-@media (min-width: 768px) and (max-width: 979px) {
-    #uplift-header .widgets strong {
-        display: none !important;
+@media (max-width: 767px) { 
+	
+	    #uplift-header #catNav {
+        margin: 2em 0 0 0;
+        width:100%;
     }
-}
-
-@media (max-width: 767px) {
-    #uplift-header .widgets {
-        line-height: 32px;
-        text-align: left;
-        strong {
-            display: block !important;
-        }
-    }
-
+        
     #sidebar {
         @include border-radius(10px);
+        margin:0;
     }
 
     #happy-little-trees {
         display: none;
     }
+    
+}
+
+
+/* Landscape phones and down */
+@media (max-width: 639px) {
+  
+    article .postImage img {
+	 @include border-radius(0);
+	}
+	
 }

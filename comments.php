@@ -27,6 +27,10 @@
 	?>
 
 	<?php // You can start editing here -- including this comment! ?>
+	
+
+    <?php comment_form(array('title_reply'=>'Please leave a reply, only your name will be displayed with your comment.', 'comment_notes_before'=>'Required fields are marked *'), $post_id); ?>
+    
 
 	<?php if ( have_comments() ) : ?>
 
@@ -47,6 +51,6 @@
 	
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+	
 
 </div><!-- #comments -->

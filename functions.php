@@ -23,6 +23,34 @@ function script_enqueuer() {
     wp_enqueue_style( 'screen' );
 }	
 
+function yourthemeslug_title_filter( $title, $sep, $seplocation ) {
+    // account for $seplocation
+    $left_sep = ( $seplocation != 'right' ? ' ' . $sep . ' ' : '' );
+    $right_sep = ( $seplocation != 'right' ? '' : ' ' . $sep . ' ' );
+ 
+    // get special page type (if any)
+    if( is_category() ) $page_type = $left_sep . 'Category' . $right_sep;
+    elseif( is_tag() ) $page_type = $left_sep . 'Tag' . $right_sep;
+    elseif( is_author() ) $page_type = $left_sep . 'Author' . $right_sep;
+    elseif( is_archive() || is_date() ) $page_type = $left_sep . 'Archives'. $right_sep;
+    else $page_type = '';
+ 
+    // get the page number
+    if( get_query_var( 'paged' ) ) $page_num = $left_sep. get_query_var( 'paged' ) . $right_sep; // on index
+    elseif( get_query_var( 'page' ) ) $page_num = $left_sep . get_query_var( 'page' ) . $right_sep; // on single
+    else $page_num = '';
+ 
+    // concoct and return title
+    if( !is_feed() ) return get_bloginfo( 'name' ) . $page_type . $title . $page_num;
+    else return $old_title;
+}
+
+add_filter('comment_form_default_fields', 'mytheme_remove_url' );
+
+function mytheme_remove_url($arg) {
+    $arg['url'] = '';
+    return $arg;
+}
 
 function new_excerpt_length($length) {
     return 100;
@@ -43,10 +71,21 @@ function starkers_comment( $comment, $args, $depth ) {
 	<li>
 		<article id="comment-<?php comment_ID() ?>">
 			<?php echo get_avatar( $comment ); ?>
-			<h4><?php comment_author_link() ?> &bull; </h4> 
-			<time><?php comment_date() ?> at <?php comment_time() ?></time>
-			<!-- <time><a href="#comment-<?php comment_ID() ?>" pubdate><?php comment_date() ?> at <?php comment_time() ?></a></time> -->
+			<h4 class="normal-case"><?php comment_author_link() ?> &bull; </h4> 
+			<time class="normal-case"><?php comment_date() ?> at <?php comment_time() ?></time>
+			<div class="commentBody">
 			<?php comment_text() ?>
+			</div>
+		</article>
+		
+	<?php elseif ($comment->comment_approved == '0') : ?>
+	<article id="comment-<?php comment_ID() ?>" class="normal-case">
+			<?php echo get_avatar( $comment ); ?>
+			<h4 class="normal-case"><?php comment_author_link() ?> &bull; </h4> 
+			<time class="normal-case"><?php comment_date() ?> at <?php comment_time() ?></time>
+			<div class="alert alert-info">
+			<p>Your comment is awaiting moderation.</p>
+			</div>
 		</article>
 	<?php endif; ?>
 	</li>
