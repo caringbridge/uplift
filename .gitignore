@@ -18,3 +18,4 @@ license.txt
 composer.lock
 vendor
 .sass-cache
+*.DS_Store*
