@@ -113,7 +113,7 @@
                     <li><a title="Find us on YouTube" data-ga-action="Click - image" data-ga-label="YouTube" onclick="window.open(this.href,'help','menubar=yes,scrollbars=yes,resizable=yes,width=800,height=700,left=100,top=75'); stopDefaultAction(event);" href="http://www.youtube.com/caringbridge" class="youtube"><span>Find us on YouTube</span></a></li>
                 </ul>
 
-                <p id="copyright"><a href="http://www.caringbridge.org/copyright">Copyright</a> &copy; 1997-2013 CaringBridge&reg;, a nonprofit organization</p>
+                <p id="copyright"><a href="http://www.caringbridge.org/copyright">Copyright</a> &copy; 1997-<?php echo(strftime('%G')); ?> CaringBridge&reg;, a nonprofit organization</p>
 
                 <p>By using this website, you agree to our <a target="_blank" href="http://www.caringbridge.org/termsofuse">Terms of Use</a> and <a target="_blank" href="http://www.caringbridge.org/privacy">Privacy Policy</a>.</p>
             </div>
