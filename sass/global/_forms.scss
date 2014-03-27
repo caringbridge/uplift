@@ -1,0 +1,40 @@
+fieldset {
+  margin: 0 0 1.5em 0;
+}
+
+legend {
+  border: none;
+}
+
+// Give actionable elements with low affordance a pointer cursor
+label[for], .btn-link {
+  cursor: pointer;
+}
+
+// Make fieldset used as a .form-group look like a normal .form-group
+fieldset.form-group {
+  @extend .form-group;
+}
+
+// Make legend used as a .control-label for other elements look like a normal label / .control-label
+.control-label, legend.control-label {
+  @extend label;
+  font-size: $font-size-base;
+  @include inline-block;
+  maring-bottom: 5px;
+}
+
+// If we're nesting .form-group's, we're up to something hinkey (namely in planner)
+.form-group {
+  .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+// Kludge -- random text that we want to line up like other .control-labels and things (the "to" in between start / end date)
+.form-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 7px;
+}

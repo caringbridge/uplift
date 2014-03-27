@@ -1,0 +1,14 @@
+h1 > a:hover, h3 > a:hover {
+    color: darken($tree-poppy, 15%);
+    text-decoration: undeline;
+}
+
+h2 > a:hover {
+  color: darken($violet-eggplant, 15%);
+  text-decoration: underline;
+}
+
+h4 > a:hover {
+  color: darken($text-color, 15%);
+  text-decoration: underline;
+}

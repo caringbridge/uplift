@@ -1,0 +1,85 @@
+/**
+ * CaringBridge typography and font-face styles
+ */
+@include font-face(
+  "Locator Display",
+  font-files(font-path("LocatorDisplayWebRegular.woff")),
+  font-path("LocatorDisplayWebRegular.eot"),
+  normal
+);
+
+@include font-face(
+  "Locator Display",
+  font-files(font-path("LocatorDisplayWebBold.woff")),
+  font-path("LocatorDisplayWebBold.eot"),
+  bold
+);
+
+@include font-face(
+  "Locator",
+  font-files(font-path("LocatorWebRegular.woff")),
+  font-path("LocatorWebRegular.eot"),
+  normal
+);
+
+@include font-face(
+  "Locator",
+  font-files(font-path("LocatorWebBold.woff")),
+  font-path("LocatorWebBold.eot"),
+  bold
+);
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: Locator;
+  font-weight: bold;
+  > a, > a:hover {
+    text-decoration: none;
+  }
+}
+
+h1, .h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h2, .h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+
+h3, .h3 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 9px 0;
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: bold;
+}
+
+
+
+/*
+h1, h1 > a, h3, h3 > a, h1 > a:hover, h3 > a:hover {
+  color: $tree-poppy;
+  text-decoration: none;
+}
+h2, h2 > a, h2 > a:hover {
+  color: $violet-eggplant;
+  text-decoration: none;
+}
+h4, h4 > a, h4 > a:hover {
+  color: $text-color;
+  text-decoration: none;
+}
+*/
+
+// Marketing said we should usually only show the amplifier heart in orange
+.cbicon-heart {
+  color: $tree-poppy;
+}

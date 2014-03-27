@@ -1,0 +1,13 @@
+/**
+ * These files are core functions, mixins, variables that other scss files depend on.
+ * Avoid importing scss files that actually output CSS styles, to reduce duplicated styles and bloat.
+ * The order of the files is important for dependencies, so edit carefully.
+ */
+@import "functions";
+@import "compass";
+@import "global/colors";
+@import "global/variables";
+@import "global/bootstrap-variables";
+@import "bootstrap";
+@import "global/font-awesome-variables";
+@import "mixins";

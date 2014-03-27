@@ -1,0 +1,74 @@
+/**
+ * Mostly copied from Bootstrap 2.3 era...
+ */
+#site-notifications {
+  margin-bottom: 1em;
+  .img-polaroid {
+    margin-right: 0.5em;
+    width: 30px;
+    height: 30px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  .panel-heading {
+    > div {
+      cursor: pointer;
+    }
+    .site-toggle-container, .img-site, h4 {
+      @include inline-block(middle);
+    }
+  }
+  .img-site {
+    width: 50px;
+    height: auto;
+  }
+  .site-toggle-container {
+    @include inline-block;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    &.top {
+      padding-left: 8px;
+    }
+  }
+  .icon-chevron-down, .icon-chevron-up {
+    float: right;
+    margin-top: 1em;
+  }
+  .icon-chevron-up {
+    display: none;
+  }
+  .panel {
+    &.muted {
+      h4, i {
+        @extend .text-muted;
+      }
+    }
+    &.expanded {
+      .icon-chevron-up {
+        display: block;
+      }
+      .icon-chevron-down {
+        display: none;
+      }
+    }
+  }
+  table {
+    .notification-email, .notification-sms, .notification-insite {
+      text-align: center;
+    }
+    tr td.notification-title {
+      padding-left: 2em;
+    }
+    tr.second th {
+      padding-top: 1em;
+    }
+  }
+}
+
+.no-js {
+  .site-notifications-toggle, .icon-chevron-down, .icon-chevron-up, #site-notifications .panel.expanded .icon-chevron-up {
+    display: none;
+  }
+}

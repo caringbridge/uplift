@@ -1,0 +1,26 @@
+.groups-container {
+  legend {
+    @include clearfix;
+    padding-bottom: 5px;
+  }
+  .add-container {
+    @include inline-block;
+    float: right;
+    select {
+      margin-bottom: 0;
+    }
+  }
+  .groups-table {
+    th {
+      background: $alabaster;
+    }
+    .card {
+      width: 80px;
+      text-align: center;
+    }
+    .action {
+      text-align: center;
+      width: 50px;
+    }
+  }
+}

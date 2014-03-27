@@ -1,0 +1,53 @@
+//Sprite Animated Amp Heart to repalce the boring old Spinner gif.
+//inspired by Lea Verou (http://lea.verou.me/) at An Event Apart 2013, who was inspired by this guy: http://simurai.com/blog/2012/12/03/step-animation/
+.loading-frame {
+  width: 17px;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+.animation {
+  width: 17px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-left: .5em;
+}
+.no-cssanimations .loading-frame {
+  background: image-path('amp16.gif')
+}
+.cssanimations {
+  .loading-frame {
+    background-size:170px 16px;
+    -webkit-animation: amping 1s steps(10) infinite;
+    animation: amping 1s steps(10) infinite;
+  }
+  &.no-svg {
+    .loading-frame {
+      background: image-path('amp16.png')
+    }
+  }
+  &.svg {
+    .loading-frame {
+      //svg baked into CSS via base64.
+      //Inspired by Kyle Foster http://www.youtube.com/watch?v=iVzW3XuOm7E&feature=youtu.be (at about the 10 Minute mark)
+      @include background-image(inline-image('amp16.svg'));
+    }
+  }
+}
+@-webkit-keyframes amping {
+  0% {
+    background-position: 0px 0;
+  }
+  100% {
+    background-position: -170px 0;
+  }
+}
+@keyframes amping {
+  0% {
+    background-position: 0px 0;
+  }
+  100% {
+    background-position: -170px 0;
+  }
+}

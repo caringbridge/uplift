@@ -1,132 +1,85 @@
-    <div class="container">
-        &nbsp;
+<footer>
+    <nav class="navbar navbar-default navbar-static navbar-footer" role="navigation">
+        <ul class="nav navbar-nav navbar-left site-links">
+            <li><a href="#">Who We Are</a></li>
 
-        <footer data-ga-label-prefix="Footer - " id="brand-footer">
-            <nav id="fat-footer">
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org" class="normal-case">CaringBridge</a></h4>
+            <li><a href="#">What We Offer</a></li>
 
-                    <ul>
-                        <li><a href="http://www.caringbridge.org/sites" class="normal-case">Sites</a></li>
+            <li><a href="#" target="_blank">Help Center</a></li>
+        </ul>
 
-                        <li><a href="http://supportplanner.caringbridge.org" class="normal-case">SupportPlanner</a></li>
+        <ul class="nav navbar-nav navbar-right social-media-links">
+            <li>
+                <a href="#" target="_blank" title="Like CaringBridge on Facebook" data-ga-label="Facebook">
+                    <i class="cbicon-facebook"></i>
+                    <span class="sr-only">Like CaringBridge on Facebook</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="Follow @CaringBridge on Twitter" data-ga-label="Twitter">
+                    <i class="cbicon-twitter"></i>
+                    <span class="sr-only">Follow @CaringBridge on Twitter</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="Follow CaringBridge on Google+" data-ga-label="Google+" rel="publisher">
+                    <i class="cbicon-google"></i>
+                    <span class="sr-only">Follow CaringBridge on Google+</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" target="_blank" title="Follow CaringBridge on Pintrest" data-ga-label="Pintrest">
+                    <i class="cbicon-pinterest"></i>
+                    <span class="sr-only">Follow CaringBridge on Pintrest</span>
+                </a>
+            </li>
+            <li id="footer-youtube">
+                <a href="#" target="_blank" title="Subscribe to CaringBridge on YouTube" data-ga-label="YouTube">
+                    <i class="cbicon-youtube"></i>
+                    <span class="sr-only">Subscribe to CaringBridge on YouTube</span>
+                </a>
+            </li>
+            <li id="footer-linkedin">
+                <a href="#" target="_blank" title="Follow CaringBridge on LinkedIn" data-ga-label="LinkedIn">
+                    <i class="cbicon-linkedin"></i>
+                    <span class="sr-only">Follow CaringBridge on LinkedIn</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</footer>
 
-                        <li><a href="http://amplifierhub.caringbridge.org" class="normal-case">Amplifier Hub</a></li>
+<footer class="container-fluid fine-print">
+    <div class="row">
+        <div class="col-sm-12 col-md-7 copyright-info">
+            <p><a href="#" rel="license">Copyright</a> &#169; 1997-<?php strftime('%G'); ?> CaringBridge &#174;, a nonprofit organization.</p>
+            <p>By using this website, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a></p>
+        </div>
 
-                        <li><a href="http://www.caringbridge.org/mobile">Mobile</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org/about">About</a></h4>
-
-                    <ul>
-                        <li><a href="http://www.caringbridge.org/stories">Personal Stories</a></li>
-
-                        <li><a href="http://www.caringbridge.org/history">History</a></li>
-
-                        <li><a href="http://www.caringbridge.org/mission">Mission</a></li>
-
-                        <li><a href="http://www.caringbridge.org/careers">Careers</a></li>
-
-                        <li><a href="http://www.caringbridge.org/finance">Financials</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org/getinvolved">Get Involved</a></h4>
-
-                    <ul>
-                        <li><a href="http://amplifierhub.caringbridge.org/amptivities/volunteer/">Volunteer</a></li>
-
-                        <li><a href="http://www.caringbridge.org/share/footer" data-ga-label="Share CaringBridge">Share <span class="normal-case">CaringBridge</span></a></li>
-
-                        <li><a href="http://www.caringbridge.org/enews">E-newsletter</a></li>
-
-                        <li><a href="http://store.caringbridge.org">Store</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org/partners">Partners</a></h4>
-
-                    <ul>
-                        <li><a href="http://www.caringbridge.org/partners/contact/partner">Become a Partner</a></li>
-
-                        <li><a href="http://www.caringbridge.org/partners/healthcare">Healthcare</a></li>
-
-                        <li><a href="http://www.caringbridge.org/partners/insurance">Insurance</a></li>
-
-                        <li><a href="http://www.caringbridge.org/partners/nonprofit">Nonprofits</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org/newsroom">Newsroom</a></h4>
-
-                    <ul>
-                        <li><a href="http://www.caringbridge.org/newsrelease">News Releases</a></li>
-
-                        <li><a href="http://www.caringbridge.org/media">Media</a></li>
-
-                        <li><a href="http://www.caringbridge.org/awards">Awards</a></li>
-
-                        <li><a href="http://www.caringbridge.org/ratings">Ratings</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links">
-                    <h4><a href="http://www.caringbridge.org/waystogive">Ways to Give</a></h4>
-
-                    <ul>
-                        <li><a href="http://www.caringbridge.org/redirect-donation?split=1019">Donate Now</a></li>
-
-                        <li><a href="http://www.caringbridge.org/giveatwork#matchinggifts">Matching Gifts</a></li>
-
-                        <li><a href="http://www.caringbridge.org/fundableprojects">Fundable Projects</a></li>
-
-                        <li><a href="http://www.gftpln.org/Home.do?orgId=1042">Legacy Giving</a></li>
-                    </ul>
-                </div>
-
-                <div class="fat-footer-links last">
-                    <h4><a href="http://www.caringbridge.org/contact">Contact</a></h4>
-
-                    <ul>
-                        <li><a href="http://caringbridge.custhelp.com/" target="_blank">Help Center</a></li>
-
-                        <li><a href="http://www.caringbridge.org/feedback">Feedback</a></li>
-                    </ul>
-                </div>
-            </nav>
-
-            <div class="clear"></div>
-
-            <div class="clearfix">
-                <ul class="horizontal" id="social-media">
-                    <li><a title="Become a fan on Facebook" data-ga-action="Click - image" data-ga-label="Facebook" onclick="window.open(this.href,'facebook','menubar=yes,scrollbars=yes,resizable=yes,width=800,height=700,left=100,top=75'); stopDefaultAction(event);" href="http://www.facebook.com/caringbridge" class="facebook"><span>Become a fan on Facebook</span></a></li>
-
-                    <li><a title="Follow @CaringBridge on Twitter" data-ga-action="Click - image" data-ga-label="Twitter" onclick="window.open(this.href,'help','menubar=yes,scrollbars=yes,resizable=yes,width=800,height=700,left=100,top=75'); stopDefaultAction(event);" href="http://www.twitter.com/caringbridge" class="twitter"><span>Follow @CaringBridge on Twitter</span></a></li>
-
-                    <li><a title="Follow CaringBridge on Google+" data-ga-action="Click - image" data-ga-label="Google+" onclick="window.open(this.href,'help','menubar=yes,scrollbars=yes,resizable=yes,width=800,height=700,left=100,top=75'); stopDefaultAction(event);" href="https://plus.google.com/113554774990455135149" class="googleplus"><span>Follow CaringBridge on Google+</span></a></li>
-
-                    <li><a title="Find us on YouTube" data-ga-action="Click - image" data-ga-label="YouTube" onclick="window.open(this.href,'help','menubar=yes,scrollbars=yes,resizable=yes,width=800,height=700,left=100,top=75'); stopDefaultAction(event);" href="http://www.youtube.com/caringbridge" class="youtube"><span>Find us on YouTube</span></a></li>
-                </ul>
-
-                <p id="copyright"><a href="http://www.caringbridge.org/copyright">Copyright</a> &copy; 1997-<?php echo(strftime('%G')); ?> CaringBridge&reg;, a nonprofit organization</p>
-
-                <p>By using this website, you agree to our <a target="_blank" href="http://www.caringbridge.org/termsofuse">Terms of Use</a> and <a target="_blank" href="http://www.caringbridge.org/privacy">Privacy Policy</a>.</p>
-            </div>
-
-            <ul class="privacy-seals">
-                <li><a onclick="window.open('http://clicktoverify.truste.com/pvr.php?page=validate&amp;url=www.caringbridge.org&amp;sealid=101','help','toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=550,left=150,top=75,screenX=700,screenY=550'); stopDefaultAction(event);" target="_blank" id="truste-image" href="http://clicktoverify.truste.com/pvr.php?page=validate&amp;url=www.caringbridge.org&amp;sealid=101" data-ga-action="Click - image" data-ga-label="TRUSTe image"><img alt="Validate TRUSTe Privacy Certification" src="http://www.caringbridge.org/tres/images/seal_truste.png" class="img-truste"></a></li>
-
-                <li><a onclick="window.open('//www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=10519','help','toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=550,left=150,top=75,screenX=700,screenY=550'); stopDefaultAction(event);" target="_blank" id="charitynav-image" href="//www.charitynavigator.org/index.cfm?bay=search.summary&amp;orgid=10519" data-ga-action="Click - image" data-ga-label="Charity Navigator image"><img alt="Charity Navigator" src="http://www.caringbridge.org/tres/images/seal_charitynav.png" class="img-charitynav"></a></li>
-
-                <li><a onclick="window.open('//charityreports.bbb.org/public/seal.aspx?ID=2352282007','help','toolbar=yes,menubar=yes,scrollbars=yes,resizable=yes,width=800,height=550,left=150,top=75,screenX=700,screenY=550'); stopDefaultAction(event);" target="_blank" id="bbb-image" href="//charityreports.bbb.org/public/seal.aspx?ID=2352282007" data-ga-action="Click - image" data-ga-label="BBB image"><img alt="Better Business Bureau accredited charity" src="http://www.caringbridge.org/tres/images/seal_bbb.png" class="img-bbb"></a></li>
+        <div class="col-sm-12 col-md-5 privacy-seal-list">
+            <ul class="list-inline">
+                <li>
+                    <a class="truste-seal"
+                        href="#"
+                        target="_blank">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/ph.gif" alt="Validate TRUSTe Privacy Certification"/>
+                    </a>
+                </li>
+                <li>
+                    <a class="charitynav-seal"
+                        href="#"
+                        target="_blank">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/ph.gif" alt="Charity Navigator Four Star Charity"/>
+                    </a>
+                </li>
+                <li>
+                    <a class="bbb-seal"
+                        href="#"
+                        target="_blank">
+                        <img src="<?php bloginfo('template_directory'); ?>/img/ph.gif" alt="Better Business Bureau Accredited Charity"/>
+                    </a>
+                </li>
             </ul>
-        </footer>
-    </div><!-- div.container -->
-    <?php wp_footer(); ?>
-</body>
-</html>
+        </div>
+    </div>
+</footer>

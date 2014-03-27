@@ -1,0 +1,12 @@
+// CaringBridge adds when viewing own profile
+.life-cycle {
+
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    margin-top: 0;
+  }
+
+  img {
+    @extend .img-responsive;
+    margin-bottom: 9px;
+  }
+}

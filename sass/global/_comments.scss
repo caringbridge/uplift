@@ -1,0 +1,24 @@
+// Push down media object if there's a label on the form field next to it
+form {
+  .media.media-offset {
+    .pull-left {
+      margin-top: 2em;
+    }
+  }
+}
+
+// Breathing room between comments
+#comment-container {
+  .media {
+    margin-bottom: 1em;
+  }
+}
+
+// Non-JS comment editing isn't implemented (yet?), so just hide this mechanism when JS isn't available
+.no-js {
+  .comment-replies {
+    .edit-reply {
+      display: none;
+    }
+  }
+}

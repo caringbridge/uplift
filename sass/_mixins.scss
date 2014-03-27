@@ -1,0 +1,161 @@
+/**
+ * Generate an "elastic" layout where the left side is fluid and the right side is static
+ * Assumes the following general document structure:
+ *
+ * <div>
+ *     <div class="subcontainer-fluid"></div>
+ *     <div class="subcontainer-static"></div>
+ * </div>
+ *
+ * Inspired by: http://alistapart.com/article/multicolumnlayouts
+ * @param  $static-width            total width of the static column
+ * @param  $static-gutter           inner padding in the static column
+ * @param  $static-background-color  background color of the static column
+ * @param  $break-point             media query width below which we stack
+ */
+@mixin fluid-static-container (
+    $static-width: 260px,
+    $static-gutter: 0,
+    $static-background-color: $alabaster,
+    $break-point: 767px
+) {
+
+  * html & {
+    height: 1%; /* So IE plays nice */
+  }
+
+  overflow: hidden;
+  padding-right: $static-width;
+  .subcontainer-fluid {
+    width: 100%;
+    border-right: $static-width solid $static-background-color;
+    margin-right: -$static-width;
+    float: left;
+  }
+  .subcontainer-static {
+    background-color: $static-background-color;
+    width: $static-width - 2 * $static-gutter;
+    float: left;
+    margin-right: -$static-width;
+    padding: $static-gutter;
+  }
+
+  // Stack vertically on narrower screens
+  @media all and (max-width: $break-point) {
+    overflow: visible;
+    padding-right: 0;
+    .subcontainer-fluid {
+      border-right: none;
+      margin-right: 0;
+      float: none;
+    }
+    .subcontainer-static {
+      background-color: $static-background-color;
+      width: auto;
+      float: none;
+      margin-right: 0;
+    }
+  }
+}
+
+/**
+ * At one point Marketing thought it was a good idea to lowercase everything.
+ * Hopefully this is now deprecated.
+ */
+@mixin friendly-case {
+  text-transform: lowercase;
+  &.normalText, &.normal-case, &.proper-noun, &.user-generated, &.admin-generated,
+  .normalText, .normal-case, .proper-noun, .user-generated, .admin-generated {
+    text-transform: none;
+  }
+}
+
+/**
+ * Prevent user-entered text from breaking layouts
+ * Hat-tip: http://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/
+ */
+@mixin force-word-wrap {
+  /* Non standard for webkit */
+  word-break: break-word;
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/**
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+@mixin visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+@mixin visually-hidden-focusable {
+  @include visually-hidden;
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/**
+ * Force a container to have a certain aspect ratio
+ * Hat-tip: http://www.mademyday.de/css-height-equals-width-with-pure-css.html
+ * @param  fraction (height / width) representing aspect ratio the outer element should have (i.e. 16/9)
+ */
+@mixin aspect-ratio($ratio) {
+  @include aspect-ratio-parent($ratio);
+  > :first-child {
+    @include aspect-ratio-child;
+  }
+}
+
+/**
+ * Force a container to have a certain aspect ratio (but no styles for child)
+ * Use this in conjunction with the aspect-ratio-child mixin
+ */
+@mixin aspect-ratio-parent($ratio) {
+  position: relative;
+  &:before{
+    content: "";
+    display: block;
+    padding-top: percentage(1/$ratio);
+  }
+}
+
+/**
+ * Styles for child element of a container with forced aspect ratio
+ * Use this in conjunction with the aspect-ratio-parent mixin
+ */
+@mixin aspect-ratio-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+
+/**
+ * Bulge an element out -- perhaps to overtake parental padding
+ * @parameter  length  $width  how much the element should buldge out
+ */
+@mixin bulge ($width: ($grid-gutter-width / 2)) {
+  margin-left:  -$width;
+  margin-right: -$width;
+  padding-left:  $width;
+  padding-right: $width;
+}

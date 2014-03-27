@@ -1,0 +1,37 @@
+/*
+ * This is the "orange bar" treatment applied to page-level headings on V5 sites and a handful of other pages
+ */
+.brooklyn-bar {
+  padding: 0 ($grid-gutter-width / 2);
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: desaturate(darken($tree-poppy, 2%), 5%);
+  background-color: $tree-poppy; // fallback for IE
+  @include background-image(linear-gradient(lighten($tree-poppy, 10%), $tree-poppy));
+  color: $white; // color contrast accessibility be damned!
+  text-shadow: 0 -1px 1px rgba(0,0,0,.1);
+  @include bulge;
+  margin-bottom: 1em;
+  i {
+    color: $white;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    img {
+      margin: 4px 9px 4px 0;
+      width: 40px;
+      height: 40px;
+    }
+    a {
+      text-shadow: 0 -1px 1px rgba(0,0,0,.1);
+      color: $white;
+      text-decoration: none;
+      @include inline-block;
+      &.active, &:hover, &:focus {
+        color: $white;
+        background: $tree-poppy;
+      }
+    }
+  }
+}

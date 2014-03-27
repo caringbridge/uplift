@@ -7,7 +7,4 @@
         { "type": "composer", "url": "http://packages.caringbridge.org" },
         { "packagist": false }
     ],
-    "require": {
-        "caringbridge/brand": "dev-master"
-    }
 }

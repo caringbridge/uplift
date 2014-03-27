@@ -1,0 +1,13 @@
+/**
+ * Images. We'll never, ever be satisfied with how images look.
+ */
+
+// Profile thumbnails, profile main photo on profile page (placeholder, because you just know it's going to change)
+.img-profile {
+}
+
+// Site thumbnails, Site main photo in V5 site banner
+.img-site {
+  @extend .img-rounded;
+  border: 1px solid $white;
+}

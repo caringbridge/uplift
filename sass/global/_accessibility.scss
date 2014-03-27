@@ -1,0 +1,10 @@
+.visuallyhidden {
+  @include visually-hidden;
+}
+.visuallyhidden, .sr-only {
+  &.focusable {
+    &:active, &:focus {
+      @include visually-hidden-focusable;
+    }
+  }
+}

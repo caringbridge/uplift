@@ -1,0 +1,4 @@
+// We should try to use Bootstrap's pre-defined contexts (of which "error" isn't one), but we have alert-errors in so many freaking places...
+.alert-error {
+  @extend .alert-danger;
+}

@@ -1,0 +1,48 @@
+.layout {
+  margin: 0 auto 1em auto;
+  @media screen and (min-width: $screen-xs) {
+    @include box-shadow(0 5px 9px 4px rgba(0,0,0,0.2));
+  }
+}
+
+.container-fluid {
+  @include box-sizing(border-box);
+  max-width: $screen-lg;
+  @media screen and (min-width: $screen-sm / .9) and (max-width: ($screen-lg / .9)) {
+    max-width: 90%;
+  }
+  @media screen and (min-width: $screen-sm) and (max-width: ($screen-sm / .9)) {
+    max-width: $screen-sm;
+  }
+}
+
+// Let them eat scroll!
+.no-mediaqueries {
+  .container-fluid {
+    min-width: $screen-sm;
+  }
+}
+
+/**
+ * It's best to wrap floated stuff in a BS3-provided .clearfix element:
+ *     <div class="clearfix">
+ *         <div class="pull-right">Blah blah blah</div>
+ *     </div>
+ *
+ * If that's not possible, you can use a .clear afterwards, though it's not ideal:
+ *     <div class="pull-right">Blah blah blah</div>
+ *     <div class="clear"></div>
+ */
+.clear {
+  clear: both;
+}
+
+// Prevent long user input from breaking design and force original text case
+.user-generated {
+  @include force-word-wrap;
+  text-transform: none; // Don't modify user's original capitalization
+}
+
+.container-bulge {
+  @include bulge;
+}

@@ -1,0 +1,69 @@
+/**
+ * V5 CaringBook
+ */
+
+$coverAspectRatio: 208/267;
+
+.caringbook {
+  .caringbook-longlist {
+    overflow-y: auto;
+    padding: .5em 1em;
+    max-height: 400px;
+    max-height: 61.8vh;
+    @media screen and (max-width: 767px) {
+      max-height: 200px;
+      max-height: 30.9vh;
+    }
+  }
+}
+
+.no-backgroundsize {
+  #caringbook-cover-preview-wrapper {
+    width: 208px;
+    height: 267px;
+  }
+}
+
+.caringbook-details {
+
+  #caringbook-cover-preview-wrapper {
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include aspect-ratio-parent($coverAspectRatio);
+  }
+
+  #caringbook-cover-preview-contents {
+    @include aspect-ratio-child;
+    left: 12%; // Cover images have extra binding margin (of mostly the same size) on left that throws off centering
+  }
+
+  #caringbook-cover-preview-title {
+    position: absolute;
+    top: 30%;
+    padding: 0 12%; // Make text roughly line up with photo placeholder white space
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+  }
+
+  #caringbook-cover-preview-photo {
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    // Specify top and bottom of image container to match up with background's placeholder space
+    top: 47%;
+    bottom: 12.5%;
+    width: 100%;
+    text-align: center;
+    // Have image fill up vertical space and be centered (since the aspect ratio is unknown)
+    img {
+      height: 100%;
+      width: auto;
+      @include inline-block;
+    }
+  }
+}

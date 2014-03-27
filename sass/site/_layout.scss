@@ -1,0 +1,78 @@
+.layout.layout-site {
+  @include clearfix;
+}
+
+// Give content and footer some separation on log in page
+.layout-site-full {
+  //@ryan - I changed this to padding so the background color of the UGC page doesn't cut off.
+  padding-bottom: 2em;
+}
+
+.site-header {
+  // undo .container padding for heading
+  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width / 2);
+  // extra breathing room below site navigation
+  margin-bottom: 1em;
+
+  // V5 Site header's brooklyn bar doesn't need any of the margin tweaks it gets elsewhere
+  .brooklyn-bar {
+    margin: 0;
+  }
+}
+
+// V5 "theme" banner
+.site-header-banner {
+  background-color: $alabaster;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+
+  /**
+   * A smaller (hopefully square) site photo that sits inside the .site-header-banner
+   * This is inside of a wrapper so we can round both the image corners and the container corners
+   */
+  .site-header-banner-img-container {
+    @include border-radius(6px);
+    @include inline-block;
+    padding: 4px;
+    background: $white;
+    @include background(linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,.8)));
+    @include box-shadow(0 1px 1px rgba(0,0,0,.1));
+    margin: 1em;
+    height: auto;
+    width: auto;
+    max-width: 25%;
+    max-height: 188px; // make sure vertically tall photos don't make the banner huge
+
+    img {
+      @include border-radius(3px);
+      border: none;
+    }
+  }
+}
+
+/**
+ * Site image in alert message when logging into a medium / high site
+ */
+.alert {
+  .img-site {
+    max-height: 150px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+.site-content {
+  padding-bottom: 1em;
+}
+
+/**
+ * Container for images, doodles, videos, when displaying a guestbook / journal post
+ */
+.media-attachments {
+  margin: 1em 0;
+  .video-container {
+    margin: 0 0 1em 0;
+  }
+}

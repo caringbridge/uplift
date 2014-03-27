@@ -1,0 +1,108 @@
+/**
+ * V5 Site Settings - Theme page
+ * These are collapsable panels with selectable themes, grouped by category
+ */
+
+.js {
+  .theme-category-link {
+    text-decoration: none;
+  }
+}
+
+#site-settings-theme {
+  margin-bottom: 1em;
+  .theme-category-link {
+    display: block;
+    line-height: 58px;
+  }
+  .theme-category-photo {
+    text-align: center;
+    float: left;
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 4px 1em 4px 4px;
+    img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+    i {
+      font-size: 45px;
+    }
+  }
+  .icon-chevron-up, .icon-chevron-down {
+    margin: 1em;
+  }
+  .icon-chevron-down {
+    @include inline-block;
+  }
+  .icon-chevron-up {
+    display: none;
+  }
+  .expanded {
+    .icon-chevron-up {
+      @include inline-block;
+    }
+    .icon-chevron-down {
+      display: none;
+    }
+  }
+}
+
+.theme-options {
+  .theme-label {
+    margin: 0 1em 1em 0;
+    .theme-title {
+      font-weight: bold;
+    }
+    .theme-option {
+      margin: 3px 0;
+      display: block;
+      img {
+        float: right;
+        height: 100px;
+        @media (max-width: $screen-xs) {
+          height: 50px;
+        }
+      }
+    }
+    &.active, &:focus, &:hover {
+      .theme-option {
+        @include box-shadow(0 1px 3px rgba(0,0,0,.3));
+      }
+    }
+  }
+}
+.themes {
+  li {
+    list-style: none;
+    label {
+      border: 1px solid transparent;
+      cursor: pointer;
+      @include inline-block;
+      @include border-radius($border-radius-small);
+      padding: .5em 1em 1em 1em;
+      input {
+        vertical-align: text-bottom;
+      }
+      span {
+        vertical-align: middle;
+      }
+      img {
+        margin-top: .5em;
+        clear: both;
+        display: block;
+      }
+      &:hover {
+        background: lighten($gray-lighter, 10%);
+        border-color: lighten($gray-light, 10%);
+      }
+    }
+    &.active {
+      label {
+        background: $gray-lighter;
+        border-color: $gray-light;
+      }
+    }
+  }
+}

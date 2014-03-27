@@ -1,0 +1,13 @@
+// Pags said this should be bigger than Bootstrap's default so that the panel headings pop
+.panel-title {
+  font-size: 20px;
+}
+
+// Space is limited inside panel, so no extra margin below button in panel-footer
+.panel-footer {
+  .btn-toolbar {
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+}

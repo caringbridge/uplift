@@ -1,0 +1,62 @@
+/**
+ * Helpful Tips displayed on the site welcome page
+ */
+.helpful-tip {
+  border: 1px solid $gray-lighter;
+  @include box-shadow(0 1px 9px 1px rgba(0, 0, 0, 0.2));
+  @include clearfix;
+  @include border-radius($border-radius-base);
+  padding: 1em;
+  margin-bottom: 1em;
+  h4 {
+    margin-top: 0;
+  }
+  .media {
+    margin-top: 0; /** Overwrites top-padding on Bootstrap .media class, comes in play on the Panel-mimiced Boxes */
+  }
+}
+
+//Not Quite Sure where these come into play....
+.helpful-tip .site-features {
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline;
+    float: left;
+    width: 33.3333%;
+    .inner-box {
+      border: 1px dotted $gray-lighter;
+      padding: 1em;
+      margin-right: 0.5em;
+    }
+    .inner-box-last {
+      margin-right: 0;
+    }
+  }
+}
+.helpful-tip .site-features-close {
+  padding-top: 0.5em;
+}
+.cms-helpful-tip {
+  border-color: $gray-lighter;
+  .dismiss-tip {
+    color: $gray-light;
+    margin-left: 0.5em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  &.left   .arrow { right: -8px; &:after  { border-left-color: $gray-lighter;   } }
+  &.right  .arrow { left: -15px; &:after   { border-right-color: $gray-lighter;  } }
+  &.bottom .arrow { top: -10px; &:after    { border-bottom-color: $gray-lighter; } }
+  &.top    .arrow { bottom: 0; top: auto; &:after { border-top-color: $gray-lighter;    } }
+  > .popover-title {
+    background: white;
+    border: 0;
+    color: $violet-eggplant;
+  }
+}

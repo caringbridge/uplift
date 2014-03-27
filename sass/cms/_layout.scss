@@ -1,0 +1,23 @@
+.layout-corporate {
+  @include clearfix;
+  @media screen and (min-width: $screen-sm) {
+    background: image-path('cb-corpsite-bg.png') 0% 100% no-repeat;
+    padding-bottom: 230px;
+  }
+}
+
+// Grid to cover 767px-600px to allow content to stay in 2 columns just a weeeee bit longer.
+// Set the container width, and override it for fixed navbars in media queries
+$w: 600px;
+.container {
+  @media (min-width: $w) and (max-width: $screen-sm-min - 1) {
+    width: $w + $grid-gutter-width;
+  }
+}
+@media (min-width: $w) and (max-width: $screen-sm-min - 1) {
+  @include make-grid-columns-float(xxs);
+  @include make-grid($grid-columns, xxs, width);
+  @include make-grid($grid-columns, xxs, pull);
+  @include make-grid($grid-columns, xxs, push);
+  @include make-grid($grid-columns, xxs, offset);
+}

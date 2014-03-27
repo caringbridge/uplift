@@ -1,0 +1,42 @@
+.layout {
+  .ugc-hero, .ugc-message {
+    background-repeat: repeat;
+    background-position: bottom right;
+  }
+}
+.no-multiplebgs {
+  .layout {
+    .ugc-hero, .ugc-message {
+      background-repeat: repeat-x;
+      background-position: bottom left;
+    }
+  }
+}
+
+.ugc-hero {
+  border-width: 0 0 3px 0;
+  border-style: solid;
+  text-align: center;
+  .ugc-hero-image {
+    padding: .5em 3em;
+    .img-responsive {
+      //get the image to hear the .text-align on its parent
+      display: inline-block;
+    }
+  }
+}
+.ugc-form {
+  margin-bottom: 20px; //match the bottom margin of the pagination in the adjacent column
+}
+.ugc-repeater {
+  height: 225px;
+}
+.ugc-message {
+  border-width: 1px;
+  border-style: solid;
+  @extend .well;
+  margin: 1em 0;
+}
+.ugc-share-image {
+  margin: 20px 0 10px 0; //match the top/bottom margin of the h2 in the adjacent column
+}

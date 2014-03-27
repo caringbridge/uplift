@@ -1,0 +1,227 @@
+@include font-face(
+  "cbicons",
+  font-files(font-path("cbicons.woff"), font-path("cbicons.ttf"), font-path("cbicons.svg")),
+  font-path("cbicons.eot")
+);
+
+/**
+ * Crank out cbicon rules
+ *
+ * @param  string      $character  escaped unicode hex character representing icon in the icon font (i.e. '\e123')
+ * @param  string|list $icons      one or more aliases for the icon (by convention, the first is the "preferred" alias)
+ * @return string                  CSS rule(s) for matching up an icon to one or more cbicon-* classes
+ */
+@mixin cbicon($character, $icons...) {
+  @each $icon in $icons {
+    .cbicon-#{$icon}:before { content: $character }
+  }
+}
+
+/* Sites Service */
+@include cbicon('\e008', 'sites', 'users');
+@include cbicon('\e027', 'site-home', 'house');
+@include cbicon('\e032', 'journal');
+@include cbicon('\e034', 'planner');
+@include cbicon('\e026', 'photos');
+@include cbicon('\e031', 'guestbook');
+@include cbicon('\e002', 'tributes', 'flower', 'tribute');
+@include cbicon('\e035', 'privacy');
+@include cbicon('\e030', 'groups');
+@include cbicon('\e025', 'notifications');
+
+/* Web Application */
+@include cbicon('\e006', 'chat', 'talk', 'discussion', 'conversation');
+@include cbicon('\e013', 'comment', 'write', 'journal', 'diary');
+@include cbicon('\e028', 'crop');
+@include cbicon('\e02a', 'edit');
+@include cbicon('\e03b', 'find');
+@include cbicon('\e003', 'heart');
+@include cbicon('\e004', 'heart-no-amps'); // no wi-fi
+@include cbicon('\e03d', 'print');
+@include cbicon('\e03a', 'delete', 'trash', 'remove'); // trashcan
+@include cbicon('\e037', 'reply');
+@include cbicon('\e03c', 'save');
+@include cbicon('\e038', 'share'); // mirror image of reply for some reason
+@include cbicon('\e005', 'start', 'peacock-arrow', 'my-story');
+@include cbicon('\e001', 'visit', 'door');
+
+/* Guestbook Features */
+@include cbicon('\e03e', 'send-card');
+@include cbicon('\e029', 'draw-picture');
+@include cbicon('\e033', 'add-location');
+
+/* Social Media */
+@include cbicon('\e02b', 'facebook');
+@include cbicon('\e02c', 'twitter');
+@include cbicon('\e02e', 'google');
+@include cbicon('\e030', 'youtube');
+@include cbicon('\e02d', 'pinterest');
+@include cbicon('\e02f', 'linkedin');
+
+/* Amplifier Hub */
+@include cbicon('\e024', 'volunteers', 'user');
+@include cbicon('\e012', 'local-community', 'houses');
+@include cbicon('\e014', 'global-community', 'globe', 'world');
+@include cbicon('\e00a', 'celebrate', 'star');
+@include cbicon('\e01b', 'network', 'resources');
+@include cbicon('\e021', 'amplifying', 'amplifier-right');
+
+/* Legacy */
+@include cbicon('\e007', 'mail');
+@include cbicon('\e009', 'stars', 'welcome');
+@include cbicon('\e00b', 'sun');
+@include cbicon('\e00c', 'photo');
+@include cbicon('\e00d', 'inverted-photo');
+@include cbicon('\e00e', 'amplifier-tree');
+@include cbicon('\e00f', 'amplifier-parachute');
+@include cbicon('\e010', 'computer');
+@include cbicon('\e015', 'amplifier');
+@include cbicon('\e016', 'amplifier-balloon');
+@include cbicon('\e017', 'person-touchdown');
+@include cbicon('\e018', 'person-disco');
+@include cbicon('\e019', 'person-jump');
+@include cbicon('\e01a', 'talk-inverted');
+@include cbicon('\e01c', 'add-calendar');
+@include cbicon('\e01d', 'calendar');
+@include cbicon('\e01e', 'gears', 'settings');
+@include cbicon('\e01f', 'plus');
+@include cbicon('\e020', 'user-add');
+@include cbicon('\e022', 'dog-tags');
+@include cbicon('\e023', 'user-question');
+
+
+/* Shamelessly stolen from Font Awesome */
+[class^="cbicon-"],
+[class*=" cbicon-"] {
+  font-family: cbicons;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+
+  /* sprites.less reset */
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: 93.5%; // hack, no idea why this needs to be different than font awesome, but it does
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
+
+/* more sprites.less reset */
+.icon-white,
+.nav-pills > .active > a > [class^="cbicon-"],
+.nav-pills > .active > a > [class*=" cbicon-"],
+.nav-list > .active > a > [class^="cbicon-"],
+.nav-list > .active > a > [class*=" cbicon-"],
+.navbar-inverse .nav > .active > a > [class^="cbicon-"],
+.navbar-inverse .nav > .active > a > [class*=" cbicon-"],
+.dropdown-menu > li > a:hover > [class^="cbicon-"],
+.dropdown-menu > li > a:hover > [class*=" cbicon-"],
+.dropdown-menu > .active > a > [class^="cbicon-"],
+.dropdown-menu > .active > a > [class*=" cbicon-"],
+.dropdown-submenu:hover > a > [class^="cbicon-"],
+.dropdown-submenu:hover > a > [class*=" cbicon-"] {
+  background-image: none;
+}
+
+[class^="cbicon-"]:before,
+[class*=" cbicon-"]:before {
+  text-decoration: inherit;
+  @include inline-block;
+  speak: none;
+}
+
+/* makes sure icons active on rollover in links */
+a {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    display: inline-block;
+  }
+}
+
+.btn, .nav {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    display: inline;
+    /* keeps button heights with and without icons the same */
+    &.icon-large { line-height: .9em; }
+    &.icon-spin { display: inline-block; }
+  }
+}
+
+.nav-tabs, .nav-pills {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    /* keeps button heights with and without icons the same */
+    &, &.icon-large { line-height: .9em; }
+  }
+}
+
+li, .nav li {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    display: inline-block;
+    width: 1.25em;
+    text-align: center;
+    &.icon-large {
+      /* increased font size for icon-large */
+      width: 1.5625em;
+    }
+  }
+}
+
+ul.icons {
+  li {
+    [class^="cbicon-"],
+    [class*=" cbicon-"] {
+      width: .75em;
+    }
+  }
+}
+
+[class^="cbicon-"],
+[class*=" cbicon-"] {
+  &.pull-left {
+    margin-right: .3em;
+  }
+  &.pull-right {
+    margin-left: .3em;
+  }
+}
+
+.btn {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    &.pull-left, &.pull-right {
+      &.icon-2x { margin-top: .18em; }
+    }
+    &.icon-spin.icon-large { line-height: .8em; }
+  }
+}
+
+.btn.btn-small {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    &.pull-left, &.pull-right {
+      &.icon-2x { margin-top: .25em; }
+    }
+  }
+}
+
+.btn.btn-large {
+  [class^="cbicon-"],
+  [class*=" cbicon-"] {
+    margin-top: 0; // overrides bootstrap default
+    &.pull-left, &.pull-right {
+      &.icon-2x { margin-top: .05em; }
+    }
+    &.pull-left.icon-2x { margin-right: .2em; }
+    &.pull-right.icon-2x { margin-left: .2em; }
+  }
+}
+
+/* end of stolen font awesome rules */

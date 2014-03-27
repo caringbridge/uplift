@@ -1,0 +1,63 @@
+body > .popover {
+  max-width: 500px;
+  width: 500px;
+}
+
+.popover pre.error-log {
+  background: transparent;
+  border: none;
+}
+
+#log-filter {
+  .control-group {
+    width: 200px;
+    @include inline-block;
+  }
+}
+
+#replicant-log {
+  margin-top: 1em;
+}
+
+#error-log {
+  // Prevent long cell contents from changing the width of the table
+  table-layout: fixed;
+  // Force long cell contents to be wrapped
+  word-wrap: break-word;
+
+  .level {
+    width: 6em;
+  }
+
+  .message {
+    small {
+      @include inline-block;
+      width: 40px;
+      @include ellipsis;
+      color: $gray;
+      padding-right: 0.5em;
+      font-weight: bold;
+    }
+    .activity {
+      color: $violet-eggplant;
+      font-style: italic;
+    }
+    .role {
+      color: $squirrel;
+      font-size: italic;
+    }
+    .notification {
+      font-weight: bold;
+      color: $gray;
+    }
+  }
+  .host {
+    color: $gray-light;
+  }
+  .created-at {
+    width: 6em;
+  }
+  td.created-at {
+    text-align: right;
+  }
+}

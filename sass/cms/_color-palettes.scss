@@ -1,0 +1,163 @@
+// shared-story content regions color palettes. Used on Homepage and Gallery Template.
+// @todo generalize the color palettes to use a common set accross all content regions/ widgets that have color customization.
+.well-orange {
+  @extend .well;
+  background: lighten($tree-poppy, 35%);
+  border: 1px solid lighten($flamingo, 20%);
+  color: $flamingo;
+  @include box-shadow(0 0 0.3em 0.3em rgba($tree-poppy, 0.1));
+}
+.well-green {
+  @extend .well;
+  background: lighten($key-lime-pie, 45%);
+  border: 1px solid lighten($key-lime-pie, 20%);
+  color: $trendy-green;
+  @include box-shadow(0 0 0.3em 0.3em rgba($key-lime-pie, 0.1));
+}
+.well-blue {
+  @extend .well;
+  background: lighten($indigo, 40%);
+  border: 1px solid lighten($indigo, 20%);
+  color: $congress-blue;
+  @include box-shadow(0 0 0.3em 0.3em rgba($indigo, 0.1));
+}
+.well-red {
+  @extend .well;
+  background: lighten($hibiscus, 45%);
+  border: 1px solid lighten($hibiscus, 30%);
+  color: $roof-terracotta;
+  @include box-shadow(0 0 0.3em 0.3em rgba($hibiscus, 0.1));
+}
+.well-teal {
+  @extend .well;
+  background: lighten($downy, 30%);
+  border: 1px solid lighten($downy, 10%);
+  color: $bahama-blue;
+  @include box-shadow(0 0 0.3em 0.3em rgba($downy, 0.1));
+}
+.well-purple {
+  @extend .well;
+  background: lighten($violet-eggplant, 55%);
+  border: 1px solid lighten($violet-eggplant, 40%);
+  color: $violet-eggplant;
+  @include box-shadow(0 0 0.3em 0.3em rgba($violet-eggplant, 0.1));
+}
+
+
+
+
+// Panel Color Palettes. Used on v5-site-panel and tribute-panel customization in CMS
+// custom button colors are only applicable on custom tribute-panels... Sorry Ryan!
+.panel.panel-orange {
+  background: lighten($tree-poppy, 43%);
+  @include panel-variant(
+    $border: $tree-poppy,
+    $heading-text-color: $white,
+    $heading-bg-color: $tree-poppy,
+    $heading-border: $tree-poppy);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($tree-poppy, 10%));
+  }
+}
+.btn-custom.btn-orange {
+  @include btn-styles($btn-color: lighten($tree-poppy, 4%));
+  color: $white;
+}
+
+.panel.panel-green {
+  background: lighten($key-lime-pie, 55%);
+  @include panel-variant(
+    $border: $key-lime-pie,
+    $heading-text-color: $white,
+    $heading-bg-color: $key-lime-pie,
+    $heading-border: $key-lime-pie);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($key-lime-pie, 8%));
+  }
+}
+.btn-custom.btn-green {
+  @include btn-styles($btn-color: lighten($key-lime-pie, 6%));
+  color: $white;
+}
+
+.panel.panel-blue {
+  background: lighten($indigo, 45%);
+  @include panel-variant(
+    $border: $indigo,
+    $heading-text-color: $white,
+    $heading-bg-color: $indigo,
+    $heading-border: $indigo);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($indigo, 8%));
+  }
+}
+.btn-custom.btn-blue {
+  @include btn-styles($btn-color: $indigo);
+  color: $white;
+}
+
+.panel.panel-pink {
+  background: lighten($hibiscus, 47%);
+  @include panel-variant(
+    $border: $hibiscus,
+    $heading-text-color: $white,
+    $heading-bg-color: $hibiscus,
+    $heading-border: $hibiscus);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($hibiscus, 10%));
+  }
+}
+.btn-custom.btn-pink {
+  @include btn-styles($btn-color: lighten($hibiscus, 4%));
+  color: $white;
+}
+
+.panel.panel-red {
+  background: lighten($flamingo, 37%);
+  @include panel-variant(
+    $border: $hibiscus,
+    $heading-text-color: $white,
+    $heading-bg-color: $flamingo,
+    $heading-border: $flamingo);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($flamingo, 4%));
+  }
+}
+.btn-custom.btn-red {
+  @include btn-styles($btn-color: $flamingo);
+  color: $white;
+}
+
+.panel.panel-teal {
+  background: lighten($downy, 35%);
+  @include panel-variant(
+    $border: $downy,
+    $heading-text-color: $white,
+    $heading-bg-color: $downy,
+    $heading-border: $downy);
+  > .panel-heading {
+    @include panel-heading-styles($downy);
+  }
+}
+.btn-custom.btn-teal {
+  @include btn-styles($btn-color: darken($downy, 4%));
+  color: $white;
+}
+
+// This is the OG tribute-panel treatment concocted by THE RYAN RUD. Bow to his excellence
+// (Also the failsafe if the panel gets saved without a color theme selected)
+.panel.panel-purple {
+  background: lighten($snuff, 7%);
+  @include panel-variant(
+    $border: $violet-eggplant,
+    $heading-text-color: $white,
+    $heading-bg-color: $violet-eggplant,
+    $heading-border: $violet-eggplant);
+  > .panel-heading {
+    @include panel-heading-styles(lighten($violet-eggplant, 8%));
+  }
+}
+.btn-custom.btn-purple {
+  @include btn-styles($btn-color: $violet-eggplant);
+  color: $white;
+}

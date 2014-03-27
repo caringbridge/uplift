@@ -1,0 +1,20 @@
+@media (max-width: $grid-float-breakpoint-max) {
+  .navbar-collapse {
+    max-height: none; // Old Android browser gets funky with overflow scrolling... not worth it
+    max-height: 75vh; // If they support viewport units, make the stacked navbar not take up their whole screen
+    .navbar-nav {
+      > li {
+        > a {
+          // Make small-screen stacked navbar links be around 44px high
+          padding-top: 12px;
+          padding-bottom: 12px;
+          @include transition(padding .1s);
+        }
+      }
+    }
+  }
+  // When stacked, the form gets extra borders, which ends up looking funky next to the divider
+  .navbar-form {
+    border-width: 0;
+  }
+}

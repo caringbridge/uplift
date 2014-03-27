@@ -1,0 +1,11 @@
+@function asset-path($path, $type) {
+  @return url("../" + $type + "/" + $path);
+}
+
+@function image-path($path) {
+  @return asset-path($path, "img");
+}
+
+@function font-path($path) {
+  @return "../fonts/" + $path;
+}

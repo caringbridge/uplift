@@ -1,0 +1,27 @@
+#universal-banner {
+  @include box-shadow(inset 0px -5px 10px 0px rgba(0,0,0,0.2));
+  .media {
+    margin-top: 0;
+    .banner-image {
+      display: none;
+    }
+    .media-body {
+      padding-top: 1em;
+      padding-bottom: .5em;
+      .universal-banner-headline {
+        display: inline;
+      }
+      p {
+        display: inline;
+      }
+    }
+  }
+  @media screen and (min-width: $screen-xs) {
+    .media {
+      .banner-image{
+        display: inline-block;
+        padding: 5px 0;
+      }
+    }
+  }
+}

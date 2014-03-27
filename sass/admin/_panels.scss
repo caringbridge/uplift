@@ -1,0 +1,22 @@
+.panel-inverse {
+  @include panel-variant($border: $navbar-inverse-border, $heading-text-color: $navbar-inverse-brand-color, $heading-bg-color: $navbar-inverse-bg, $heading-border: $navbar-inverse-border);
+  > .panel-heading {
+    @include gradient-vertical($start-color: lighten($navbar-inverse-bg, 10%), $end-color: $navbar-inverse-bg);
+    @include reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+
+    a {
+      color: $navbar-inverse-link-color;
+      &:hover,
+      &:focus {
+        color: $navbar-inverse-link-hover-color;
+      }
+    }
+  }
+}
+.panel {
+  .panel-heading {
+    .icon-chevron-up, .icon-chevron-down {
+      display: none;
+    }
+  }
+}

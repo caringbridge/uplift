@@ -1,0 +1,120 @@
+.navbar-global {
+  // suck the top and bottom padding in on the global nav to take up a little less space
+  .navbar-brand {
+    max-height: 60px;
+    @include box-sizing(border-box);
+    width: 235px;
+    padding: 5px 0 0 15px;
+    @media screen and (min-width: $screen-sm) {
+      padding: 10px 0 9px 0;
+    }
+  }
+  .navbar-right {
+    // adjust padding to the links on the right side of global nav to fill the extra space created by the CB logo
+    > li > a {
+      padding: 25px 10px 15px 10px;
+      @media screen and (min-width: $screen-md) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      // Add the hover state to match other Nav links
+      &:active,
+      &:hover,
+      &:focus {
+        @include box-shadow(inset 0 0 7px 3px darken($navbar-default-bg, 4%));
+      }
+    }
+    > li {
+      // Style the dropdown menus so they aren't boring ol' white
+      > ul.dropdown-menu {
+        border-color: $navbar-default-border;
+        @include background(linear-gradient(lighten($navbar-default-bg, 10%), $navbar-default-bg));
+        > li > a {
+          padding: 10px 20px;
+          color: $navbar-default-link-color ;
+          &:hover,
+          &:focus {
+            @include background($navbar-default-link-hover-bg);
+            @include box-shadow(inset 0 0 7px 3px darken($navbar-default-bg, 4%));
+            color: $navbar-default-link-hover-color;
+          }
+        }
+        .divider {
+          background-color: $navbar-default-border;
+        }
+      }
+    }
+    a.nav-donate {
+      color: $flamingo;
+      font-weight: bold;
+      &:active,
+      &:hover,
+      &:focus {
+        color: darken($flamingo, 25%);
+        @include box-shadow(inset 0 0 7px 3px rgba($flamingo, .25));
+      }
+    }
+    .global-profile {
+      border-color: $profile-nav-border;
+      @include background(linear-gradient($profile-nav-bg, darken($profile-nav-bg, 15%)));
+      @include box-shadow($shadow);
+      @include text-shadow(0 -1px 1px rgba(0,0,0,.4));
+      a {
+        color: $white;
+        &:active,
+        &:hover,
+        &:focus {
+          @include background(darken($profile-nav-bg, 15%));
+          @include box-shadow(inset 0 0 7px 3px darken($profile-nav-bg, 20%));
+          color: $white;
+        }
+      }
+    }
+  }
+  .dropdown-menu {
+    li {
+      @media (min-width: $grid-float-breakpoint) {
+        max-width: 25em;
+      }
+      a {
+        max-width: 100%;
+        @include ellipsis($no-wrap: true);
+      }
+    }
+  }
+
+  // Make sure search box is wide enough to show placeholder text (on large screens when space is cheap)
+  #q {
+    @media (min-width: $grid-float-breakpoint) {
+      min-width: 10em;
+    }
+  }
+}
+
+// Collapse less important global nav links *EXCEPT* when the deals are this good at medium-ish screen widths
+.no-mediaqueries, .no-js {
+  .navbar-more {
+    display: none;
+  }
+}
+.nav > .navbar-expendable {
+  display: none;
+}
+@media screen and (min-width: $screen-md) {
+  .navbar-more {
+    display: block;
+  }
+}
+@media screen and (min-width: $screen-lg) {
+  .nav > .navbar-expendable {
+    display: block;
+  }
+  .navbar-dropdown-expendable {
+    display: none;
+  }
+}
+.navbar-static {
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+}

@@ -1,0 +1,12 @@
+/**
+ * This file is for misc global values we need to define that aren't related to Bootstrap
+ */
+
+$golden-ratio: 1.61803398875;
+
+//helper to mimic the look/feel of the BS3 navbars. All the cool navbars are using it!
+$shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
+
+//Because Ryan hates the Berry motif of the Profile menu, he can change it on his local environment with ease!
+$profile-nav-bg: $violet-eggplant;
+$profile-nav-border: darken($profile-nav-bg, 30%);

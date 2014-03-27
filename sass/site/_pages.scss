@@ -1,0 +1,82 @@
+// V5 site settings pages
+// Authors choose which V5 site components to enable / disable
+#modules {
+  &.ui-sortable {
+    .module {
+      cursor: move;
+    }
+  }
+  label {
+    display: block;
+    // Placeholder element when sorting
+    &.well.well-small {
+      height: 6 * $base-font-size;
+    }
+    &.ui-sortable-helper {
+      background: rgba(255,255,255,.9);
+      @include border-radius($border-radius-base);
+      @include box-shadow(0 1px 5px rgba(0,0,0,.1));
+    }
+  }
+  .module-heading {
+    display: block;
+    margin: 0 0 .5em 0;
+    input {
+      margin-right: 6px;
+    }
+  }
+  .module-description {
+    font-weight: normal;
+  }
+  .module-graphic {
+    float: left;
+    margin-right: $base-line-height;
+    display: inline-block;
+    margin-bottom: $base-line-height;
+    padding: $base-font-size 2*$base-font-size;
+    font-size: 6 * $base-font-size;
+    line-height: 6 * $base-font-size;
+    text-align: center;
+    @include border-radius($border-radius-base);
+    background: lighten($pampas, 5%);
+    color: lighten($gray-light, 10%);
+    @include transition-property(background-color, color);
+    @include transition-duration(400ms);
+    @include transition-timing-function(ease);
+    &:hover {
+      background: $pampas;
+      color: $gray-light;
+    }
+  }
+  .module.checked {
+    .module-graphic {
+      color: $white;
+      @include text-shadow(0 -1px 1px rgba(0,0,0,.2));
+    }
+    &.module-journal {
+      .module-graphic {
+        background-color: $key-lime-pie;
+      }
+    }
+    &.module-guestbook {
+      .module-graphic {
+        background-color: $hibiscus; // should this be the same as calendar?
+      }
+    }
+    &.module-photo{
+      .module-graphic {
+        background-color: $indigo;
+      }
+    }
+    &.module-calendar {
+      .module-graphic {
+        background-color: $hibiscus;
+      }
+    }
+    &:hover {
+      .module-graphic {
+        color: $white;
+      }
+    }
+  }
+}
