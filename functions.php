@@ -52,10 +52,10 @@ function mytheme_remove_url($arg) {
     return $arg;
 }
 
-function new_excerpt_length($length) {
-    return 50;
+function custom_excerpt_length( $length ) {
+    return (is_front_page()) ? 50 : 20;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 /**
@@ -96,8 +96,16 @@ function starkers_comment( $comment, $args, $depth ) {
  * Enable sidebar widgets
  */
 if (function_exists('register_sidebar')) {
-    register_sidebar();
+    register_sidebar( array(
+        'before_widget' => '<div class="widget col-xs-12 col-sm-6 col-md-12"><div class="panel panel-widget">',
+        'after_widget'  => '</div></div>',
+        'before_title'  =>  '<div class="panel-heading"><h3 class="panel-title">',
+        'after_title'   =>  '</h3></div>'
+    ) );
 }
+
+
+
 
 
 /**

@@ -580,7 +580,7 @@ img {
 }
 
 /* line 93, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
-.img-thumbnail {
+.img-thumbnail, .wp-post-image, .attachment-post-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
   background-color: white;
@@ -880,18 +880,15 @@ cite {
 }
 
 /* line 148, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-ul, .pagination .wp-paginate,
+ul,
 ol {
   margin-top: 0;
   margin-bottom: 10px;
 }
 /* line 152, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-ul ul, .pagination .wp-paginate ul, ul .pagination .wp-paginate, .pagination ul .wp-paginate, .pagination .wp-paginate .wp-paginate,
+ul ul,
 ul ol,
-.pagination .wp-paginate ol,
 ol ul,
-ol .pagination .wp-paginate,
-.pagination ol .wp-paginate,
 ol ol {
   margin-bottom: 0;
 }
@@ -983,8 +980,6 @@ blockquote {
 /* line 242, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 blockquote p:last-child,
 blockquote ul:last-child,
-blockquote .pagination .wp-paginate:last-child,
-.pagination blockquote .wp-paginate:last-child,
 blockquote ol:last-child {
   margin-bottom: 0;
 }
@@ -5686,19 +5681,20 @@ input[type="button"].btn-block {
 }
 
 /* line 4, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination {
+.pagination, .pagingNav .wp-paginate {
   display: inline-block;
   padding-left: 0;
   margin: 20px 0;
   border-radius: 4px;
 }
 /* line 10, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li {
+.pagination > li, .pagingNav .wp-paginate > li {
   display: inline;
 }
 /* line 13, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li > a,
-.pagination > li > span {
+.pagination > li > a, .pagingNav .wp-paginate > li > a,
+.pagination > li > span,
+.pagingNav .wp-paginate > li > span {
   position: relative;
   float: left;
   padding: 6px 12px;
@@ -5710,31 +5706,38 @@ input[type="button"].btn-block {
   margin-left: -1px;
 }
 /* line 26, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li:first-child > a,
-.pagination > li:first-child > span {
+.pagination > li:first-child > a, .pagingNav .wp-paginate > li:first-child > a,
+.pagination > li:first-child > span,
+.pagingNav .wp-paginate > li:first-child > span {
   margin-left: 0;
   border-bottom-left-radius: 4px;
   border-top-left-radius: 4px;
 }
 /* line 33, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li:last-child > a,
-.pagination > li:last-child > span {
+.pagination > li:last-child > a, .pagingNav .wp-paginate > li:last-child > a,
+.pagination > li:last-child > span,
+.pagingNav .wp-paginate > li:last-child > span {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
 }
 /* line 42, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > li > a:hover, .pagination > li > a:focus,
+.pagination > li > a:hover, .pagingNav .wp-paginate > li > a:hover, .pagination > li > a:focus, .pagingNav .wp-paginate > li > a:focus,
 .pagination > li > span:hover,
-.pagination > li > span:focus {
+.pagingNav .wp-paginate > li > span:hover,
+.pagination > li > span:focus,
+.pagingNav .wp-paginate > li > span:focus {
   color: #600f4e;
   background-color: #c7c7c8;
   border-color: #dddddd;
 }
 /* line 53, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus,
+.pagination > .active > a, .pagingNav .wp-paginate > .active > a, .pagination > .active > a:hover, .pagingNav .wp-paginate > .active > a:hover, .pagination > .active > a:focus, .pagingNav .wp-paginate > .active > a:focus,
 .pagination > .active > span,
+.pagingNav .wp-paginate > .active > span,
 .pagination > .active > span:hover,
-.pagination > .active > span:focus {
+.pagingNav .wp-paginate > .active > span:hover,
+.pagination > .active > span:focus,
+.pagingNav .wp-paginate > .active > span:focus {
   z-index: 2;
   color: white;
   background-color: #a21984;
@@ -5742,12 +5745,17 @@ input[type="button"].btn-block {
   cursor: default;
 }
 /* line 68, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_pagination.scss */
-.pagination > .disabled > span,
+.pagination > .disabled > span, .pagingNav .wp-paginate > .disabled > span,
 .pagination > .disabled > span:hover,
+.pagingNav .wp-paginate > .disabled > span:hover,
 .pagination > .disabled > span:focus,
+.pagingNav .wp-paginate > .disabled > span:focus,
 .pagination > .disabled > a,
+.pagingNav .wp-paginate > .disabled > a,
 .pagination > .disabled > a:hover,
-.pagination > .disabled > a:focus {
+.pagingNav .wp-paginate > .disabled > a:hover,
+.pagination > .disabled > a:focus,
+.pagingNav .wp-paginate > .disabled > a:focus {
   color: #8e8f92;
   background-color: white;
   border-color: #dddddd;
@@ -6075,8 +6083,7 @@ a.thumbnail.active {
 }
 /* line 28, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
 .alert > p,
-.alert > ul,
-.pagination .alert > .wp-paginate {
+.alert > ul {
   margin-bottom: 0;
 }
 /* line 31, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
@@ -6847,7 +6854,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
 }
 
 /* line 7, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_wells.scss */
-.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple, .row-fluid .thumbnail, #sidebar ul .widget_categories > ul, #sidebar .pagination .wp-paginate .widget_categories > ul, .pagination #sidebar .wp-paginate .widget_categories > ul, #sidebar ul .pagination .widget_categories > .wp-paginate, .pagination #sidebar ul .widget_categories > .wp-paginate, #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate, .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate, #sidebar ul .widget_recent_entries > ul, #sidebar .pagination .wp-paginate .widget_recent_entries > ul, .pagination #sidebar .wp-paginate .widget_recent_entries > ul, #sidebar ul .pagination .widget_recent_entries > .wp-paginate, .pagination #sidebar ul .widget_recent_entries > .wp-paginate, #sidebar .pagination .wp-paginate .widget_recent_entries > .wp-paginate, .pagination #sidebar .wp-paginate .widget_recent_entries > .wp-paginate {
+.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -6858,7 +6865,7 @@ a.list-group-item-danger.active, a.list-group-item-danger.active:hover, a.list-g
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 /* line 15, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_wells.scss */
-.well blockquote, .ugc-message blockquote, .well-orange blockquote, .well-green blockquote, .well-blue blockquote, .well-red blockquote, .well-teal blockquote, .well-purple blockquote, .row-fluid .thumbnail blockquote, #sidebar ul .widget_categories > ul blockquote, #sidebar .pagination .wp-paginate .widget_categories > ul blockquote, .pagination #sidebar .wp-paginate .widget_categories > ul blockquote, #sidebar ul .pagination .widget_categories > .wp-paginate blockquote, .pagination #sidebar ul .widget_categories > .wp-paginate blockquote, #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate blockquote, .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate blockquote, #sidebar ul .widget_recent_entries > ul blockquote, #sidebar .pagination .wp-paginate .widget_recent_entries > ul blockquote, .pagination #sidebar .wp-paginate .widget_recent_entries > ul blockquote, #sidebar ul .pagination .widget_recent_entries > .wp-paginate blockquote, .pagination #sidebar ul .widget_recent_entries > .wp-paginate blockquote, #sidebar .pagination .wp-paginate .widget_recent_entries > .wp-paginate blockquote, .pagination #sidebar .wp-paginate .widget_recent_entries > .wp-paginate blockquote {
+.well blockquote, .ugc-message blockquote, .well-orange blockquote, .well-green blockquote, .well-blue blockquote, .well-red blockquote, .well-teal blockquote, .well-purple blockquote {
   border-color: #ddd;
   border-color: rgba(0, 0, 0, 0.15);
 }
@@ -8009,7 +8016,9 @@ td.visible-print {
 
 /* line 77, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
 .thumbnail,
-.img-thumbnail {
+.img-thumbnail,
+.wp-post-image,
+.attachment-post-thumbnail {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
 }
@@ -8257,7 +8266,7 @@ td.visible-print {
 }
 
 /* line 242, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple, .row-fluid .thumbnail, #sidebar ul .widget_categories > ul, #sidebar .pagination .wp-paginate .widget_categories > ul, .pagination #sidebar .wp-paginate .widget_categories > ul, #sidebar ul .pagination .widget_categories > .wp-paginate, .pagination #sidebar ul .widget_categories > .wp-paginate, #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate, .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate, #sidebar ul .widget_recent_entries > ul, #sidebar .pagination .wp-paginate .widget_recent_entries > ul, .pagination #sidebar .wp-paginate .widget_recent_entries > ul, #sidebar ul .pagination .widget_recent_entries > .wp-paginate, .pagination #sidebar ul .widget_recent_entries > .wp-paginate, #sidebar .pagination .wp-paginate .widget_recent_entries > .wp-paginate, .pagination #sidebar .wp-paginate .widget_recent_entries > .wp-paginate {
+.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple {
   background-image: -webkit-linear-gradient(top, #f4eddf 0%, #faf8f2 100%);
   background-image: linear-gradient(to bottom, #f4eddf 0%, #faf8f2 100%);
   background-repeat: repeat-x;
@@ -8820,9 +8829,8 @@ li [class*=" cbicon-"].icon-large, .nav li [class^="cbicon-"].icon-large,
 }
 
 /* line 180, ../sass/global/_cbicons.scss */
-ul.icons li [class^="cbicon-"], .pagination .icons.wp-paginate li [class^="cbicon-"],
-ul.icons li [class*=" cbicon-"],
-.pagination .icons.wp-paginate li [class*=" cbicon-"] {
+ul.icons li [class^="cbicon-"],
+ul.icons li [class*=" cbicon-"] {
   width: .75em;
 }
 
@@ -9127,14 +9135,13 @@ li [class*=" icon-"].icon-large, .nav li [class^="icon-"].icon-large,
 }
 
 /* line 131, ../sass/_font-awesome.scss */
-ul.icons, .pagination .icons.wp-paginate {
+ul.icons {
   list-style-type: none;
   text-indent: -.75em;
 }
 /* line 137, ../sass/_font-awesome.scss */
-ul.icons li [class^="icon-"], .pagination .icons.wp-paginate li [class^="icon-"],
-ul.icons li [class*=" icon-"],
-.pagination .icons.wp-paginate li [class*=" icon-"] {
+ul.icons li [class^="icon-"],
+ul.icons li [class*=" icon-"] {
   width: .75em;
 }
 
@@ -10732,7 +10739,7 @@ ul.icons li [class*=" icon-"],
   box-shadow: inset 0 0 7px 3px #e8dbbd;
 }
 /* line 29, ../sass/global/_navbar-global.scss */
-.navbar-global .navbar-right > li > ul.dropdown-menu, .navbar-global .pagination .navbar-right > li > .dropdown-menu.wp-paginate, .pagination .navbar-global .navbar-right > li > .dropdown-menu.wp-paginate {
+.navbar-global .navbar-right > li > ul.dropdown-menu {
   border-color: #e4d6b3;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #faf8f2), color-stop(100%, #ede3cc));
   background: -webkit-linear-gradient(#faf8f2, #ede3cc);
@@ -10741,19 +10748,19 @@ ul.icons li [class*=" icon-"],
   background: linear-gradient(#faf8f2, #ede3cc);
 }
 /* line 32, ../sass/global/_navbar-global.scss */
-.navbar-global .navbar-right > li > ul.dropdown-menu > li > a, .navbar-global .pagination .navbar-right > li > .dropdown-menu.wp-paginate > li > a, .pagination .navbar-global .navbar-right > li > .dropdown-menu.wp-paginate > li > a {
+.navbar-global .navbar-right > li > ul.dropdown-menu > li > a {
   padding: 10px 20px;
   color: #a21984;
 }
 /* line 36, ../sass/global/_navbar-global.scss */
-.navbar-global .navbar-right > li > ul.dropdown-menu > li > a:hover, .navbar-global .pagination .navbar-right > li > .dropdown-menu.wp-paginate > li > a:hover, .pagination .navbar-global .navbar-right > li > .dropdown-menu.wp-paginate > li > a:hover, .navbar-global .navbar-right > li > ul.dropdown-menu > li > a:focus, .navbar-global .pagination .navbar-right > li > .dropdown-menu.wp-paginate > li > a:focus, .pagination .navbar-global .navbar-right > li > .dropdown-menu.wp-paginate > li > a:focus {
+.navbar-global .navbar-right > li > ul.dropdown-menu > li > a:hover, .navbar-global .navbar-right > li > ul.dropdown-menu > li > a:focus {
   background: #efe9e5;
   -webkit-box-shadow: inset 0 0 7px 3px #e8dbbd;
   box-shadow: inset 0 0 7px 3px #e8dbbd;
   color: #54075b;
 }
 /* line 42, ../sass/global/_navbar-global.scss */
-.navbar-global .navbar-right > li > ul.dropdown-menu .divider, .navbar-global .pagination .navbar-right > li > .dropdown-menu.wp-paginate .divider, .pagination .navbar-global .navbar-right > li > .dropdown-menu.wp-paginate .divider {
+.navbar-global .navbar-right > li > ul.dropdown-menu .divider {
   background-color: #e4d6b3;
 }
 /* line 47, ../sass/global/_navbar-global.scss */
@@ -10953,7 +10960,7 @@ ul.icons li [class*=" icon-"],
 }
 @media screen and (min-width: 992px) {
   /* line 65, ../sass/global/_footer.scss */
-  .privacy-seal-list ul, .privacy-seal-list .pagination .wp-paginate, .pagination .privacy-seal-list .wp-paginate {
+  .privacy-seal-list ul {
     float: right;
   }
 }
@@ -12805,7 +12812,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
 }
 
 /* line 7, ../sass/cms/_shame.scss */
-.gallery .tribox-shared-story .well .row .col-xxs-6, .gallery .tribox-shared-story .ugc-message .row .col-xxs-6, .gallery .tribox-shared-story .well-orange .row .col-xxs-6, .gallery .tribox-shared-story .well-green .row .col-xxs-6, .gallery .tribox-shared-story .well-blue .row .col-xxs-6, .gallery .tribox-shared-story .well-red .row .col-xxs-6, .gallery .tribox-shared-story .well-teal .row .col-xxs-6, .gallery .tribox-shared-story .well-purple .row .col-xxs-6, .gallery .tribox-shared-story .row-fluid .thumbnail .row .col-xxs-6, .row-fluid .gallery .tribox-shared-story .thumbnail .row .col-xxs-6, .gallery .tribox-shared-story #sidebar ul .widget_categories > ul .row .col-xxs-6, #sidebar ul .gallery .tribox-shared-story .widget_categories > ul .row .col-xxs-6, .gallery .tribox-shared-story #sidebar .pagination .wp-paginate .widget_categories > ul .row .col-xxs-6, #sidebar .pagination .wp-paginate .gallery .tribox-shared-story .widget_categories > ul .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar .wp-paginate .widget_categories > ul .row .col-xxs-6, .pagination #sidebar .wp-paginate .gallery .tribox-shared-story .widget_categories > ul .row .col-xxs-6, .gallery .tribox-shared-story #sidebar ul .pagination .widget_categories > .wp-paginate .row .col-xxs-6, #sidebar ul .pagination .gallery .tribox-shared-story .widget_categories > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar ul .widget_categories > .wp-paginate .row .col-xxs-6, .pagination #sidebar ul .gallery .tribox-shared-story .widget_categories > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate .row .col-xxs-6, #sidebar .pagination .wp-paginate .gallery .tribox-shared-story .widget_categories > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate .row .col-xxs-6, .pagination #sidebar .wp-paginate .gallery .tribox-shared-story .widget_categories > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story #sidebar ul .widget_recent_entries > ul .row .col-xxs-6, #sidebar ul .gallery .tribox-shared-story .widget_recent_entries > ul .row .col-xxs-6, .gallery .tribox-shared-story #sidebar .pagination .wp-paginate .widget_recent_entries > ul .row .col-xxs-6, #sidebar .pagination .wp-paginate .gallery .tribox-shared-story .widget_recent_entries > ul .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar .wp-paginate .widget_recent_entries > ul .row .col-xxs-6, .pagination #sidebar .wp-paginate .gallery .tribox-shared-story .widget_recent_entries > ul .row .col-xxs-6, .gallery .tribox-shared-story #sidebar ul .pagination .widget_recent_entries > .wp-paginate .row .col-xxs-6, #sidebar ul .pagination .gallery .tribox-shared-story .widget_recent_entries > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar ul .widget_recent_entries > .wp-paginate .row .col-xxs-6, .pagination #sidebar ul .gallery .tribox-shared-story .widget_recent_entries > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story #sidebar .pagination .wp-paginate .widget_recent_entries > .wp-paginate .row .col-xxs-6, #sidebar .pagination .wp-paginate .gallery .tribox-shared-story .widget_recent_entries > .wp-paginate .row .col-xxs-6, .gallery .tribox-shared-story .pagination #sidebar .wp-paginate .widget_recent_entries > .wp-paginate .row .col-xxs-6, .pagination #sidebar .wp-paginate .gallery .tribox-shared-story .widget_recent_entries > .wp-paginate .row .col-xxs-6 {
+.gallery .tribox-shared-story .well .row .col-xxs-6, .gallery .tribox-shared-story .ugc-message .row .col-xxs-6, .gallery .tribox-shared-story .well-orange .row .col-xxs-6, .gallery .tribox-shared-story .well-green .row .col-xxs-6, .gallery .tribox-shared-story .well-blue .row .col-xxs-6, .gallery .tribox-shared-story .well-red .row .col-xxs-6, .gallery .tribox-shared-story .well-teal .row .col-xxs-6, .gallery .tribox-shared-story .well-purple .row .col-xxs-6 {
   width: 100%;
 }
 
@@ -13060,7 +13067,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
   margin-bottom: 1em;
 }
 /* line 6, ../sass/profile/_manage-notifications.scss */
-#site-notifications .img-polaroid, #site-notifications .wp-post-image {
+#site-notifications .img-polaroid {
   margin-right: 0.5em;
   width: 30px;
   height: 30px;
@@ -15170,7 +15177,7 @@ form#create > fieldset legend .badge {
   display: block;
 }
 /* line 12, ../sass/site/_pages.scss */
-#modules label.well.well-small, #modules .well.well-small.control-label, #modules .well-small.control-label.ugc-message, #modules #sidebar ul .widget_categories > ul.control-label.ugc-message, #sidebar ul #modules .widget_categories > ul.control-label.ugc-message, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.ugc-message, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.ugc-message, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.ugc-message, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.ugc-message, #modules #sidebar ul .pagination .widget_categories > .control-label.ugc-message.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.ugc-message.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.ugc-message.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.ugc-message.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.ugc-message.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.ugc-message.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.ugc-message.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.ugc-message.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.ugc-message, #sidebar ul #modules .widget_recent_entries > ul.control-label.ugc-message, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.ugc-message, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.ugc-message, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.ugc-message, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.ugc-message, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.ugc-message.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.ugc-message.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.ugc-message.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.ugc-message.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.ugc-message.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.ugc-message.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.ugc-message.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.ugc-message.wp-paginate, #modules .well-small.control-label.well-orange, #modules #sidebar ul .widget_categories > ul.control-label.well-orange, #sidebar ul #modules .widget_categories > ul.control-label.well-orange, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-orange, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-orange, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-orange, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-orange, #modules #sidebar ul .pagination .widget_categories > .control-label.well-orange.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-orange.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-orange.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-orange.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-orange.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-orange.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-orange.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-orange.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-orange, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-orange, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-orange, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-orange, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-orange, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-orange, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-orange.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-orange.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-orange.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-orange.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-orange.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-orange.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-orange.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-orange.wp-paginate, #modules .well-small.control-label.well-green, #modules #sidebar ul .widget_categories > ul.control-label.well-green, #sidebar ul #modules .widget_categories > ul.control-label.well-green, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-green, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-green, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-green, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-green, #modules #sidebar ul .pagination .widget_categories > .control-label.well-green.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-green.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-green.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-green.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-green.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-green.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-green.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-green.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-green, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-green, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-green, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-green, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-green, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-green, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-green.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-green.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-green.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-green.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-green.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-green.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-green.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-green.wp-paginate, #modules .well-small.control-label.well-blue, #modules #sidebar ul .widget_categories > ul.control-label.well-blue, #sidebar ul #modules .widget_categories > ul.control-label.well-blue, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-blue, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-blue, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-blue, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-blue, #modules #sidebar ul .pagination .widget_categories > .control-label.well-blue.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-blue.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-blue.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-blue.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-blue.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-blue.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-blue.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-blue.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-blue, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-blue, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-blue, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-blue, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-blue, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-blue, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-blue.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-blue.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-blue.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-blue.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-blue.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-blue.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-blue.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-blue.wp-paginate, #modules .well-small.control-label.well-red, #modules #sidebar ul .widget_categories > ul.control-label.well-red, #sidebar ul #modules .widget_categories > ul.control-label.well-red, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-red, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-red, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-red, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-red, #modules #sidebar ul .pagination .widget_categories > .control-label.well-red.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-red.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-red.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-red.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-red.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-red.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-red.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-red.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-red, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-red, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-red, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-red, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-red, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-red, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-red.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-red.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-red.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-red.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-red.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-red.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-red.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-red.wp-paginate, #modules .well-small.control-label.well-teal, #modules #sidebar ul .widget_categories > ul.control-label.well-teal, #sidebar ul #modules .widget_categories > ul.control-label.well-teal, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-teal, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-teal, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-teal, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-teal, #modules #sidebar ul .pagination .widget_categories > .control-label.well-teal.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-teal.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-teal.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-teal.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-teal.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-teal.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-teal.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-teal.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-teal, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-teal, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-teal, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-teal, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-teal, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-teal, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-teal.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-teal.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-teal.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-teal.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-teal.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-teal.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-teal.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-teal.wp-paginate, #modules .well-small.control-label.well-purple, #modules #sidebar ul .widget_categories > ul.control-label.well-purple, #sidebar ul #modules .widget_categories > ul.control-label.well-purple, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.well-purple, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.well-purple, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.well-purple, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.well-purple, #modules #sidebar ul .pagination .widget_categories > .control-label.well-purple.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.well-purple.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.well-purple.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.well-purple.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.well-purple.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.well-purple.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.well-purple.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.well-purple.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label.well-purple, #sidebar ul #modules .widget_recent_entries > ul.control-label.well-purple, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.well-purple, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.well-purple, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.well-purple, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.well-purple, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.well-purple.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.well-purple.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.well-purple.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.well-purple.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.well-purple.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.well-purple.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.well-purple.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.well-purple.wp-paginate, #modules .row-fluid .well-small.control-label.thumbnail, .row-fluid #modules .well-small.control-label.thumbnail, #modules .row-fluid #sidebar ul .widget_categories > ul.control-label.thumbnail, .row-fluid #sidebar ul #modules .widget_categories > ul.control-label.thumbnail, #modules #sidebar ul .row-fluid .widget_categories > ul.control-label.thumbnail, #sidebar ul .row-fluid #modules .widget_categories > ul.control-label.thumbnail, #modules .row-fluid #sidebar .pagination .wp-paginate .widget_categories > ul.control-label.thumbnail, .row-fluid #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label.thumbnail, #modules #sidebar .pagination .wp-paginate .row-fluid .widget_categories > ul.control-label.thumbnail, #sidebar .pagination .wp-paginate .row-fluid #modules .widget_categories > ul.control-label.thumbnail, #modules .row-fluid .pagination #sidebar .wp-paginate .widget_categories > ul.control-label.thumbnail, .row-fluid .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label.thumbnail, #modules .pagination #sidebar .wp-paginate .row-fluid .widget_categories > ul.control-label.thumbnail, .pagination #sidebar .wp-paginate .row-fluid #modules .widget_categories > ul.control-label.thumbnail, #modules .row-fluid #sidebar ul .pagination .widget_categories > .control-label.thumbnail.wp-paginate, .row-fluid #sidebar ul .pagination #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules #sidebar ul .pagination .row-fluid .widget_categories > .control-label.thumbnail.wp-paginate, #sidebar ul .pagination .row-fluid #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .row-fluid .pagination #sidebar ul .widget_categories > .control-label.thumbnail.wp-paginate, .row-fluid .pagination #sidebar ul #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .pagination #sidebar ul .row-fluid .widget_categories > .control-label.thumbnail.wp-paginate, .pagination #sidebar ul .row-fluid #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .row-fluid #sidebar .pagination .wp-paginate .widget_categories > .control-label.thumbnail.wp-paginate, .row-fluid #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules #sidebar .pagination .wp-paginate .row-fluid .widget_categories > .control-label.thumbnail.wp-paginate, #sidebar .pagination .wp-paginate .row-fluid #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .row-fluid .pagination #sidebar .wp-paginate .widget_categories > .control-label.thumbnail.wp-paginate, .row-fluid .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .pagination #sidebar .wp-paginate .row-fluid .widget_categories > .control-label.thumbnail.wp-paginate, .pagination #sidebar .wp-paginate .row-fluid #modules .widget_categories > .control-label.thumbnail.wp-paginate, #modules .row-fluid #sidebar ul .widget_recent_entries > ul.control-label.thumbnail, .row-fluid #sidebar ul #modules .widget_recent_entries > ul.control-label.thumbnail, #modules #sidebar ul .row-fluid .widget_recent_entries > ul.control-label.thumbnail, #sidebar ul .row-fluid #modules .widget_recent_entries > ul.control-label.thumbnail, #modules .row-fluid #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label.thumbnail, .row-fluid #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label.thumbnail, #modules #sidebar .pagination .wp-paginate .row-fluid .widget_recent_entries > ul.control-label.thumbnail, #sidebar .pagination .wp-paginate .row-fluid #modules .widget_recent_entries > ul.control-label.thumbnail, #modules .row-fluid .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label.thumbnail, .row-fluid .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label.thumbnail, #modules .pagination #sidebar .wp-paginate .row-fluid .widget_recent_entries > ul.control-label.thumbnail, .pagination #sidebar .wp-paginate .row-fluid #modules .widget_recent_entries > ul.control-label.thumbnail, #modules .row-fluid #sidebar ul .pagination .widget_recent_entries > .control-label.thumbnail.wp-paginate, .row-fluid #sidebar ul .pagination #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules #sidebar ul .pagination .row-fluid .widget_recent_entries > .control-label.thumbnail.wp-paginate, #sidebar ul .pagination .row-fluid #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules .row-fluid .pagination #sidebar ul .widget_recent_entries > .control-label.thumbnail.wp-paginate, .row-fluid .pagination #sidebar ul #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules .pagination #sidebar ul .row-fluid .widget_recent_entries > .control-label.thumbnail.wp-paginate, .pagination #sidebar ul .row-fluid #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules .row-fluid #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.thumbnail.wp-paginate, .row-fluid #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules #sidebar .pagination .wp-paginate .row-fluid .widget_recent_entries > .control-label.thumbnail.wp-paginate, #sidebar .pagination .wp-paginate .row-fluid #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules .row-fluid .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.thumbnail.wp-paginate, .row-fluid .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules .pagination #sidebar .wp-paginate .row-fluid .widget_recent_entries > .control-label.thumbnail.wp-paginate, .pagination #sidebar .wp-paginate .row-fluid #modules .widget_recent_entries > .control-label.thumbnail.wp-paginate, #modules #sidebar ul .widget_categories > ul.control-label, #sidebar ul #modules .widget_categories > ul.control-label, #modules #sidebar .pagination .wp-paginate .widget_categories > ul.control-label, #sidebar .pagination .wp-paginate #modules .widget_categories > ul.control-label, #modules .pagination #sidebar .wp-paginate .widget_categories > ul.control-label, .pagination #sidebar .wp-paginate #modules .widget_categories > ul.control-label, #modules #sidebar ul .pagination .widget_categories > .control-label.wp-paginate, #sidebar ul .pagination #modules .widget_categories > .control-label.wp-paginate, #modules .pagination #sidebar ul .widget_categories > .control-label.wp-paginate, .pagination #sidebar ul #modules .widget_categories > .control-label.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_categories > .control-label.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_categories > .control-label.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_categories > .control-label.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_categories > .control-label.wp-paginate, #modules #sidebar ul .widget_recent_entries > ul.control-label, #sidebar ul #modules .widget_recent_entries > ul.control-label, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > ul.control-label, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > ul.control-label, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > ul.control-label, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > ul.control-label, #modules #sidebar ul .pagination .widget_recent_entries > .control-label.wp-paginate, #sidebar ul .pagination #modules .widget_recent_entries > .control-label.wp-paginate, #modules .pagination #sidebar ul .widget_recent_entries > .control-label.wp-paginate, .pagination #sidebar ul #modules .widget_recent_entries > .control-label.wp-paginate, #modules #sidebar .pagination .wp-paginate .widget_recent_entries > .control-label.wp-paginate, #sidebar .pagination .wp-paginate #modules .widget_recent_entries > .control-label.wp-paginate, #modules .pagination #sidebar .wp-paginate .widget_recent_entries > .control-label.wp-paginate, .pagination #sidebar .wp-paginate #modules .widget_recent_entries > .control-label.wp-paginate, #modules legend.well.well-small.control-label, #modules legend.well-small.control-label.ugc-message, #modules legend.well-small.control-label.well-orange, #modules legend.well-small.control-label.well-green, #modules legend.well-small.control-label.well-blue, #modules legend.well-small.control-label.well-red, #modules legend.well-small.control-label.well-teal, #modules legend.well-small.control-label.well-purple, #modules .row-fluid legend.well-small.control-label.thumbnail, .row-fluid #modules legend.well-small.control-label.thumbnail, #modules label.well-small.ugc-message, #modules label.well-small.well-orange, #modules label.well-small.well-green, #modules label.well-small.well-blue, #modules label.well-small.well-red, #modules label.well-small.well-teal, #modules label.well-small.well-purple, #modules .row-fluid label.well-small.thumbnail, .row-fluid #modules label.well-small.thumbnail {
+#modules label.well.well-small, #modules .well.well-small.control-label, #modules .well-small.control-label.ugc-message, #modules .well-small.control-label.well-orange, #modules .well-small.control-label.well-green, #modules .well-small.control-label.well-blue, #modules .well-small.control-label.well-red, #modules .well-small.control-label.well-teal, #modules .well-small.control-label.well-purple, #modules label.well-small.ugc-message, #modules label.well-small.well-orange, #modules label.well-small.well-green, #modules label.well-small.well-blue, #modules label.well-small.well-red, #modules label.well-small.well-teal, #modules label.well-small.well-purple {
   height: 96px;
 }
 /* line 15, ../sass/site/_pages.scss */
@@ -15333,121 +15340,68 @@ form#create > fieldset legend .badge {
   padding-left: 17px;
 }
 
-/* line 1, ../sass/blog/_blog-type.scss */
-h1 > a:hover, h3 > a:hover, .h3 > a:hover {
-  color: #c26f06;
-  text-decoration: undeline;
-}
-
-/* line 6, ../sass/blog/_blog-type.scss */
-h2 > a:hover, .h2 > a:hover {
-  color: #600f4e;
-  text-decoration: underline;
-}
-
-/* line 11, ../sass/blog/_blog-type.scss */
-h4 > a:hover, .h4 > a:hover {
-  color: #131314;
-  text-decoration: underline;
-}
-
 /* line 1, ../sass/blog/_blog.scss */
-.blog-header {
-  padding: 1em 1.5em .5em 1.5em;
-}
-/* line 4, ../sass/blog/_blog.scss */
-.blog-header .faux-co-header ul.faux-co-nav, .blog-header .faux-co-header .pagination .faux-co-nav.wp-paginate, .pagination .blog-header .faux-co-header .faux-co-nav.wp-paginate {
-  border-bottom: 0;
-  /** Override purple border for blog only **/
-}
-
-/* line 10, ../sass/blog/_blog.scss */
-.layout {
-  position: relative;
-  z-index: 100;
-}
-
-/* line 15, ../sass/blog/_blog.scss */
 #content {
   padding: 0 1em;
 }
-/* line 17, ../sass/blog/_blog.scss */
+/* line 3, ../sass/blog/_blog.scss */
 #content .uplift-logo-container {
   line-height: 68px;
   vertical-align: baseline;
   margin: 2em 0;
 }
 
-/* line 24, ../sass/blog/_blog.scss */
-.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple, .row-fluid .thumbnail, #sidebar ul .widget_categories > ul, #sidebar .pagination .wp-paginate .widget_categories > ul, .pagination #sidebar .wp-paginate .widget_categories > ul, #sidebar ul .pagination .widget_categories > .wp-paginate, .pagination #sidebar ul .widget_categories > .wp-paginate, #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate, .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate, #sidebar ul .widget_recent_entries > ul, #sidebar .pagination .wp-paginate .widget_recent_entries > ul, .pagination #sidebar .wp-paginate .widget_recent_entries > ul, #sidebar ul .pagination .widget_recent_entries > .wp-paginate, .pagination #sidebar ul .widget_recent_entries > .wp-paginate, #sidebar .pagination .wp-paginate .widget_recent_entries > .wp-paginate, .pagination #sidebar .wp-paginate .widget_recent_entries > .wp-paginate {
+/* line 10, ../sass/blog/_blog.scss */
+.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple {
   background-color: rgba(237, 227, 204, 0.7);
   border: 1px solid rgba(232, 211, 162, 0.7);
 }
 
-/* line 29, ../sass/blog/_blog.scss */
+/* line 15, ../sass/blog/_blog.scss */
 hr {
   border-top: #eae4e0 1px solid;
 }
 
-/* line 33, ../sass/blog/_blog.scss */
+/* line 22, ../sass/blog/_blog.scss */
 .wp-post-image {
-  margin: 0 0 2em 0;
+  margin: 0 0 1em 0;
 }
 
-/* line 40, ../sass/blog/_blog.scss */
-.media {
-  background-color: white;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #faf8f2));
-  background-image: -webkit-linear-gradient(#ffffff, #faf8f2);
-  background-image: -moz-linear-gradient(#ffffff, #faf8f2);
-  background-image: -o-linear-gradient(#ffffff, #faf8f2);
-  background-image: linear-gradient(#ffffff, #faf8f2);
-  border-bottom: #eae4e0 1px solid;
-  padding: 0 1em 1em 1em;
-  margin: 0 -1em;
+/* line 27, ../sass/blog/_blog.scss */
+.attachment-post-thumbnail {
+  margin: 0 0 1em 0;
 }
 
-/* line 50, ../sass/blog/_blog.scss */
-.social-sharing h2, .social-sharing .h2 {
-  display: inline-block;
-}
-/* line 53, ../sass/blog/_blog.scss */
-.social-sharing .sharing-buttons {
-  display: inline-block;
-  padding: 0 0 0 1em;
+/* line 37, ../sass/blog/_blog.scss */
+h1 > a:hover, h3 > a:hover, .h3 > a:hover {
+  color: #c26f06;
+  text-decoration: undeline;
 }
 
-/* line 63, ../sass/blog/_blog.scss */
-.pagination .wp-paginate .current {
-  background-color: #c7c7c8;
+/* line 42, ../sass/blog/_blog.scss */
+h2 > a:hover, .h2 > a:hover {
+  color: #600f4e;
+  text-decoration: underline;
 }
 
-/* line 71, ../sass/blog/_blog.scss */
-.row-fluid .thumbnail {
-  min-height: 150px;
-  padding: 5px;
-}
-/* line 75, ../sass/blog/_blog.scss */
-.row-fluid .thumbnail img {
-  margin: 0;
-  border: 1px solid rgba(232, 211, 162, 0.7);
-  box-shadow: none;
-  padding: 0;
-  background-color: none;
+/* line 47, ../sass/blog/_blog.scss */
+h4 > a:hover, .h4 > a:hover {
+  color: #131314;
+  text-decoration: underline;
 }
 
 @media (max-width: 767px) {
-  /* line 87, ../sass/blog/_blog.scss */
+  /* line 64, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail {
     min-height: 40px;
   }
-  /* line 89, ../sass/blog/_blog.scss */
+  /* line 66, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail > img {
     display: inline-block;
     width: 41.6%;
     vertical-align: top;
   }
-  /* line 94, ../sass/blog/_blog.scss */
+  /* line 71, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail .caption {
     display: inline-block;
     width: 52.4%;
@@ -15456,20 +15410,20 @@ hr {
   }
 }
 @media (max-width: 600px) {
-  /* line 107, ../sass/blog/_blog.scss */
+  /* line 84, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail .caption {
     padding: 0 0 0 1em;
   }
 }
 @media (max-width: 500px) {
-  /* line 117, ../sass/blog/_blog.scss */
+  /* line 94, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail > img {
     display: block;
     margin: 0;
     width: auto;
     vertical-align: middle;
   }
-  /* line 123, ../sass/blog/_blog.scss */
+  /* line 100, ../sass/blog/_blog.scss */
   .row-fluid .thumbnail .caption {
     display: inline-block;
     width: 100%;
@@ -15477,163 +15431,39 @@ hr {
     vertical-align: middle;
   }
 }
-/* line 152, ../sass/blog/_blog.scss */
-.widgettitle {
-  font-family: "Locator Display";
-  font-size: 18px;
-  line-height: 32px;
-  margin: 0;
-}
-
-/* line 158, ../sass/blog/_blog.scss */
-#sidebar {
-  background-color: #f8971d;
-  background: #f8971d url(../img/sidebar-BG.png) bottom center repeat-x;
-  background: url(../img/sidebar-BG.png) bottom center repeat-x, -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #f8971d), color-stop(100%, #f4b34d));
-  background: url(../img/sidebar-BG.png) bottom center repeat-x, -webkit-linear-gradient(left, #f8971d 0%, #f4b34d 100%);
-  background: url(../img/sidebar-BG.png) bottom center repeat-x, -moz-linear-gradient(left, #f8971d 0%, #f4b34d 100%);
-  background: url(../img/sidebar-BG.png) bottom center repeat-x, -o-linear-gradient(left, #f8971d 0%, #f4b34d 100%);
-  background: url(../img/sidebar-BG.png) bottom center repeat-x, linear-gradient(left, #f8971d 0%, #f4b34d 100%);
-  border: 1px solid #db7d07;
-  border-top: 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  min-height: 655px;
-  padding: 1em 1.25em;
-  margin: 0 1em 0 0;
-}
-/* line 169, ../sass/blog/_blog.scss */
-#sidebar ul, #sidebar .pagination .wp-paginate, .pagination #sidebar .wp-paginate {
-  margin: 0;
-  list-style: none;
-}
-/* line 173, ../sass/blog/_blog.scss */
-#sidebar ul li, #sidebar .pagination .wp-paginate li, .pagination #sidebar .wp-paginate li {
-  margin-bottom: 1em;
-}
-/* line 180, ../sass/blog/_blog.scss */
-#sidebar ul .widget_categories > ul li, #sidebar .pagination .wp-paginate .widget_categories > ul li, .pagination #sidebar .wp-paginate .widget_categories > ul li, #sidebar ul .pagination .widget_categories > .wp-paginate li, .pagination #sidebar ul .widget_categories > .wp-paginate li, #sidebar .pagination .wp-paginate .widget_categories > .wp-paginate li, .pagination #sidebar .wp-paginate .widget_categories > .wp-paginate li {
-  margin-bottom: .3em;
-}
-
-/* line 194, ../sass/blog/_blog.scss */
+/* line 111, ../sass/blog/_blog.scss */
 #happy-little-trees {
   background: white url(../img/blog-BG-repeater.png) bottom left repeat-x;
   background: url(../img/blog-BG-repeater.png) bottom left repeat-x, white;
   height: 309px;
 }
-
 @media (max-width: 768px) {
-  /* line 209, ../sass/blog/_blog.scss */
-  .social-sharing .sharing-buttons {
-    padding: 0;
-  }
-
-  /* line 213, ../sass/blog/_blog.scss */
-  #sidebar {
-    margin: 1em 1em 0 1em;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
-
-  /* line 217, ../sass/blog/_blog.scss */
-  .wp-post-image {
-    margin: 0 0 1em 0;
-    width: 95%;
-  }
-
-  /* line 221, ../sass/blog/_blog.scss */
+  /* line 111, ../sass/blog/_blog.scss */
   #happy-little-trees {
     display: none;
   }
 }
-/** --------------------------------COMMENTS--------------------------- **/
-/* line 232, ../sass/blog/_blog.scss */
-#comments {
-  font-family: locator, Arial, Helvetica, Verdana, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-}
-/* line 236, ../sass/blog/_blog.scss */
-#comments ol {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  background-color: #74cbc8;
-  border: 1px solid #4fbdb9;
-  padding: 1em;
-  margin: 0;
-  list-style: none;
-}
-/* line 244, ../sass/blog/_blog.scss */
-#comments ol li h4, #comments ol li .h4, #comments ol li time {
-  display: inline;
-  font-size: 18px;
-  line-height: 24px;
-  color: #fff;
-  font-weight: normal;
-  font-style: italic;
-}
-/* line 252, ../sass/blog/_blog.scss */
-#comments ol li .commentBody {
-  background-color: #fff;
-  padding: 1em;
-}
-/* line 258, ../sass/blog/_blog.scss */
-#comments .comment-respond {
-  display: block;
-}
-/* line 260, ../sass/blog/_blog.scss */
-#comments .comment-respond label, #comments .comment-respond .control-label {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-/* line 263, ../sass/blog/_blog.scss */
-#comments .comment-respond .required {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-}
-/* line 266, ../sass/blog/_blog.scss */
-#comments .comment-respond input {
-  display: block;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  width: 100%;
-}
-/* line 275, ../sass/blog/_blog.scss */
-#comments .comment-respond .form-submit {
-  float: right;
-}
 
-/* line 289, ../sass/blog/_blog.scss */
+/* line 129, ../sass/blog/_blog.scss */
 p.form-allowed-tags {
   display: none;
 }
 
-/* line 311, ../sass/blog/_blog.scss */
+/* line 134, ../sass/blog/_blog.scss */
 .alert-info {
   border-color: #006990;
   background-color: #e8f2f2;
   background-image: url("../img/icon_information.png");
 }
 
-/* line 317, ../sass/blog/_blog.scss */
+/* line 140, ../sass/blog/_blog.scss */
 .alert-error {
   border-color: #f15d40;
   background-color: #fdeae3;
   background-image: url("../img/icon_error.png");
 }
 
-/* line 324, ../sass/blog/_blog.scss */
+/* line 146, ../sass/blog/_blog.scss */
 .alert {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -15651,208 +15481,199 @@ p.form-allowed-tags {
   line-height: 1.5em;
 }
 
-/* line 339, ../sass/blog/_blog.scss */
-footer#brand-footer {
-  *zoom: 1;
+/* line 1, ../sass/blog/_sidebar.scss */
+.rss {
+  margin-bottom: 20px;
 }
-/* line 38, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-footer#brand-footer:after {
-  content: "";
-  display: table;
-  clear: both;
+
+/* line 4, ../sass/blog/_sidebar.scss */
+.panel.panel-author {
+  background: #faf9fc;
+  border-color: #a21984;
 }
-/* line 343, ../sass/blog/_blog.scss */
-footer#brand-footer nav#fat-footer .fat-footer-links {
-  display: inline-block;
-  margin: 0 0.5em 1em 0;
-  text-transform: lowercase;
-  vertical-align: top;
+/* line 409, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.panel.panel-author > .panel-heading {
+  color: white;
+  background-color: #a21984;
+  border-color: #a21984;
 }
-/* line 349, ../sass/blog/_blog.scss */
-footer#brand-footer nav#fat-footer .fat-footer-links h4, footer#brand-footer nav#fat-footer .fat-footer-links .h4 {
-  color: #333333;
-  font-size: 18px;
+/* line 414, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.panel.panel-author > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #a21984;
+}
+/* line 419, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+.panel.panel-author > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #a21984;
+}
+/* line 11, ../sass/blog/_sidebar.scss */
+.panel.panel-author > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #a21984 0%, #8c1672 100%);
+  background-image: linear-gradient(to bottom, #a21984 0%, #8c1672 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA21984', endColorstr='#FF8C1672', GradientType=0);
+}
+/* line 14, ../sass/blog/_sidebar.scss */
+.panel.panel-author .author-thumb {
+  margin: 0 15px 0 0;
+}
+/* line 17, ../sass/blog/_sidebar.scss */
+.panel.panel-author hr {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* line 23, ../sass/blog/_sidebar.scss */
+#sidebar > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 27, ../sass/blog/_sidebar.scss */
+#sidebar > ul > li {
+  margin-bottom: 20px;
+}
+/* line 31, ../sass/blog/_sidebar.scss */
+#sidebar .widget {
+  padding-left: 0;
+  padding-right: 0;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 36, ../sass/blog/_sidebar.scss */
+  #sidebar .widget:first-child {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  /* line 40, ../sass/blog/_sidebar.scss */
+  #sidebar .widget:last-child {
+    padding-rigfht: 0;
+    padding-left: 15px;
+  }
+}
+/* line 45, ../sass/blog/_sidebar.scss */
+#sidebar .panel.panel-widget {
+  background: #fff9f2;
+  border-color: #f8971d;
+}
+/* line 409, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+#sidebar .panel.panel-widget > .panel-heading {
+  color: white;
+  background-color: #f8971d;
+  border-color: #f8971d;
+}
+/* line 414, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+#sidebar .panel.panel-widget > .panel-heading + .panel-collapse .panel-body {
+  border-top-color: #f8971d;
+}
+/* line 419, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
+#sidebar .panel.panel-widget > .panel-footer + .panel-collapse .panel-body {
+  border-bottom-color: #f8971d;
+}
+/* line 52, ../sass/blog/_sidebar.scss */
+#sidebar .panel.panel-widget > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #faae4e 0%, #f9a236 100%);
+  background-image: linear-gradient(to bottom, #faae4e 0%, #f9a236 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAAE4E', endColorstr='#FFF9A236', GradientType=0);
+}
+/* line 55, ../sass/blog/_sidebar.scss */
+#sidebar .panel.panel-widget ul {
+  list-style: none;
+  padding: 15px;
+}
+/* line 58, ../sass/blog/_sidebar.scss */
+#sidebar .panel.panel-widget ul li {
+  margin-bottom: 10px;
+}
+/* line 61, ../sass/blog/_sidebar.scss */
+#sidebar .panel.panel-widget ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 1, ../sass/blog/_comments.scss */
+#comments {
+  font-family: locator, Arial, Helvetica, Verdana, sans-serif;
+  font-size: 16px;
   line-height: 18px;
 }
-/* line 353, ../sass/blog/_blog.scss */
-footer#brand-footer nav#fat-footer .fat-footer-links h4 a, footer#brand-footer nav#fat-footer .fat-footer-links .h4 a {
-  color: #004990;
-}
-/* line 357, ../sass/blog/_blog.scss */
-footer#brand-footer nav#fat-footer .fat-footer-links ul, footer#brand-footer nav#fat-footer .fat-footer-links .pagination .wp-paginate, .pagination footer#brand-footer nav#fat-footer .fat-footer-links .wp-paginate {
+/* line 5, ../sass/blog/_comments.scss */
+#comments ol {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #74cbc8;
+  border: 1px solid #4fbdb9;
+  padding: 1em;
   margin: 0;
   list-style: none;
 }
-/* line 362, ../sass/blog/_blog.scss */
-footer#brand-footer nav#fat-footer .fat-footer-links a {
-  display: block;
-  padding: 1px 13px;
+/* line 13, ../sass/blog/_comments.scss */
+#comments ol li h4, #comments ol li .h4, #comments ol li time {
+  display: inline;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  font-weight: normal;
+  font-style: italic;
 }
-/* line 369, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media, footer#brand-footer .pagination #social-media.wp-paginate, .pagination footer#brand-footer #social-media.wp-paginate {
-  list-style-type: none;
+/* line 21, ../sass/blog/_comments.scss */
+#comments ol li .commentBody {
+  background-color: #fff;
+  padding: 1em;
+}
+/* line 27, ../sass/blog/_comments.scss */
+#comments .comment-respond {
+  display: block;
+}
+/* line 29, ../sass/blog/_comments.scss */
+#comments .comment-respond label, #comments .comment-respond .control-label {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 32, ../sass/blog/_comments.scss */
+#comments .comment-respond .required {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 35, ../sass/blog/_comments.scss */
+#comments .comment-respond input {
+  display: block;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  width: 100%;
+}
+/* line 40, ../sass/blog/_comments.scss */
+#comments .comment-respond .form-submit {
   float: right;
 }
-/* line 5, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
-footer#brand-footer ul#social-media, footer#brand-footer .pagination #social-media.wp-paginate, .pagination footer#brand-footer #social-media.wp-paginate, footer#brand-footer ul#social-media li, footer#brand-footer .pagination #social-media.wp-paginate li, .pagination footer#brand-footer #social-media.wp-paginate li {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-}
-/* line 373, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a, footer#brand-footer .pagination #social-media.wp-paginate a, .pagination footer#brand-footer #social-media.wp-paginate a {
-  background-color: transparent;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  display: block;
-  float: left;
-  height: 32px;
-  margin: 0 1ex 0 0;
-  width: 32px;
-}
-/* line 383, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a span, footer#brand-footer .pagination #social-media.wp-paginate a span, .pagination footer#brand-footer #social-media.wp-paginate a span {
-  display: none;
-}
-/* line 388, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a.facebook, footer#brand-footer .pagination #social-media.wp-paginate a.facebook, .pagination footer#brand-footer #social-media.wp-paginate a.facebook {
-  background-image: brand-asset-path("icon-facebook.png", "images/icons");
-}
-/* line 392, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a.twitter, footer#brand-footer .pagination #social-media.wp-paginate a.twitter, .pagination footer#brand-footer #social-media.wp-paginate a.twitter {
-  background-image: brand-asset-path("icon-twitter.png", "images/icons");
-}
-/* line 396, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a.googleplus, footer#brand-footer .pagination #social-media.wp-paginate a.googleplus, .pagination footer#brand-footer #social-media.wp-paginate a.googleplus {
-  background-image: brand-asset-path("icon-googleplus.png", "images/icons");
-}
-/* line 400, ../sass/blog/_blog.scss */
-footer#brand-footer ul#social-media a.youtube, footer#brand-footer .pagination #social-media.wp-paginate a.youtube, .pagination footer#brand-footer #social-media.wp-paginate a.youtube {
-  background-image: brand-asset-path("icon-youtube.png", "images/icons");
-}
-/* line 406, ../sass/blog/_blog.scss */
-footer#brand-footer ul.privacy-seals, footer#brand-footer .pagination .privacy-seals.wp-paginate, .pagination footer#brand-footer .privacy-seals.wp-paginate {
-  float: left;
-  list-style-type: none;
-}
-/* line 5, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/typography/lists/_inline-list.scss */
-footer#brand-footer ul.privacy-seals, footer#brand-footer .pagination .privacy-seals.wp-paginate, .pagination footer#brand-footer .privacy-seals.wp-paginate, footer#brand-footer ul.privacy-seals li, footer#brand-footer .pagination .privacy-seals.wp-paginate li, .pagination footer#brand-footer .privacy-seals.wp-paginate li {
-  margin: 0px;
-  padding: 0px;
-  display: inline;
-}
-/* line 409, ../sass/blog/_blog.scss */
-footer#brand-footer ul.privacy-seals li a, footer#brand-footer .pagination .privacy-seals.wp-paginate li a, .pagination footer#brand-footer .privacy-seals.wp-paginate li a {
-  padding: 0 1em 0 0;
-  text-decoration: none;
-}
-/* line 412, ../sass/blog/_blog.scss */
-footer#brand-footer ul.privacy-seals li a img, footer#brand-footer .pagination .privacy-seals.wp-paginate li a img, .pagination footer#brand-footer .privacy-seals.wp-paginate li a img {
-  max-width: none;
-}
 
-/** Mixins **/
-/* line 41, ../sass/blog/_buttons.scss */
-.btn, #comments .comment-respond .form-submit input {
-  -webkit-transition: all 0.05s linear;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.05s linear 0s;
-  -o-transition: all 0.05s linear 0s;
-  transition: all 0.05s linear 0s;
-  background: none repeat scroll 0 0 #EDE3CC;
-  border: 0 none;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 0.5em 1em;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
-}
-
-/* line 45, ../sass/blog/_buttons.scss */
-.btn-primary, #comments .comment-respond .form-submit input {
-  -webkit-transition: all 0.05s linear;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.05s linear 0s;
-  -o-transition: all 0.05s linear 0s;
-  transition: all 0.05s linear 0s;
-  background: none repeat scroll 0 0 #EDE3CC;
-  border: 0 none;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 0.5em 1em;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
-  background: none repeat scroll 0 0 #CA3162;
-  color: #FFFFFF;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-}
-
-/* line 49, ../sass/blog/_buttons.scss */
-.btn-donate {
-  -webkit-transition: all 0.05s linear;
-  -webkit-transition-delay: 0s;
-  -moz-transition: all 0.05s linear 0s;
-  -o-transition: all 0.05s linear 0s;
-  transition: all 0.05s linear 0s;
-  background: none repeat scroll 0 0 #EDE3CC;
-  border: 0 none;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  box-shadow: 0 2px 2px rgba(255, 255, 255, 0.25) inset, 0 -2px 2px rgba(0, 0, 0, 0.5) inset, 0 2px 2px rgba(0, 0, 0, 0.2);
-  padding: 0.5em 1em;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.05);
-  background: none repeat scroll 0 0 #CA3162;
-  color: #FFFFFF;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  margin: 18px 1em;
-  padding-left: 53px;
-  position: relative;
-  font-weight: bold;
-}
-/* line 29, ../sass/blog/_buttons.scss */
-.btn-donate i.icon-flower {
-  background: url("../img/donate-btn-flower.png") no-repeat scroll center center transparent;
+/* line 3, ../sass/blog/_plugins.scss */
+.social-sharing h2, .social-sharing .h2 {
   display: inline-block;
-  height: 68px;
-  left: 3px;
-  margin-top: -34px;
-  position: absolute;
-  top: 50%;
-  width: 47px;
+}
+/* line 6, ../sass/blog/_plugins.scss */
+.social-sharing .sharing-buttons {
+  display: inline-block;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
-  /* line 2, ../sass/blog/_responsive.scss */
-  #uplift-header .widgets strong {
-    display: none !important;
-  }
+/* line 14, ../sass/blog/_plugins.scss */
+.pagingNav {
+  text-align: center;
 }
-@media (max-width: 767px) {
-  /* line 8, ../sass/blog/_responsive.scss */
-  #uplift-header .widgets {
-    line-height: 32px;
-    text-align: left;
-  }
-  /* line 11, ../sass/blog/_responsive.scss */
-  #uplift-header .widgets strong {
-    display: block !important;
-  }
 
-  /* line 16, ../sass/blog/_responsive.scss */
-  #sidebar {
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-  }
-
-  /* line 20, ../sass/blog/_responsive.scss */
-  #happy-little-trees {
-    display: none;
-  }
+/* line 37, ../sass/blog/_plugins.scss */
+.attachment-post-thumbnail {
+  margin: 0 0 1em 0;
 }
+
 /* line 1, ../sass/blog/_shame.scss */
 .h2 {
   /** Cheater Class for Blog Titles on index.php and single.php **/
