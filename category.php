@@ -4,7 +4,7 @@
     <div class="row">
         <section class="col-md-8">
             <?php if ( have_posts() ): ?>
-                <h1>Category Archive: <?php echo single_cat_title( '', false ); ?></h1>
+                <h1>Category Archive:<br/> <?php echo single_cat_title( '', false ); ?></h1>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <?php get_template_parts(array('parts/shared/article-preview') ); ?>
                 <?php endwhile; ?>

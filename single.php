@@ -31,7 +31,7 @@
                     <section class="related-posts">
                         <?php related_posts(); ?>
                     </section>
-                    <section class="comments">
+                    <section id="comment-container">
                         <?php comments_template( '', true ); ?>
                     </section>
                 <?php endwhile; ?>

@@ -14,7 +14,7 @@
                     <h1>Archive</h1>
                 <?php endif; ?>
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_parts(array('parts/shared/fine-print') ); ?>
+                    <?php get_template_parts(array('parts/shared/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
                 <h2>No posts to display</h2>

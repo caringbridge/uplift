@@ -8,9 +8,6 @@
  * @subpackage 	Starkers
  * @since 		Starkers 4.0
  */
-
-
-
 require_once( 'external/starkers-utilities.php' );
 add_theme_support('post-thumbnails');
 add_action( 'wp_enqueue_scripts', 'script_enqueuer' );
@@ -18,7 +15,6 @@ add_filter( 'body_class', 'add_slug_to_body_class' );
 function script_enqueuer() {
 	wp_register_script( 'site', get_template_directory_uri().'/js/site.js', array( 'jquery' ) );
 	wp_enqueue_script( 'site' );
-
 	wp_register_style( 'screen', get_template_directory_uri().'/style.css', '', '', 'screen' );
     wp_enqueue_style( 'screen' );
 }
@@ -44,7 +40,6 @@ function yourthemeslug_title_filter( $title, $sep, $seplocation ) {
     if( !is_feed() ) return get_bloginfo( 'name' ) . $page_type . $title . $page_num;
     else return $old_title;
 }
-
 add_filter('comment_form_default_fields', 'mytheme_remove_url' );
 
 function mytheme_remove_url($arg) {
@@ -52,10 +47,25 @@ function mytheme_remove_url($arg) {
     return $arg;
 }
 
+
+/**
+ * Different post excerpt lengths on different pages
+ *
+ * @return void
+ * @author Olaf - http://stackoverflow.com/questions/4082662/multiple-excerpt-lengths-in-wordpress
+ */
 function custom_excerpt_length( $length ) {
     return (is_front_page()) ? 50 : 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+
+
+
+
+
+
 
 
 /**
@@ -65,30 +75,47 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
  * @author Keir Whitaker
  */
 function starkers_comment( $comment, $args, $depth ) {
-	$GLOBALS['comment'] = $comment;
-	?>
-	<?php if ( $comment->comment_approved == '1' ): ?>
-	<li>
-		<article id="comment-<?php comment_ID() ?>">
-			<h4><?php comment_author_link() ?> &bull; </h4>
-			<time><?php comment_date() ?> at <?php comment_time() ?></time>
-			<div class="commentBody">
-			<?php comment_text() ?>
-			</div>
-		</article>
+    $GLOBALS['comment'] = $comment;
+    ?>
 
-	<?php elseif ($comment->comment_approved == '0') : ?>
-	<article id="comment-<?php comment_ID() ?>" class="normal-case">
-			<?php echo get_avatar( $comment ); ?>
-			<h4 class="normal-case"><?php comment_author_link() ?> &bull; </h4>
-			<time class="normal-case"><?php comment_date() ?> at <?php comment_time() ?></time>
-			<div class="alert alert-info">
-			<p>Your comment is awaiting moderation.</p>
-			</div>
-		</article>
-	<?php endif; ?>
-	</li>
-	<?php
+    <li class="comment-reply list-group-item">
+       <?php if ( $comment->comment_approved == '1' ): ?>
+            <article id="comment-<?php comment_ID() ?>">
+                <div class="media">
+                    <span class="pull-left">
+                        <!-- avatar thumbnail here?-->
+                    </span>
+                    <div class="media-body">
+                        <header>
+                            <h5 class="media-heading"><?php comment_author_link() ?>
+                                <span class="text-muted">&mdash; <time><?php comment_date() ?> at <?php comment_time() ?></time></span>
+                            </h5>
+                        </header>
+                        <div class="user-generated">
+                            <?php comment_text() ?>
+                        </div>
+                    </div>
+            </article>
+        <?php elseif ($comment->comment_approved == '0') : ?>
+            <article id="comment-<?php comment_ID() ?>">
+                <div class="media">
+                    <span class="pull-left">
+                        <!-- avatar thumbnail here?-->
+                    </span>
+                    <div class="media-body">
+                        <header>
+                            <h5 class="media-heading"><?php comment_author_link() ?>
+                                <span class="text-muted">&mdash; <time><?php comment_date() ?> at <?php comment_time() ?></time></span>
+                            </h5>
+                        </header>
+                        <div class="user-generated">
+                            <?php comment_text() ?>
+                        </div>
+                    </div>
+            </article>
+       <?php endif; ?>
+    </li>
+    <?php
 }
 
 
@@ -103,9 +130,6 @@ if (function_exists('register_sidebar')) {
         'after_title'   =>  '</h3></div>'
     ) );
 }
-
-
-
 
 
 /**
@@ -146,6 +170,8 @@ function db_filter_authors_search( $posts_search ) {
     error_log( $posts_search );
     return $posts_search;
 }
+
+
 /**
  * Modify get_users() to search display_name instead of user_nicename
  */

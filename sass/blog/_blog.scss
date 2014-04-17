@@ -1,11 +1,40 @@
 #content {
-    padding: 0 1em;
-    .uplift-logo-container {
-        line-height: 68px;
-        vertical-align: baseline;
-        margin: 2em 0;
-    }
+  padding: 0 1em;
+  .uplift-logo-container {
+    line-height: 68px;
+    vertical-align: baseline;
+    margin: 2em 0;
+  }
 }
+
+
+
+#content {
+  padding: 0 1em;
+}
+#content.uplift-logo-container {
+  line-height: 68px;
+  vertical-align: baseline;
+  margin: 2em 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .well {
   background-color: rgba($parchment, .7);

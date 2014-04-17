@@ -12,91 +12,66 @@
  * @since 		Starkers 4.0
  */
 ?>
-<div id="comments">
-	<h2 class="h3">Comments</h2>
-	<?php if ( post_password_required() ) : ?>
-	<p>This post is password protected. Enter the password to view any comments</p>
-</div>
-
-	<?php
-			/* Stop the rest of comments.php from being processed,
-			 * but don't kill the script entirely -- we still have
-			 * to fully load the template.
-			 */
-			return;
-		endif;
-	?>
-
-	<?php // You can start editing here -- including this comment! ?>
 
 
+<?php if ( post_password_required() ) : ?>
+<p>This post is password protected. Enter the password to view any comments</p>
+<?php
+	/* Stop the rest of comments.php from being processed,
+	* but don't kill the script entirely -- we still have
+	* to fully load the template.
+	*/
+	return;
+endif; ?>
+<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+<?php
+	$fields = array(
 
-	<ol>
+		'comment_field' =>
+		    '<div class="comment-form">
+		        <div class="media media-offset">
+		            <span class="pull-left">
+		                <!--thumbnail here-->
+		            </span>
+		            <div class="media-body">
+		                <div class="form-group">
+		                    <label for="comment">
+		                        <span class="required">
+		                            <span aria-hidden="true" role="presentation" title="Required">*
+		                            </span>
+		                            <span class="sr-only">Required
+		                            </span>
+		                        </span>' . _x( 'Post your comment', 'noun' ) . '
+		                    </label>
+		                    <textarea class="form-control" id="comment" name="comment" rows="4" aria-required="true" ></textarea>
+		                </div>',
+
+		'author' =>
+	        '<div class="form-group">' . '<label class="sr-only" for="name">' . __( 'Name', 'domainreference' ) . '</label>' .
+	        '<input class="form-control" id="author" type="text" name="name" placeholder="Sign your name..." value="' . esc_attr( $commenter['comment_author'] ) . '""' . $aria_req . '"></div>',
+
+	    'email' =>
+	       	'<div class="form-group">' . '<label class="sr-only" for="email">' . __( 'Email', 'domainreference' ) . '</label>' .
+	        '<input class="form-control" id="email" type="text" name="email" placeholder="Only your name will be displayed with your comment." value="' . esc_attr( $commenter['comment_author_email'] ) . '""' . $aria_req . '"></div>',
+	);
+
+	comment_form(array(
+	'id_form' => 'comment',
+	'title_reply' => 'Comments',
+	'fields' => $fields
+	));
+?>
+
+<?php if ( have_comments() ) : ?>
+	<ul class="comment-replies list-group">
 		<?php wp_list_comments( array( 'callback' => 'starkers_comment' ) ); ?>
-	</ol>
-
-	<?php
-		/* If there are no comments and comments are closed, let's leave a little note, shall we?
-		 * But we don't want the note on pages or post types that do not support comments.
-		 */
-		elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-
-	<p>Comments are closed</p>
-
-	<?php endif; ?>
-
-	<br/>
-
-	<button type="button" class="btn btn-primary btn-block" data-toggle="collapse" data-target="#demo">
-	  <icon class="icon-comments"></i> Write a Reply or Comment
-	</button>
-
-	<div id="demo" class="collapse">
-	<?php
-		$comments_args = array(
-			// change the title of send button
-		    'label_submit' => 'Submit Comment',
-
-		    // change the title of the reply section
-		    'title_reply' => '',
-
-		    // change Text before the set of comment form fields.
-		    'comment_notes_before' => 'Only your name will be displayed with your comment.',
-
-		    // remove "Text or HTML to be displayed after the set of comment fields"
-		    'comment_notes_after' => '',
-
-		    'comment_field' =>
-		    	'<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
-		    	'</label><textarea id="comment" name="comment" rows="3" aria-required="true"></textarea></p>',
-
-		    'fields' => apply_filters( 'comment_form_default_fields', array(
-
-		        'author' =>
-		        	'<div class="row-fluid">
-		        		<div class="span6">
-		        			<p class="comment-form-author">' .
-		        				'<label for="author">' . __( 'Name', 'domainreference' ) . '</label> ' .
-		        				( $req ? '<span class="required">*</span>' : '' ) .
-		        				'<input class="span6" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-		        				'""' . $aria_req . ' /></p>
-		        		</div>',
-
-		        'email' =>
-		        		'<div class="span6">
-		        			<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
-		        			( $req ? '<span class="required">*</span>' : '' ) .
-		        			'<input class="span6" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-		        			'""' . $aria_req . ' /></p>
-		        		</div>
-		        	</div>',
-		       	)
-		    ),
-		);
-		comment_form($comments_args);
-	?>
-	</div>
-</div>
+	</ul>
+<?php
+	/* If there are no comments and comments are closed, let's leave a little note, shall we?
+	 * But we don't want the note on pages or post types that do not support comments.
+	*/
+	elseif ( ! comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) :
+?>
+<p>Comments are closed</p>
+<?php endif; ?>

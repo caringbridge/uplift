@@ -5,11 +5,8 @@
   }
   .sharing-buttons {
     display: inline-block;
-
   }
 }
-
-
 //WP-Paginate Plug-In
 .pagingNav {
   text-align: center;
@@ -17,23 +14,7 @@
     @extend .pagination;
   }
 }
-
-
-
-
-
-//WP-Paginate Plug-In
-//.pagination {
-//  .wp-paginate {
-//    @extend ul;
-//    .current {
-//      background-color: $gray-lighter;
-//    }
-//  }
-//}
-
 // YARPP Plug-In
-
 .attachment-post-thumbnail {
   @extend .img-thumbnail;
   margin: 0 0 1em 0;
