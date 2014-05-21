@@ -1,12 +1,11 @@
 //AddThis Plug-In
 .social-sharing {
-  h2 {
-    display: inline-block;
-  }
-  .sharing-buttons {
-    display: inline-block;
+  margin: 0 0 10px 0;
+  @media screen and (min-width: $screen-sm) {
+    float: right;
   }
 }
+
 //WP-Paginate Plug-In
 .pagingNav {
   text-align: center;
@@ -14,8 +13,20 @@
     @extend .pagination;
   }
 }
+
 // YARPP Plug-In
-.attachment-post-thumbnail {
-  @extend .img-thumbnail;
-  margin: 0 0 1em 0;
+.panel-related {
+  article {
+    margin-bottom: 1em;
+    border-bottom: desaturate(darken($pampas, 2%), 5%) 1px solid;
+  }
+  article:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+}
+//Force the Dern Thumbnail in the Related Stories to be 100x100 because WP is stupid
+.strongarm {
+  width: 100px;
+  height:100px;
 }

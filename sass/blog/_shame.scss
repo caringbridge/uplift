@@ -1,9 +1,24 @@
-.h2 {
-    @extend h2; /** Cheater Class for Blog Titles on index.php and single.php **/
+//Hide this part of the Comment Form that we don;t use better than WP hides it.
+#reply-title {
+  display: none;
 }
-.h3 {
-  @extend h3; /** Cheater Class for Comments Heading **/
+
+//Strip some stock typography styles away to visually align the Byline and SocialSharing on top of single posts
+header {
+  p {
+    margin: 0 0 0 0;
+  }
 }
-.h4 {
-  @extend h4;
+//Same as reason as above, but not nested in <header> so it touches the SocialSharing below Post as well.
+.social-sharing {
+  p {
+    margin: 0 0 0 0;
+  }
+}
+
+//Comment Form Pattern from v5 hangs this margin on <form>, which we can;t do in WP because of how the Comment Form in rendered by Core.
+.comment-form {
+  .media.media-offset .pull-left {
+    margin-top: 2em;
+  }
 }

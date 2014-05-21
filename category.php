@@ -1,12 +1,12 @@
-<?php get_template_parts( array('parts/shared/header') ); ?>
+<?php get_template_parts( array('parts/header') ); ?>
 <div class="layout container-fluid">
-<?php get_template_parts(array('parts/shared/uplift-logo')); ?>
+<?php get_template_parts(array('parts/uplift-logo')); ?>
     <div class="row">
         <section class="col-md-8">
             <?php if ( have_posts() ): ?>
                 <h1>Category Archive:<br/> <?php echo single_cat_title( '', false ); ?></h1>
                 <?php while ( have_posts() ) : the_post(); ?>
-                    <?php get_template_parts(array('parts/shared/article-preview') ); ?>
+                    <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
                 <h2>No posts to display in <?php echo single_cat_title( '', false ); ?></h2>
@@ -16,10 +16,10 @@
             </div>
         </section>
         <aside class="col-md-4">
-            <?php get_template_parts(array('parts/shared/sidebar') ); ?>
+            <?php get_template_parts(array('parts/sidebar') ); ?>
         </aside>
     </div>
-    <?php get_template_parts(array('parts/shared/footer') ); ?>
+    <?php get_template_parts(array('parts/footer') ); ?>
 </div>
-<?php get_template_parts(array('parts/shared/fine-print') ); ?>
+<?php get_template_parts(array('parts/fine-print') ); ?>
 <div class="home" id="happy-little-trees"></div>

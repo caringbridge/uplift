@@ -447,17 +447,14 @@ th {
   /* line 55, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_print.scss */
   p,
   h2,
-  .h2,
-  h3,
-  .h3 {
+  h3 {
     orphans: 3;
     widows: 3;
   }
 
   /* line 61, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_print.scss */
-  h2, .h2,
-  h3,
-  .h3 {
+  h2,
+  h3 {
     page-break-after: avoid;
   }
 
@@ -478,8 +475,9 @@ th {
   }
 
   /* line 83, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret,
-  .dropup > .btn > .caret {
+  .btn > .caret, .form-submit #submit > .caret,
+  .dropup > .btn > .caret,
+  .form-submit .dropup > #submit > .caret {
     border-top-color: #000 !important;
   }
 
@@ -579,7 +577,8 @@ img {
 }
 
 /* line 93, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_scaffolding.scss */
-.img-thumbnail, .wp-post-image, .attachment-post-thumbnail {
+.img-thumbnail, .wp-post-image,
+.attachment-post-thumbnail {
   padding: 4px;
   line-height: 1.428571429;
   background-color: white;
@@ -618,7 +617,7 @@ hr {
 }
 
 /* line 10, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h1, h2, .h2, h3, .h3, h4, .h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -627,13 +626,10 @@ h1, h2, .h2, h3, .h3, h4, .h4, h5, h6,
 }
 /* line 17, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1 small,
-h1 .small, h2 small, .h2 small,
-h2 .small,
-.h2 .small, h3 small, .h3 small,
-h3 .small,
-.h3 .small, h4 small, .h4 small,
-h4 .small,
-.h4 .small, h5 small,
+h1 .small, h2 small,
+h2 .small, h3 small,
+h3 .small, h4 small,
+h4 .small, h5 small,
 h5 .small, h6 small,
 h6 .small,
 .h1 small,
@@ -650,10 +646,8 @@ h6 .small,
 
 /* line 26, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1,
-h2,
-.h2, .h2,
-h3,
-.h3, .h3 {
+h2, .h2,
+h3, .h3 {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -662,29 +656,24 @@ h1 small,
 h1 .small, .h1 small,
 .h1 .small,
 h2 small,
-.h2 small,
-h2 .small,
-.h2 .small, .h2 small,
+h2 .small, .h2 small,
 .h2 .small,
 h3 small,
-.h3 small,
-h3 .small,
-.h3 .small, .h3 small,
+h3 .small, .h3 small,
 .h3 .small {
   font-size: 65%;
 }
 
 /* line 37, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h4, .h4, .h4,
+h4, .h4,
 h5, .h5,
 h6, .h6 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 42, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h4 small, .h4 small,
-h4 .small,
-.h4 .small, .h4 small,
+h4 small,
+h4 .small, .h4 small,
 .h4 .small,
 h5 small,
 h5 .small, .h5 small,
@@ -701,17 +690,17 @@ h1, .h1 {
 }
 
 /* line 48, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h2, .h2, .h2 {
+h2, .h2 {
   font-size: 30px;
 }
 
 /* line 49, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h3, .h3, .h3 {
+h3, .h3 {
   font-size: 24px;
 }
 
 /* line 50, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-h4, .h4, .h4 {
+h4, .h4 {
   font-size: 18px;
 }
 
@@ -776,7 +765,7 @@ cite {
 }
 
 /* line 91, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_type.scss */
-.text-muted, .muted, #site-notifications .panel.muted h4, #site-notifications .panel.muted .h4, #site-notifications .panel.muted i {
+.text-muted, .muted, #site-notifications .panel.muted h4, #site-notifications .panel.muted i {
   color: #545559;
 }
 
@@ -2688,7 +2677,8 @@ input[type="checkbox"],
 /* line 917, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .input-group-btn > .btn,
+.form-submit .input-group-sm > .input-group-btn > #submit {
   height: 30px;
   padding: 5px 10px;
   font-size: 12px;
@@ -2699,7 +2689,8 @@ input[type="checkbox"],
 /* line 922, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
-.input-group-sm > .input-group-btn > select.btn {
+.input-group-sm > .input-group-btn > select.btn,
+.form-submit .input-group-sm > .input-group-btn > select#submit {
   height: 30px;
   line-height: 30px;
 }
@@ -2708,17 +2699,20 @@ select.input-sm, .input-group-sm > select.form-control,
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
+.form-submit .input-group-sm > .input-group-btn > textarea#submit,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
-.input-group-sm > .input-group-btn > select[multiple].btn {
+.input-group-sm > .input-group-btn > select[multiple].btn,
+.form-submit .input-group-sm > .input-group-btn > select[multiple]#submit {
   height: auto;
 }
 
 /* line 917, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .input-group-btn > .btn,
+.form-submit .input-group-lg > .input-group-btn > #submit {
   height: 46px;
   padding: 10px 16px;
   font-size: 18px;
@@ -2729,7 +2723,8 @@ select[multiple].input-sm,
 /* line 922, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
-.input-group-lg > .input-group-btn > select.btn {
+.input-group-lg > .input-group-btn > select.btn,
+.form-submit .input-group-lg > .input-group-btn > select#submit {
   height: 46px;
   line-height: 46px;
 }
@@ -2738,10 +2733,12 @@ select.input-lg, .input-group-lg > select.form-control,
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
+.form-submit .input-group-lg > .input-group-btn > textarea#submit,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
-.input-group-lg > .input-group-btn > select[multiple].btn {
+.input-group-lg > .input-group-btn > select[multiple].btn,
+.form-submit .input-group-lg > .input-group-btn > select[multiple]#submit {
   height: auto;
 }
 
@@ -2961,7 +2958,7 @@ select[multiple].input-lg,
 }
 
 /* line 9, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn {
+.btn, .form-submit #submit {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -2982,25 +2979,25 @@ select[multiple].input-lg,
   user-select: none;
 }
 /* line 22, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:focus {
+.btn:focus, .form-submit #submit:focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
 /* line 27, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:hover, .btn:focus {
+.btn:hover, .form-submit #submit:hover, .btn:focus, .form-submit #submit:focus {
   color: #333333;
   text-decoration: none;
 }
 /* line 33, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:active, .btn.active {
+.btn:active, .form-submit #submit:active, .btn.active, .form-submit .active#submit {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 /* line 41, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled, .form-submit .disabled#submit, .btn[disabled], .form-submit [disabled]#submit, fieldset[disabled] .btn, fieldset[disabled] .form-submit #submit, .form-submit fieldset[disabled] #submit {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -3047,38 +3044,38 @@ select[multiple].input-lg,
 }
 
 /* line 56, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-primary {
+.btn-primary, .form-submit #submit {
   color: white;
   background-color: #a21984;
   border-color: #8c1672;
 }
 /* line 510, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active {
+.btn-primary:hover, .form-submit #submit:hover, .btn-primary:focus, .form-submit #submit:focus, .btn-primary:active, .form-submit #submit:active, .btn-primary.active, .form-submit .active#submit {
   color: white;
   background-color: #7f1467;
   border-color: #570d47;
 }
 /* line 515, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.open .btn-primary.dropdown-toggle {
+.open .btn-primary.dropdown-toggle, .open .form-submit .dropdown-toggle#submit, .form-submit .open .dropdown-toggle#submit {
   color: white;
   background-color: #7f1467;
   border-color: #570d47;
 }
 /* line 521, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.btn-primary:active, .btn-primary.active {
+.btn-primary:active, .form-submit #submit:active, .btn-primary.active, .form-submit .active#submit {
   background-image: none;
 }
 /* line 524, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.open .btn-primary.dropdown-toggle {
+.open .btn-primary.dropdown-toggle, .open .form-submit .dropdown-toggle#submit, .form-submit .open .dropdown-toggle#submit {
   background-image: none;
 }
 /* line 534, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
+.btn-primary.disabled, .form-submit .disabled#submit, .btn-primary.disabled:hover, .form-submit .disabled#submit:hover, .btn-primary.disabled:focus, .form-submit .disabled#submit:focus, .btn-primary.disabled:active, .form-submit .disabled#submit:active, .btn-primary.disabled.active, .form-submit .disabled.active#submit, .btn-primary[disabled], .form-submit [disabled]#submit, .btn-primary[disabled]:hover, .form-submit [disabled]#submit:hover, .btn-primary[disabled]:focus, .form-submit [disabled]#submit:focus, .btn-primary[disabled]:active, .form-submit [disabled]#submit:active, .btn-primary[disabled].active, .form-submit [disabled].active#submit, fieldset[disabled] .btn-primary, fieldset[disabled] .form-submit #submit, .form-submit fieldset[disabled] #submit, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .form-submit #submit:hover, .form-submit fieldset[disabled] #submit:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .form-submit #submit:focus, .form-submit fieldset[disabled] #submit:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .form-submit #submit:active, .form-submit fieldset[disabled] #submit:active, fieldset[disabled] .btn-primary.active, fieldset[disabled] .form-submit .active#submit, .form-submit fieldset[disabled] .active#submit {
   background-color: #a21984;
   border-color: #8c1672;
 }
 /* line 540, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.btn-primary .badge {
+.btn-primary .badge, .form-submit #submit .badge {
   color: #a21984;
   background-color: white;
 }
@@ -3261,7 +3258,7 @@ select[multiple].input-lg,
 }
 
 /* line 120, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .form-submit .btn-group-lg > #submit {
   padding: 10px 16px;
   font-size: 18px;
   line-height: 1.33;
@@ -3269,7 +3266,7 @@ select[multiple].input-lg,
 }
 
 /* line 124, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .form-submit .btn-group-sm > #submit {
   padding: 5px 10px;
   font-size: 12px;
   line-height: 1.5;
@@ -3277,7 +3274,7 @@ select[multiple].input-lg,
 }
 
 /* line 128, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn {
+.btn-xs, .btn-group-xs > .btn, .form-submit .btn-group-xs > #submit {
   padding: 1px 5px;
   font-size: 12px;
   line-height: 1.5;
@@ -4528,29 +4525,39 @@ input[type="button"].btn-block {
   vertical-align: middle;
 }
 /* line 11, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn,
-.btn-group-vertical > .btn {
+.btn-group > .btn, .form-submit .btn-group > #submit,
+.btn-group-vertical > .btn,
+.form-submit .btn-group-vertical > #submit {
   position: relative;
   float: left;
 }
 /* line 18, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+.btn-group > .btn:hover, .form-submit .btn-group > #submit:hover, .btn-group > .btn:focus, .form-submit .btn-group > #submit:focus, .btn-group > .btn:active, .form-submit .btn-group > #submit:active, .btn-group > .btn.active, .form-submit .btn-group > .active#submit,
 .btn-group-vertical > .btn:hover,
+.form-submit .btn-group-vertical > #submit:hover,
 .btn-group-vertical > .btn:focus,
+.form-submit .btn-group-vertical > #submit:focus,
 .btn-group-vertical > .btn:active,
-.btn-group-vertical > .btn.active {
+.form-submit .btn-group-vertical > #submit:active,
+.btn-group-vertical > .btn.active,
+.form-submit .btn-group-vertical > .active#submit {
   z-index: 2;
 }
 /* line 21, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:focus,
-.btn-group-vertical > .btn:focus {
+.btn-group > .btn:focus, .form-submit .btn-group > #submit:focus,
+.btn-group-vertical > .btn:focus,
+.form-submit .btn-group-vertical > #submit:focus {
   outline: none;
 }
 
 /* line 33, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn,
+.btn-group .btn + .btn, .btn-group .form-submit #submit + .btn, .form-submit .btn-group #submit + .btn, .btn-group .form-submit .btn + #submit, .form-submit .btn-group .btn + #submit, .btn-group .form-submit #submit + #submit, .form-submit .btn-group #submit + #submit,
 .btn-group .btn + .btn-group,
+.btn-group .form-submit #submit + .btn-group,
+.form-submit .btn-group #submit + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .form-submit .btn-group + #submit,
+.form-submit .btn-group .btn-group + #submit,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
 }
@@ -4574,29 +4581,29 @@ input[type="button"].btn-block {
   float: left;
 }
 /* line 49, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-toolbar > .btn,
+.btn-toolbar > .btn, .form-submit .btn-toolbar > #submit,
 .btn-toolbar > .btn-group,
 .btn-toolbar > .input-group {
   margin-left: 5px;
 }
 
 /* line 54, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .form-submit .btn-group > #submit:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0;
 }
 
 /* line 59, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .form-submit .btn-group > #submit:first-child {
   margin-left: 0;
 }
 /* line 61, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .form-submit .btn-group > #submit:first-child:not(:last-child):not(.dropdown-toggle) {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 67, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .form-submit .btn-group > #submit:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
@@ -4608,19 +4615,19 @@ input[type="button"].btn-block {
 }
 
 /* line 75, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .form-submit .btn-group > .btn-group:not(:first-child):not(:last-child) > #submit {
   border-radius: 0;
 }
 
 /* line 80, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child > .btn:last-child,
+.btn-group > .btn-group:first-child > .btn:last-child, .form-submit .btn-group > .btn-group:first-child > #submit:last-child,
 .btn-group > .btn-group:first-child > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
 
 /* line 84, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child > .btn:first-child {
+.btn-group > .btn-group:last-child > .btn:first-child, .form-submit .btn-group > .btn-group:last-child > #submit:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4632,13 +4639,13 @@ input[type="button"].btn-block {
 }
 
 /* line 108, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .form-submit .btn-group > #submit + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px;
 }
 
 /* line 112, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .form-submit .btn-group-lg.btn-group > #submit + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -4655,25 +4662,26 @@ input[type="button"].btn-block {
 }
 
 /* line 130, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn .caret {
+.btn .caret, .form-submit #submit .caret {
   margin-left: 0;
 }
 
 /* line 134, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .form-submit .btn-group-lg > #submit .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0;
 }
 
 /* line 139, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .form-submit .btn-group-lg > #submit .caret, .form-submit .dropup .btn-group-lg > #submit .caret {
   border-width: 0 5px 5px;
 }
 
 /* line 150, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .form-submit .btn-group-vertical > #submit,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn,
+.form-submit .btn-group-vertical > .btn-group > #submit {
   display: block;
   float: none;
   width: 100%;
@@ -4689,49 +4697,51 @@ input[type="button"].btn-block {
   clear: both;
 }
 /* line 160, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .form-submit .btn-group-vertical > .btn-group > #submit {
   float: none;
 }
 /* line 168, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn, .form-submit .btn-group-vertical > #submit + .btn, .form-submit .btn-group-vertical > .btn + #submit, .form-submit .btn-group-vertical > #submit + #submit,
 .btn-group-vertical > .btn + .btn-group,
+.form-submit .btn-group-vertical > #submit + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.form-submit .btn-group-vertical > .btn-group + #submit,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0;
 }
 
 /* line 175, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .form-submit .btn-group-vertical > #submit:not(:first-child):not(:last-child) {
   border-radius: 0;
 }
 /* line 178, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .form-submit .btn-group-vertical > #submit:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 /* line 182, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .form-submit .btn-group-vertical > #submit:last-child:not(:first-child) {
   border-bottom-left-radius: 4px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
 /* line 187, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .form-submit .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > #submit {
   border-radius: 0;
 }
 
 /* line 192, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .form-submit .btn-group-vertical > .btn-group:first-child:not(:last-child) > #submit:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 /* line 196, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .form-submit .btn-group-vertical > .btn-group:last-child:not(:first-child) > #submit:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4744,20 +4754,21 @@ input[type="button"].btn-block {
   border-collapse: separate;
 }
 /* line 211, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn,
+.btn-group-justified > .btn, .form-submit .btn-group-justified > #submit,
 .btn-group-justified > .btn-group {
   float: none;
   display: table-cell;
   width: 1%;
 }
 /* line 216, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-justified > .btn-group .btn {
+.btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .form-submit #submit, .form-submit .btn-group-justified > .btn-group #submit {
   width: 100%;
 }
 
 /* line 224, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn > input[type="radio"],
-[data-toggle="buttons"] > .btn > input[type="checkbox"] {
+[data-toggle="buttons"] > .btn > input[type="radio"], .form-submit [data-toggle="buttons"] > #submit > input[type="radio"],
+[data-toggle="buttons"] > .btn > input[type="checkbox"],
+.form-submit [data-toggle="buttons"] > #submit > input[type="checkbox"] {
   display: none;
 }
 
@@ -4816,7 +4827,8 @@ input[type="button"].btn-block {
 /* line 76, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon.input-sm,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .input-group-addon.btn {
+.input-group-sm > .input-group-btn > .input-group-addon.btn,
+.form-submit .input-group-sm > .input-group-btn > .input-group-addon#submit {
   padding: 5px 10px;
   font-size: 12px;
   border-radius: 3px;
@@ -4824,7 +4836,8 @@ input[type="button"].btn-block {
 /* line 81, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon.input-lg,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .input-group-addon.btn {
+.input-group-lg > .input-group-btn > .input-group-addon.btn,
+.form-submit .input-group-lg > .input-group-btn > .input-group-addon#submit {
   padding: 10px 16px;
   font-size: 18px;
   border-radius: 6px;
@@ -4839,10 +4852,14 @@ input[type="button"].btn-block {
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+.form-submit .input-group-btn:first-child > #submit,
 .input-group-btn:first-child > .btn-group > .btn,
+.form-submit .input-group-btn:first-child > .btn-group > #submit,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.form-submit .input-group-btn:last-child > #submit:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.form-submit .input-group-btn:last-child > .btn-group:not(:last-child) > #submit {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4856,10 +4873,14 @@ input[type="button"].btn-block {
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+.form-submit .input-group-btn:last-child > #submit,
 .input-group-btn:last-child > .btn-group > .btn,
+.form-submit .input-group-btn:last-child > .btn-group > #submit,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.form-submit .input-group-btn:first-child > #submit:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.form-submit .input-group-btn:first-child > .btn-group:not(:first-child) > #submit {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
@@ -4876,24 +4897,24 @@ input[type="button"].btn-block {
   white-space: nowrap;
 }
 /* line 131, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn {
+.input-group-btn > .btn, .form-submit .input-group-btn > #submit {
   position: relative;
 }
 /* line 133, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn + .btn {
+.input-group-btn > .btn + .btn, .form-submit .input-group-btn > #submit + .btn, .form-submit .input-group-btn > .btn + #submit, .form-submit .input-group-btn > #submit + #submit {
   margin-left: -1px;
 }
 /* line 139, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
+.input-group-btn > .btn:hover, .form-submit .input-group-btn > #submit:hover, .input-group-btn > .btn:focus, .form-submit .input-group-btn > #submit:focus, .input-group-btn > .btn:active, .form-submit .input-group-btn > #submit:active {
   z-index: 2;
 }
 /* line 147, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn, .form-submit .input-group-btn:first-child > #submit,
 .input-group-btn:first-child > .btn-group {
   margin-right: -1px;
 }
 /* line 153, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_input-groups.scss */
-.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn, .form-submit .input-group-btn:last-child > #submit,
 .input-group-btn:last-child > .btn-group {
   margin-left: -1px;
 }
@@ -5416,12 +5437,12 @@ input[type="button"].btn-block {
   margin-bottom: 8px;
 }
 /* line 351, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+.navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .form-submit .btn-group-sm > .navbar-btn#submit {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 /* line 354, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_navbar.scss */
-.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
+.navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .form-submit .btn-group-xs > .navbar-btn#submit {
   margin-top: 14px;
   margin-bottom: 14px;
 }
@@ -5852,7 +5873,7 @@ input[type="button"].btn-block {
   display: none;
 }
 /* line 33, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_labels.scss */
-.btn .label {
+.btn .label, .form-submit #submit .label {
   position: relative;
   top: -1px;
 }
@@ -5931,12 +5952,12 @@ input[type="button"].btn-block {
   display: none;
 }
 /* line 27, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_badges.scss */
-.btn .badge {
+.btn .badge, .form-submit #submit .badge {
   position: relative;
   top: -1px;
 }
 /* line 31, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_badges.scss */
-.btn-xs .badge, .btn-group-xs > .btn .badge {
+.btn-xs .badge, .btn-group-xs > .btn .badge, .form-submit .btn-group-xs > #submit .badge {
   top: 0;
   padding: 1px 5px;
 }
@@ -6039,28 +6060,29 @@ a.thumbnail.active {
 }
 
 /* line 9, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert {
+.alert, .logged-in-as {
   padding: 15px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
 /* line 16, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert h4, .alert .h4 {
+.alert h4, .logged-in-as h4 {
   margin-top: 0;
   color: inherit;
 }
 /* line 22, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert .alert-link {
+.alert .alert-link, .logged-in-as .alert-link, .logged-in-as a {
   font-weight: bold;
 }
 /* line 28, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert > p,
-.alert > ul {
+.alert > p, .logged-in-as > p,
+.alert > ul,
+.logged-in-as > ul {
   margin-bottom: 0;
 }
 /* line 31, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert > p + p {
+.alert > p + p, .logged-in-as > p + p {
   margin-top: 5px;
 }
 
@@ -6087,22 +6109,22 @@ a.thumbnail.active {
   border-top-color: #e1d044;
 }
 /* line 435, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.alert-success .alert-link {
+.alert-success .alert-link, .alert-success .logged-in-as a, .logged-in-as .alert-success a {
   color: #0b0b02;
 }
 
 /* line 59, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_alerts.scss */
-.alert-info {
+.alert-info, .logged-in-as {
   background-color: #c3e1ff;
   border-color: #9fe0ff;
   color: #002f5d;
 }
 /* line 432, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.alert-info hr {
+.alert-info hr, .logged-in-as hr {
   border-top-color: #86d7ff;
 }
 /* line 435, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.alert-info .alert-link {
+.alert-info .alert-link, .logged-in-as .alert-link, .logged-in-as a {
   color: #00152a;
 }
 
@@ -6117,7 +6139,7 @@ a.thumbnail.active {
   border-top-color: #feca6b;
 }
 /* line 435, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.alert-warning .alert-link {
+.alert-warning .alert-link, .alert-warning .logged-in-as a, .logged-in-as .alert-warning a {
   color: black;
 }
 
@@ -6132,7 +6154,7 @@ a.thumbnail.active {
   border-top-color: #ec93a7;
 }
 /* line 435, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.alert-danger .alert-link, .alert-error .alert-link {
+.alert-danger .alert-link, .alert-error .alert-link, .alert-danger .logged-in-as a, .logged-in-as .alert-danger a, .alert-error .logged-in-as a, .logged-in-as .alert-error a {
   color: #580f13;
 }
 
@@ -7002,12 +7024,12 @@ button.close {
   clear: both;
 }
 /* line 108, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn + .btn {
+.modal-footer .btn + .btn, .modal-footer .form-submit #submit + .btn, .form-submit .modal-footer #submit + .btn, .modal-footer .form-submit .btn + #submit, .form-submit .modal-footer .btn + #submit, .modal-footer .form-submit #submit + #submit, .form-submit .modal-footer #submit + #submit {
   margin-left: 5px;
   margin-bottom: 0;
 }
 /* line 113, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_modals.scss */
-.modal-footer .btn-group .btn + .btn {
+.modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .form-submit #submit + .btn, .form-submit .modal-footer .btn-group #submit + .btn, .modal-footer .btn-group .form-submit .btn + #submit, .form-submit .modal-footer .btn-group .btn + #submit, .modal-footer .btn-group .form-submit #submit + #submit, .form-submit .modal-footer .btn-group #submit + #submit {
   margin-left: -1px;
 }
 /* line 117, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_modals.scss */
@@ -7487,7 +7509,7 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 /* line 198, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_carousel.scss */
-.carousel-caption .btn {
+.carousel-caption .btn, .carousel-caption .form-submit #submit, .form-submit .carousel-caption #submit {
   text-shadow: none;
 }
 
@@ -7827,6 +7849,7 @@ td.visible-print {
 /* line 21, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
 .btn-default,
 .btn-primary,
+.form-submit #submit,
 .btn-success,
 .btn-info,
 .btn-warning,
@@ -7838,7 +7861,9 @@ td.visible-print {
 /* line 28, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
 .btn-default:active, .btn-default.active,
 .btn-primary:active,
+.form-submit #submit:active,
 .btn-primary.active,
+.form-submit .active#submit,
 .btn-success:active,
 .btn-success.active,
 .btn-info:active,
@@ -7852,7 +7877,7 @@ td.visible-print {
 }
 
 /* line 57, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.btn:active, .btn.active {
+.btn:active, .form-submit #submit:active, .btn.active, .form-submit .active#submit {
   background-image: none;
 }
 
@@ -7880,7 +7905,7 @@ td.visible-print {
 }
 
 /* line 64, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.btn-primary {
+.btn-primary, .form-submit #submit {
   background-image: -webkit-linear-gradient(top, #a21984 0%, #6d1159 100%);
   background-image: linear-gradient(to bottom, #a21984 0%, #6d1159 100%);
   background-repeat: repeat-x;
@@ -7890,12 +7915,12 @@ td.visible-print {
   border-color: #640f52;
 }
 /* line 41, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.btn-primary:hover, .btn-primary:focus {
+.btn-primary:hover, .form-submit #submit:hover, .btn-primary:focus, .form-submit #submit:focus {
   background-color: #6d1159;
   background-position: 0 -15px;
 }
 /* line 47, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.btn-primary:active, .btn-primary.active {
+.btn-primary:active, .form-submit #submit:active, .btn-primary.active, .form-submit .active#submit {
   background-color: #6d1159;
   border-color: #640f52;
 }
@@ -8072,7 +8097,7 @@ td.visible-print {
 }
 
 /* line 153, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.alert {
+.alert, .logged-in-as {
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -8088,7 +8113,7 @@ td.visible-print {
 }
 
 /* line 167, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_theme.scss */
-.alert-info {
+.alert-info, .logged-in-as {
   background-image: -webkit-linear-gradient(top, #c3e1ff 0%, #9dcfff 100%);
   background-image: linear-gradient(to bottom, #c3e1ff 0%, #9dcfff 100%);
   background-repeat: repeat-x;
@@ -8248,8 +8273,8 @@ td.visible-print {
 
 @font-face {
   font-family: "cbicons";
-  src: url('/fonts/../fonts/cbicons.eot');
-  src: url('/fonts/../fonts/cbicons.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/cbicons.woff') format('woff'), url('/fonts/../fonts/cbicons.ttf') format('truetype'), url('/fonts/../fonts/cbicons.svg') format('svg');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/cbicons.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/cbicons.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/cbicons.woff') format('woff'), url('/fonts/../wp-content/themes/Uplift/fonts/cbicons.ttf') format('truetype'), url('/fonts/../wp-content/themes/Uplift/fonts/cbicons.svg') format('svg');
 }
 
 /**
@@ -8260,433 +8285,433 @@ td.visible-print {
  * @return string                  CSS rule(s) for matching up an icon to one or more cbicon-* classes
  */
 /* Sites Service */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-sites:before {
   content: "\e008";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-users:before {
   content: "\e008";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-site-home:before {
   content: "\e027";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-house:before {
   content: "\e027";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-journal:before {
   content: "\e032";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-planner:before {
   content: "\e034";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-photos:before {
   content: "\e026";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-guestbook:before {
   content: "\e031";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-tributes:before {
   content: "\e002";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-flower:before {
   content: "\e002";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-tribute:before {
   content: "\e002";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-privacy:before {
   content: "\e035";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-groups:before {
   content: "\e030";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-notifications:before {
   content: "\e025";
 }
 
 /* Web Application */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-chat:before {
   content: "\e006";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-talk:before {
   content: "\e006";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-discussion:before {
   content: "\e006";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-conversation:before {
   content: "\e006";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-comment:before {
   content: "\e013";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-write:before {
   content: "\e013";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-journal:before {
   content: "\e013";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-diary:before {
   content: "\e013";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-crop:before {
   content: "\e028";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-edit:before {
   content: "\e02a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-find:before {
   content: "\e03b";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-heart:before {
   content: "\e003";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-heart-no-amps:before {
   content: "\e004";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-print:before {
   content: "\e03d";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-delete:before {
   content: "\e03a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-trash:before {
   content: "\e03a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-remove:before {
   content: "\e03a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-reply:before {
   content: "\e037";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-save:before {
   content: "\e03c";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-share:before {
   content: "\e038";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-start:before {
   content: "\e005";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-peacock-arrow:before {
   content: "\e005";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-my-story:before {
   content: "\e005";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-visit:before {
   content: "\e001";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-door:before {
   content: "\e001";
 }
 
 /* Guestbook Features */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-send-card:before {
   content: "\e03e";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-draw-picture:before {
   content: "\e029";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-add-location:before {
   content: "\e033";
 }
 
 /* Social Media */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-facebook:before {
   content: "\e02b";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-twitter:before {
   content: "\e02c";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-google:before {
   content: "\e02e";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-youtube:before {
   content: "\e030";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-pinterest:before {
   content: "\e02d";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-linkedin:before {
   content: "\e02f";
 }
 
 /* Amplifier Hub */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-volunteers:before {
   content: "\e024";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-user:before {
   content: "\e024";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-local-community:before {
   content: "\e012";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-houses:before {
   content: "\e012";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-global-community:before {
   content: "\e014";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-globe:before {
   content: "\e014";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-world:before {
   content: "\e014";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-celebrate:before {
   content: "\e00a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-star:before {
   content: "\e00a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-network:before {
   content: "\e01b";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-resources:before {
   content: "\e01b";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifying:before {
   content: "\e021";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifier-right:before {
   content: "\e021";
 }
 
 /* Legacy */
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-mail:before {
   content: "\e007";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-stars:before {
   content: "\e009";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-welcome:before {
   content: "\e009";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-sun:before {
   content: "\e00b";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-photo:before {
   content: "\e00c";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-inverted-photo:before {
   content: "\e00d";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifier-tree:before {
   content: "\e00e";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifier-parachute:before {
   content: "\e00f";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-computer:before {
   content: "\e010";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifier:before {
   content: "\e015";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-amplifier-balloon:before {
   content: "\e016";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-person-touchdown:before {
   content: "\e017";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-person-disco:before {
   content: "\e018";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-person-jump:before {
   content: "\e019";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-talk-inverted:before {
   content: "\e01a";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-add-calendar:before {
   content: "\e01c";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-calendar:before {
   content: "\e01d";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-gears:before {
   content: "\e01e";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-settings:before {
   content: "\e01e";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-plus:before {
   content: "\e01f";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-user-add:before {
   content: "\e020";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-dog-tags:before {
   content: "\e022";
 }
 
-/* line 16, ../sass/global/_cbicons.scss */
+/* line 20, ../sass/global/_cbicons.scss */
 .cbicon-user-question:before {
   content: "\e023";
 }
 
 /* Shamelessly stolen from Font Awesome */
-/* line 95, ../sass/global/_cbicons.scss */
+/* line 99, ../sass/global/_cbicons.scss */
 [class^="cbicon-"],
 [class*=" cbicon-"] {
   font-family: cbicons;
@@ -8707,7 +8732,7 @@ td.visible-print {
 }
 
 /* more sprites.less reset */
-/* line 127, ../sass/global/_cbicons.scss */
+/* line 131, ../sass/global/_cbicons.scss */
 .icon-white,
 .nav-pills > .active > a > [class^="cbicon-"],
 .nav-pills > .active > a > [class*=" cbicon-"],
@@ -8724,7 +8749,7 @@ td.visible-print {
   background-image: none;
 }
 
-/* line 132, ../sass/global/_cbicons.scss */
+/* line 136, ../sass/global/_cbicons.scss */
 [class^="cbicon-"]:before,
 [class*=" cbicon-"]:before {
   text-decoration: inherit;
@@ -8738,39 +8763,42 @@ td.visible-print {
 }
 
 /* makes sure icons active on rollover in links */
-/* line 141, ../sass/global/_cbicons.scss */
+/* line 145, ../sass/global/_cbicons.scss */
 a [class^="cbicon-"],
 a [class*=" cbicon-"] {
   display: inline-block;
 }
 
-/* line 148, ../sass/global/_cbicons.scss */
-.btn [class^="cbicon-"],
-.btn [class*=" cbicon-"], .nav [class^="cbicon-"],
+/* line 152, ../sass/global/_cbicons.scss */
+.btn [class^="cbicon-"], .form-submit #submit [class^="cbicon-"],
+.btn [class*=" cbicon-"],
+.form-submit #submit [class*=" cbicon-"], .nav [class^="cbicon-"],
 .nav [class*=" cbicon-"] {
   display: inline;
   /* keeps button heights with and without icons the same */
 }
-/* line 151, ../sass/global/_cbicons.scss */
-.btn [class^="cbicon-"].icon-large,
-.btn [class*=" cbicon-"].icon-large, .nav [class^="cbicon-"].icon-large,
+/* line 155, ../sass/global/_cbicons.scss */
+.btn [class^="cbicon-"].icon-large, .form-submit #submit [class^="cbicon-"].icon-large,
+.btn [class*=" cbicon-"].icon-large,
+.form-submit #submit [class*=" cbicon-"].icon-large, .nav [class^="cbicon-"].icon-large,
 .nav [class*=" cbicon-"].icon-large {
   line-height: .9em;
 }
-/* line 152, ../sass/global/_cbicons.scss */
-.btn [class^="cbicon-"].icon-spin,
-.btn [class*=" cbicon-"].icon-spin, .nav [class^="cbicon-"].icon-spin,
+/* line 156, ../sass/global/_cbicons.scss */
+.btn [class^="cbicon-"].icon-spin, .form-submit #submit [class^="cbicon-"].icon-spin,
+.btn [class*=" cbicon-"].icon-spin,
+.form-submit #submit [class*=" cbicon-"].icon-spin, .nav [class^="cbicon-"].icon-spin,
 .nav [class*=" cbicon-"].icon-spin {
   display: inline-block;
 }
 
-/* line 158, ../sass/global/_cbicons.scss */
+/* line 162, ../sass/global/_cbicons.scss */
 .nav-tabs [class^="cbicon-"],
 .nav-tabs [class*=" cbicon-"], .nav-pills [class^="cbicon-"],
 .nav-pills [class*=" cbicon-"] {
   /* keeps button heights with and without icons the same */
 }
-/* line 160, ../sass/global/_cbicons.scss */
+/* line 164, ../sass/global/_cbicons.scss */
 .nav-tabs [class^="cbicon-"], .nav-tabs [class^="cbicon-"].icon-large,
 .nav-tabs [class*=" cbicon-"],
 .nav-tabs [class*=" cbicon-"].icon-large, .nav-pills [class^="cbicon-"], .nav-pills [class^="cbicon-"].icon-large,
@@ -8779,7 +8807,7 @@ a [class*=" cbicon-"] {
   line-height: .9em;
 }
 
-/* line 166, ../sass/global/_cbicons.scss */
+/* line 170, ../sass/global/_cbicons.scss */
 li [class^="cbicon-"],
 li [class*=" cbicon-"], .nav li [class^="cbicon-"],
 .nav li [class*=" cbicon-"] {
@@ -8787,7 +8815,7 @@ li [class*=" cbicon-"], .nav li [class^="cbicon-"],
   width: 1.25em;
   text-align: center;
 }
-/* line 170, ../sass/global/_cbicons.scss */
+/* line 174, ../sass/global/_cbicons.scss */
 li [class^="cbicon-"].icon-large,
 li [class*=" cbicon-"].icon-large, .nav li [class^="cbicon-"].icon-large,
 .nav li [class*=" cbicon-"].icon-large {
@@ -8795,61 +8823,71 @@ li [class*=" cbicon-"].icon-large, .nav li [class^="cbicon-"].icon-large,
   width: 1.5625em;
 }
 
-/* line 180, ../sass/global/_cbicons.scss */
+/* line 184, ../sass/global/_cbicons.scss */
 ul.icons li [class^="cbicon-"],
 ul.icons li [class*=" cbicon-"] {
   width: .75em;
 }
 
-/* line 188, ../sass/global/_cbicons.scss */
+/* line 192, ../sass/global/_cbicons.scss */
 [class^="cbicon-"].pull-left,
 [class*=" cbicon-"].pull-left {
   margin-right: .3em;
 }
-/* line 191, ../sass/global/_cbicons.scss */
+/* line 195, ../sass/global/_cbicons.scss */
 [class^="cbicon-"].pull-right,
 [class*=" cbicon-"].pull-right {
   margin-left: .3em;
 }
 
-/* line 200, ../sass/global/_cbicons.scss */
-.btn [class^="cbicon-"].pull-left.icon-2x, .btn [class^="cbicon-"].pull-right.icon-2x,
+/* line 204, ../sass/global/_cbicons.scss */
+.btn [class^="cbicon-"].pull-left.icon-2x, .form-submit #submit [class^="cbicon-"].pull-left.icon-2x, .btn [class^="cbicon-"].pull-right.icon-2x, .form-submit #submit [class^="cbicon-"].pull-right.icon-2x,
 .btn [class*=" cbicon-"].pull-left.icon-2x,
-.btn [class*=" cbicon-"].pull-right.icon-2x {
+.form-submit #submit [class*=" cbicon-"].pull-left.icon-2x,
+.btn [class*=" cbicon-"].pull-right.icon-2x,
+.form-submit #submit [class*=" cbicon-"].pull-right.icon-2x {
   margin-top: .18em;
 }
-/* line 202, ../sass/global/_cbicons.scss */
-.btn [class^="cbicon-"].icon-spin.icon-large,
-.btn [class*=" cbicon-"].icon-spin.icon-large {
+/* line 206, ../sass/global/_cbicons.scss */
+.btn [class^="cbicon-"].icon-spin.icon-large, .form-submit #submit [class^="cbicon-"].icon-spin.icon-large,
+.btn [class*=" cbicon-"].icon-spin.icon-large,
+.form-submit #submit [class*=" cbicon-"].icon-spin.icon-large {
   line-height: .8em;
 }
 
-/* line 210, ../sass/global/_cbicons.scss */
-.btn.btn-small [class^="cbicon-"].pull-left.icon-2x, .btn.btn-small [class^="cbicon-"].pull-right.icon-2x,
+/* line 214, ../sass/global/_cbicons.scss */
+.btn.btn-small [class^="cbicon-"].pull-left.icon-2x, .form-submit .btn-small#submit [class^="cbicon-"].pull-left.icon-2x, .btn.btn-small [class^="cbicon-"].pull-right.icon-2x, .form-submit .btn-small#submit [class^="cbicon-"].pull-right.icon-2x,
 .btn.btn-small [class*=" cbicon-"].pull-left.icon-2x,
-.btn.btn-small [class*=" cbicon-"].pull-right.icon-2x {
+.form-submit .btn-small#submit [class*=" cbicon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" cbicon-"].pull-right.icon-2x,
+.form-submit .btn-small#submit [class*=" cbicon-"].pull-right.icon-2x {
   margin-top: .25em;
 }
 
-/* line 217, ../sass/global/_cbicons.scss */
-.btn.btn-large [class^="cbicon-"],
-.btn.btn-large [class*=" cbicon-"] {
+/* line 221, ../sass/global/_cbicons.scss */
+.btn.btn-large [class^="cbicon-"], .form-submit .btn-large#submit [class^="cbicon-"],
+.btn.btn-large [class*=" cbicon-"],
+.form-submit .btn-large#submit [class*=" cbicon-"] {
   margin-top: 0;
 }
-/* line 220, ../sass/global/_cbicons.scss */
-.btn.btn-large [class^="cbicon-"].pull-left.icon-2x, .btn.btn-large [class^="cbicon-"].pull-right.icon-2x,
+/* line 224, ../sass/global/_cbicons.scss */
+.btn.btn-large [class^="cbicon-"].pull-left.icon-2x, .form-submit .btn-large#submit [class^="cbicon-"].pull-left.icon-2x, .btn.btn-large [class^="cbicon-"].pull-right.icon-2x, .form-submit .btn-large#submit [class^="cbicon-"].pull-right.icon-2x,
 .btn.btn-large [class*=" cbicon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" cbicon-"].pull-right.icon-2x {
+.form-submit .btn-large#submit [class*=" cbicon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" cbicon-"].pull-right.icon-2x,
+.form-submit .btn-large#submit [class*=" cbicon-"].pull-right.icon-2x {
   margin-top: .05em;
 }
-/* line 222, ../sass/global/_cbicons.scss */
-.btn.btn-large [class^="cbicon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" cbicon-"].pull-left.icon-2x {
+/* line 226, ../sass/global/_cbicons.scss */
+.btn.btn-large [class^="cbicon-"].pull-left.icon-2x, .form-submit .btn-large#submit [class^="cbicon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" cbicon-"].pull-left.icon-2x,
+.form-submit .btn-large#submit [class*=" cbicon-"].pull-left.icon-2x {
   margin-right: .2em;
 }
-/* line 223, ../sass/global/_cbicons.scss */
-.btn.btn-large [class^="cbicon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" cbicon-"].pull-right.icon-2x {
+/* line 227, ../sass/global/_cbicons.scss */
+.btn.btn-large [class^="cbicon-"].pull-right.icon-2x, .form-submit .btn-large#submit [class^="cbicon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" cbicon-"].pull-right.icon-2x,
+.form-submit .btn-large#submit [class*=" cbicon-"].pull-right.icon-2x {
   margin-left: .2em;
 }
 
@@ -8859,40 +8897,40 @@ ul.icons li [class*=" cbicon-"] {
  */
 @font-face {
   font-family: "Locator Display";
-  src: url('/fonts/../fonts/LocatorDisplayWebRegular.eot');
-  src: url('/fonts/../fonts/LocatorDisplayWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorDisplayWebRegular.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Locator Display";
-  src: url('/fonts/../fonts/LocatorDisplayWebBold.eot');
-  src: url('/fonts/../fonts/LocatorDisplayWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorDisplayWebBold.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.woff') format('woff');
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Locator";
-  src: url('/fonts/../fonts/LocatorWebRegular.eot');
-  src: url('/fonts/../fonts/LocatorWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorWebRegular.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Locator";
-  src: url('/fonts/../fonts/LocatorWebBold.eot');
-  src: url('/fonts/../fonts/LocatorWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorWebBold.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.woff') format('woff');
   font-weight: bold;
 }
 
 /* line 33, ../sass/global/_typography.scss */
-h1, h2, .h2, h3, .h3, h4, .h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Locator;
   font-weight: bold;
 }
 /* line 36, ../sass/global/_typography.scss */
-h1 > a, h1 > a:hover, h2 > a, .h2 > a, h2 > a:hover, .h2 > a:hover, h3 > a, .h3 > a, h3 > a:hover, .h3 > a:hover, h4 > a, .h4 > a, h4 > a:hover, .h4 > a:hover, h5 > a, h5 > a:hover, h6 > a, h6 > a:hover,
+h1 > a, h1 > a:hover, h2 > a, h2 > a:hover, h3 > a, h3 > a:hover, h4 > a, h4 > a:hover, h5 > a, h5 > a:hover, h6 > a, h6 > a:hover,
 .h1 > a,
 .h1 > a:hover, .h2 > a, .h2 > a:hover, .h3 > a, .h3 > a:hover, .h4 > a, .h4 > a:hover, .h5 > a, .h5 > a:hover, .h6 > a, .h6 > a:hover {
   text-decoration: none;
@@ -8905,20 +8943,20 @@ h1, .h1 {
 }
 
 /* line 46, ../sass/global/_typography.scss */
-h2, .h2, .h2 {
+h2, .h2 {
   font-size: 28px;
   line-height: 32px;
 }
 
 /* line 51, ../sass/global/_typography.scss */
-h3, .h3, .h3 {
+h3, .h3 {
   font-size: 20px;
   line-height: 24px;
   margin: 9px 0;
 }
 
 /* line 58, ../sass/global/_typography.scss */
-h4, .h4, h5, h6,
+h4, h5, h6,
 .h4, .h5, .h6 {
   font-family: Arial, Verdana, sans-serif;
   font-size: 14px;
@@ -9038,21 +9076,24 @@ a [class*=" icon-"] {
 }
 
 /* line 102, ../sass/_font-awesome.scss */
-.btn [class^="icon-"],
-.btn [class*=" icon-"], .nav [class^="icon-"],
+.btn [class^="icon-"], .form-submit #submit [class^="icon-"],
+.btn [class*=" icon-"],
+.form-submit #submit [class*=" icon-"], .nav [class^="icon-"],
 .nav [class*=" icon-"] {
   display: inline;
   /* keeps button heights with and without icons the same */
 }
 /* line 105, ../sass/_font-awesome.scss */
-.btn [class^="icon-"].icon-large,
-.btn [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
+.btn [class^="icon-"].icon-large, .form-submit #submit [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.form-submit #submit [class*=" icon-"].icon-large, .nav [class^="icon-"].icon-large,
 .nav [class*=" icon-"].icon-large {
   line-height: .9em;
 }
 /* line 106, ../sass/_font-awesome.scss */
-.btn [class^="icon-"].icon-spin,
-.btn [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
+.btn [class^="icon-"].icon-spin, .form-submit #submit [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.form-submit #submit [class*=" icon-"].icon-spin, .nav [class^="icon-"].icon-spin,
 .nav [class*=" icon-"].icon-spin {
   display: inline-block;
 }
@@ -9171,43 +9212,53 @@ ul.icons li [class*=" icon-"] {
 }
 
 /* line 202, ../sass/_font-awesome.scss */
-.btn [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x,
+.btn [class^="icon-"].pull-left.icon-2x, .form-submit #submit [class^="icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x, .form-submit #submit [class^="icon-"].pull-right.icon-2x,
 .btn [class*=" icon-"].pull-left.icon-2x,
-.btn [class*=" icon-"].pull-right.icon-2x {
+.form-submit #submit [class*=" icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x,
+.form-submit #submit [class*=" icon-"].pull-right.icon-2x {
   margin-top: .18em;
 }
 /* line 204, ../sass/_font-awesome.scss */
-.btn [class^="icon-"].icon-spin.icon-large,
-.btn [class*=" icon-"].icon-spin.icon-large {
+.btn [class^="icon-"].icon-spin.icon-large, .form-submit #submit [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large,
+.form-submit #submit [class*=" icon-"].icon-spin.icon-large {
   line-height: .8em;
 }
 
 /* line 212, ../sass/_font-awesome.scss */
-.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class^="icon-"].pull-left.icon-2x, .form-submit .btn-small#submit [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x, .form-submit .btn-small#submit [class^="icon-"].pull-right.icon-2x,
 .btn.btn-small [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+.form-submit .btn-small#submit [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x,
+.form-submit .btn-small#submit [class*=" icon-"].pull-right.icon-2x {
   margin-top: .25em;
 }
 
 /* line 219, ../sass/_font-awesome.scss */
-.btn.btn-large [class^="icon-"],
-.btn.btn-large [class*=" icon-"] {
+.btn.btn-large [class^="icon-"], .form-submit .btn-large#submit [class^="icon-"],
+.btn.btn-large [class*=" icon-"],
+.form-submit .btn-large#submit [class*=" icon-"] {
   margin-top: 0;
 }
 /* line 222, ../sass/_font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .form-submit .btn-large#submit [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x, .form-submit .btn-large#submit [class^="icon-"].pull-right.icon-2x,
 .btn.btn-large [class*=" icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+.form-submit .btn-large#submit [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x,
+.form-submit .btn-large#submit [class*=" icon-"].pull-right.icon-2x {
   margin-top: .05em;
 }
 /* line 224, ../sass/_font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+.btn.btn-large [class^="icon-"].pull-left.icon-2x, .form-submit .btn-large#submit [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.form-submit .btn-large#submit [class*=" icon-"].pull-left.icon-2x {
   margin-right: .2em;
 }
 /* line 225, ../sass/_font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-right.icon-2x,
-.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+.btn.btn-large [class^="icon-"].pull-right.icon-2x, .form-submit .btn-large#submit [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x,
+.form-submit .btn-large#submit [class*=" icon-"].pull-right.icon-2x {
   margin-left: .2em;
 }
 
@@ -9287,7 +9338,7 @@ ul.icons li [class*=" icon-"] {
   }
 
   /* line 261, ../sass/_font-awesome.scss */
-  .btn .icon-spin {
+  .btn .icon-spin, .form-submit #submit .icon-spin {
     height: auto;
   }
 
@@ -9297,7 +9348,7 @@ ul.icons li [class*=" icon-"] {
   }
 
   /* line 263, ../sass/_font-awesome.scss */
-  .btn .icon-spin.icon-large {
+  .btn .icon-spin.icon-large, .form-submit #submit .icon-spin.icon-large {
     height: .75em;
   }
 }
@@ -10952,67 +11003,6 @@ ul.icons li [class*=" icon-"] {
   text-align: center;
 }
 
-/* line 3, ../sass/global/_cb-spinner.scss */
-.loading-frame {
-  width: 17px;
-  height: 16px;
-  background-repeat: no-repeat;
-}
-
-/* line 8, ../sass/global/_cb-spinner.scss */
-.animation {
-  width: 17px;
-  height: 16px;
-  display: inline-block;
-  position: relative;
-  text-align: center;
-  margin-left: .5em;
-}
-
-/* line 16, ../sass/global/_cb-spinner.scss */
-.no-cssanimations .loading-frame {
-  background: url("../img/amp16.gif");
-}
-
-/* line 20, ../sass/global/_cb-spinner.scss */
-.cssanimations .loading-frame {
-  background-size: 170px 16px;
-  -webkit-animation: amping 1s steps(10) infinite;
-  animation: amping 1s steps(10) infinite;
-}
-/* line 26, ../sass/global/_cb-spinner.scss */
-.cssanimations.no-svg .loading-frame {
-  background: url("../img/amp16.png");
-}
-/* line 31, ../sass/global/_cb-spinner.scss */
-.cssanimations.svg .loading-frame {
-  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNzAgMTYiPjxyZWN0IGZpbGw9Im5vbmUiIHdpZHRoPSIxNzAiIGhlaWdodD0iMTYiLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNNjguNDg4IDQuODY5Yy0wLjA4OCAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjItMC4xNDktMC4yODYtMC40NTctMC4xNTQtMC42ODcgQzY4LjE5MSAzLjkgNzAuNyAwIDc2LjYgMGMwLjAzMyAwIDAuMSAwIDAuMSAwYzUuODUxIDAgOC4yIDMuOSA4LjMgNC4wMzZjMC4xMzQgMC4yIDAuMSAwLjUzNi0wLjE2NCAwLjcgYy0wLjIzMSAwLjEzNy0wLjUxOSAwLjA2OS0wLjY2Mi0wLjE3MkM4NC4wMDIgNC40IDgxLjkgMSA3Ni42IDAuOTk1Yy01LjM4OSAwLjAzNS03LjY0NyAzLjYyMi03LjY2OSAzLjcgQzY4LjgwOCA0LjggNjguNyA0LjkgNjguNSA0LjkiLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNNzEuNDA4IDUuNzZjLTAuMDg3IDAtMC4xNzYtMC4wMjMtMC4yNTMtMC4wOGMtMC4yMjEtMC4xNDgtMC4yODYtMC40NTgtMC4xNDMtMC42ODUgYzAuMDY2LTAuMTE1IDEuNjg2LTIuNjc0IDUuNTQyLTIuNjk4YzAuMDIyIDAgMCAwIDAuMSAwYzMuODI0IDAgNS4zIDIuNSA1LjQgMi42NTJjMC4xMzIgMC4yIDAuMSAwLjUzNy0wLjE2NiAwLjcgYy0wLjIzMSAwLjEzNy0wLjUxOCAwLjA2OC0wLjY2LTAuMTcxYy0wLjA1NS0wLjA5Mi0xLjMzMy0yLjE3Mi00LjU4My0yLjE3MmMtMC4wMSAwLTAuMDMyIDAtMC4wNDMgMCBjLTMuMzI4IDAuMDIzLTQuNzE2IDIuMjE2LTQuNzM4IDIuMjM5QzcxLjcxOCA1LjcgNzEuNiA1LjggNzEuNCA1LjgiLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNNzQuMjA3IDYuNjYzYy0wLjA4NyAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjItMC4xNDktMC4yODYtMC40NTgtMC4xNDMtMC42ODYgYzAuMDMzLTAuMDU3IDAuODM4LTEuMzI3IDIuNzEtMS4zMzdjMC4wMTEgMCAwIDAgMCAwYzEuODYyIDAgMi42IDEuMyAyLjcgMS4zMjVjMC4xMzIgMC4yIDAuMSAwLjUzOC0wLjE2NSAwLjcgYy0wLjIzIDAuMTQ5LTAuNTE5IDAuMDY4LTAuNjYxLTAuMTcxYy0wLjAyMy0wLjAyMy0wLjUyOS0wLjg0Ni0xLjgzLTAuODQ2Yy0wLjAxMSAwLTAuMDExIDAtMC4wMjIgMCBjLTEuMzMzIDAuMDEyLTEuODk1IDAuODY5LTEuOTA2IDAuODgxQzc0LjUyNiA2LjYgNzQuNCA2LjcgNzQuMiA2LjciLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNODAuODYxIDcuNTU0Yy0wLjQ0LTAuMjk3LTAuODU4LTAuNDEyLTEuMjQ0LTAuNDEyYy0xLjQ2NiAwLTIuNTkgMS42NDQtMy4xNDEgMS43IGMtMC4yODYgMC4wMTItMC43MzgtMC40MTMtMS4zMTItMC44MzRjLTAuODQ5LTAuNjI4LTEuOTM5LTEuMjQ2LTMuMDYyLTAuNDY4QzY4LjkwNyA5LjcgNzQuNSAxNiA3Ni41IDE2IEM3OC40OTUgMTYgODMuOCA5LjYgODAuOSA3LjU1NHoiLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNODUuNDkxIDQuODY5Yy0wLjA4OCAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjIxLTAuMTQ5LTAuMjg2LTAuNDU3LTAuMTU0LTAuNjg3IGMwLjExLTAuMTYgMi41NzktNC4wNjggOC40ODQtNC4xMDNjMC4wMzIgMCAwLjEgMCAwLjEgMGM1Ljg1IDAgOC4yIDMuOSA4LjMgNC4wMzZjMC4xMzQgMC4yIDAuMSAwLjUzNi0wLjE2NSAwLjcgYy0wLjIyOSAwLjEzNy0wLjUxOCAwLjA2OS0wLjY2LTAuMTcyQzEwMS4wMDUgNC40IDk4LjkgMSA5My42IDAuOTk1Yy01LjM5IDAuMDM1LTcuNjQ3IDMuNjIyLTcuNjcgMy43IEM4NS44MTEgNC44IDg1LjcgNC45IDg1LjUgNC45Ii8+PHBhdGggZmlsbD0iI0Y4OTcxRCIgZD0iTTg4LjQxIDUuNzZjLTAuMDg2IDAtMC4xNzUtMC4wMjMtMC4yNTItMC4wOGMtMC4yMi0wLjE0OC0wLjI4Ni0wLjQ1OC0wLjE0My0wLjY4NSBjMC4wNjMtMC4xMTUgMS42ODYtMi42NzQgNS41NDEtMi42OThjMC4wMjEgMCAwIDAgMC4xIDBjMy44MjQgMCA1LjMgMi41IDUuNCAyLjY1MmMwLjEzNCAwLjIgMC4xIDAuNTM3LTAuMTY1IDAuNyBjLTAuMjMxIDAuMTM3LTAuNTE4IDAuMDY4LTAuNjYxLTAuMTcxYy0wLjA1NS0wLjA5Mi0xLjMzMi0yLjE3Mi00LjU4NC0yLjE3MmMtMC4wMTEgMC0wLjAzMyAwLTAuMDQzIDAgYy0zLjMyNyAwLjAyMy00LjcxNiAyLjIxNi00LjczOCAyLjIzOUM4OC43MjEgNS43IDg4LjYgNS44IDg4LjQgNS44Ii8+PHBhdGggZmlsbD0iI0ZBQkE2QSIgZD0iTTkxLjIwOSA2LjY2M2MtMC4wODcgMC0wLjE3NS0wLjAyMy0wLjI1Mi0wLjA4Yy0wLjIyMS0wLjE0OS0wLjI4Ni0wLjQ1OC0wLjE0NC0wLjY4NiBjMC4wMzQtMC4wNTcgMC44MzgtMS4zMjcgMi43MS0xLjMzN2MwLjAxMyAwIDAgMCAwIDBjMS44NjIgMCAyLjYgMS4zIDIuNyAxLjMyNWMwLjEzIDAuMiAwLjEgMC41MzgtMC4xNjggMC43IGMtMC4yMjkgMC4xNDktMC41MTggMC4wNjgtMC42Ni0wLjE3MWMtMC4wMjItMC4wMjMtMC41MjktMC44NDYtMS44MjktMC44NDZjLTAuMDEgMC0wLjAxIDAtMC4wMjIgMCBjLTEuMzMyIDAuMDEyLTEuODk2IDAuODY5LTEuOTA0IDAuODgxQzkxLjUzIDYuNiA5MS40IDYuNyA5MS4yIDYuNyIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik05Ny44NjYgNy41NTRjLTAuNDQyLTAuMjk3LTAuODYyLTAuNDEyLTEuMjQ4LTAuNDEyYy0xLjQ2NiAwLTIuNTg3IDEuNjQ0LTMuMTM5IDEuNyBjLTAuMjg1IDAuMDEyLTAuNzM3LTAuNDEzLTEuMzEyLTAuODM0Yy0wLjg0OS0wLjYyOC0xLjkzOC0xLjI0Ni0zLjA2My0wLjQ2OEM4NS45MSA5LjcgOTEuNSAxNiA5My41IDE2IEM5NS40OTUgMTYgMTAwLjggOS42IDk3LjkgNy41NTR6Ii8+PHBhdGggZmlsbD0iI0Y4OTcxRCIgZD0iTTEwMi40OTUgNC44NjljLTAuMDg4IDAtMC4xNzctMC4wMjMtMC4yNTQtMC4wOGMtMC4yMi0wLjE0OS0wLjI4Ni0wLjQ1Ny0wLjE1NC0wLjY4NyBjMC4xMTEtMC4xNiAyLjU4LTQuMDY4IDguNDg0LTQuMTAzYzAuMDMyIDAgMC4xIDAgMC4xIDBjNS44NTIgMCA4LjIgMy45IDguMyA0LjAzNmMwLjEzMyAwLjIgMC4xIDAuNTM2LTAuMTY2IDAuNyBjLTAuMjI5IDAuMTM3LTAuNTE4IDAuMDY5LTAuNjYtMC4xNzJjLTAuMDg5LTAuMTQ4LTIuMTgzLTMuNTg4LTcuNTI1LTMuNTUzYy01LjM4OSAwLjAzNS03LjY0NyAzLjYyMi03LjY3IDMuNyBDMTAyLjgxMyA0LjggMTAyLjcgNC45IDEwMi41IDQuOSIvPjxwYXRoIGZpbGw9IiNGQUJBNkEiIGQ9Ik0xMDUuNDE2IDUuNzZjLTAuMDg5IDAtMC4xNzgtMC4wMjMtMC4yNTUtMC4wOGMtMC4yMi0wLjE0OC0wLjI4Ny0wLjQ1OC0wLjE0NS0wLjY4NSBjMC4wNjYtMC4xMTUgMS42ODgtMi42NzQgNS41NDQtMi42OThjMC4wMjEgMCAwIDAgMC4xIDBjMy44MjEgMCA1LjMgMi41IDUuNCAyLjcgYzAuMTM0IDAuMiAwLjEgMC41MzctMC4xNjUgMC42ODdjLTAuMjMxIDAuMTM3LTAuNTE4IDAuMDY4LTAuNjYxLTAuMTcxYy0wLjA1NS0wLjA5Mi0xLjMzNC0yLjE3Mi00LjU4My0yLjE3MiBjLTAuMDEyIDAtMC4wMzQgMC0wLjA0NCAwYy0zLjMyNiAwLjAyMy00LjcxNiAyLjIxNi00LjczOCAyLjIzOUMxMDUuNzI1IDUuNyAxMDUuNiA1LjggMTA1LjQgNS44Ii8+PHBhdGggZmlsbD0iI0ZERERCNSIgZD0iTTEwOC4yMTIgNi42NjNjLTAuMDg3IDAtMC4xNzUtMC4wMjMtMC4yNTItMC4wOGMtMC4yMjMtMC4xNDktMC4yODYtMC40NTgtMC4xNDQtMC42ODYgYzAuMDM0LTAuMDU3IDAuODM4LTEuMzI3IDIuNzEtMS4zMzdjMC4wMTIgMCAwIDAgMCAwYzEuODYzIDAgMi42IDEuMyAyLjcgMS4zMjVjMC4xMyAwLjIgMC4xIDAuNTM4LTAuMTY4IDAuNyBjLTAuMjI5IDAuMTQ5LTAuNTE4IDAuMDY4LTAuNjYtMC4xNzFjLTAuMDIyLTAuMDIzLTAuNTI4LTAuODQ2LTEuODI5LTAuODQ2Yy0wLjAxMSAwLTAuMDExIDAtMC4wMjIgMCBjLTEuMzMyIDAuMDEyLTEuODk1IDAuODY5LTEuOTA0IDAuODgxQzEwOC41MzMgNi42IDEwOC40IDYuNyAxMDguMiA2LjciLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNMTE0Ljg2OSA3LjU1NGMtMC40NDItMC4yOTctMC44NTktMC40MTItMS4yNDctMC40MTJjLTEuNDY0IDAtMi41ODggMS42NDQtMy4xMzkgMS43IGMtMC4yODYgMC4wMTItMC43MzgtMC40MTMtMS4zMTItMC44MzRjLTAuODQ5LTAuNjI4LTEuOTM4LTEuMjQ2LTMuMDYzLTAuNDY4QzEwMi45MTMgOS43IDEwOC41IDE2IDExMC41IDE2IEMxMTIuNDk4IDE2IDExNy44IDkuNiAxMTQuOSA3LjU1NHoiLz48cGF0aCBmaWxsPSIjRkFCQTZBIiBkPSJNMTE5LjQ5OCA0Ljg2OWMtMC4wODggMC0wLjE3Ny0wLjAyMy0wLjI1NC0wLjA4Yy0wLjIyLTAuMTQ5LTAuMjg2LTAuNDU3LTAuMTU2LTAuNjg3IGMwLjExMy0wLjE2IDIuNTgyLTQuMDY4IDguNDg2LTQuMTAzYzAuMDMyIDAgMC4xIDAgMC4xIDBjNS44NTEgMCA4LjIgMy45IDguMyA0LjAzNmMwLjEzNCAwLjIgMC4xIDAuNTM2LTAuMTY2IDAuNyBjLTAuMjI5IDAuMTM3LTAuNTE4IDAuMDY5LTAuNjYtMC4xNzJjLTAuMDg5LTAuMTQ4LTIuMTgzLTMuNTg4LTcuNTI1LTMuNTUzYy01LjM4OSAwLjAzNS03LjY0NiAzLjYyMi03LjY3IDMuNyBDMTE5LjgxNiA0LjggMTE5LjcgNC45IDExOS41IDQuOSIvPjxwYXRoIGZpbGw9IiNGREREQjUiIGQ9Ik0xMjIuNDE5IDUuNzZjLTAuMDg5IDAtMC4xNzctMC4wMjMtMC4yNTQtMC4wOGMtMC4yMjEtMC4xNDgtMC4yODgtMC40NTgtMC4xNDQtMC42ODUgYzAuMDY0LTAuMTE1IDEuNjg3LTIuNjc0IDUuNTQyLTIuNjk4YzAuMDIxIDAgMCAwIDAuMSAwYzMuODIzIDAgNS4zIDIuNSA1LjQgMi43IGMwLjEzNCAwLjIgMC4xIDAuNTM3LTAuMTY1IDAuNjg3Yy0wLjIzMSAwLjEzNy0wLjUxOCAwLjA2OC0wLjY2LTAuMTcxYy0wLjA1NS0wLjA5Mi0xLjMzMy0yLjE3Mi00LjU4NC0yLjE3MiBjLTAuMDEyIDAtMC4wMzQgMC0wLjA0NCAwYy0zLjMyNiAwLjAyMy00LjcxNSAyLjIxNi00LjczNyAyLjIzOUMxMjIuNzI4IDUuNyAxMjIuNiA1LjggMTIyLjQgNS44Ii8+PHBhdGggZmlsbD0iI0Y4OTcxRCIgZD0iTTEzMS44NzIgNy41NTRjLTAuNDQxLTAuMjk3LTAuODYxLTAuNDEyLTEuMjQ3LTAuNDEyYy0xLjQ2NiAwLTIuNTg4IDEuNjQ0LTMuMTM5IDEuNyBjLTAuMjg2IDAuMDEyLTAuNzM3LTAuNDEzLTEuMzEyLTAuODM0Yy0wLjg0OS0wLjYyOC0xLjkzOC0xLjI0Ni0zLjA2My0wLjQ2OEMxMTkuOTE2IDkuNyAxMjUuNSAxNiAxMjcuNSAxNiBDMTI5LjUwMiAxNiAxMzQuOCA5LjYgMTMxLjkgNy41NTR6Ii8+PHBhdGggZmlsbD0iI0ZERERCNSIgZD0iTTEzNi41MDEgNC44NjljLTAuMDg4IDAtMC4xNzctMC4wMjMtMC4yNTQtMC4wOGMtMC4yMi0wLjE0OS0wLjI4Ni0wLjQ1Ny0wLjE1NC0wLjY4NyBjMC4xMTEtMC4xNiAyLjU4LTQuMDY4IDguNDg1LTQuMTAzYzAuMDMxIDAgMC4xIDAgMC4xIDBjNS44NTEgMCA4LjIgMy45IDguMyA0LjAzNmMwLjEzMiAwLjIgMC4xIDAuNTM2LTAuMTY2IDAuNyBjLTAuMjMxIDAuMTM3LTAuNTE5IDAuMDY5LTAuNjYyLTAuMTcyYy0wLjA4OC0wLjE0OC0yLjE4My0zLjU4OC03LjUyNC0zLjU1M2MtNS4zOSAwLjAzNS03LjY0NyAzLjYyMi03LjY3IDMuNyBDMTM2LjgxOSA0LjggMTM2LjcgNC45IDEzNi41IDQuOSIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik0xNDguODc2IDcuNTU0Yy0wLjQ0Mi0wLjI5Ny0wLjg2LTAuNDEyLTEuMjQ4LTAuNDEyYy0xLjQ2NCAwLTIuNTg3IDEuNjQ0LTMuMTM5IDEuNyBjLTAuMjg2IDAuMDEyLTAuNzM3LTAuNDEzLTEuMzEyLTAuODM0Yy0wLjg0OS0wLjYyOC0xLjkzOC0xLjI0Ni0zLjA2My0wLjQ2OEMxMzYuOTE5IDkuNyAxNDIuNSAxNiAxNDQuNSAxNiBDMTQ2LjUwNSAxNiAxNTEuOSA5LjYgMTQ4LjkgNy41NTR6Ii8+PHBhdGggZmlsbD0iI0Y4OTcxRCIgZD0iTTE2NS44NzkgNy41NTRjLTAuNDQyLTAuMjk3LTAuODYtMC40MTItMS4yNDgtMC40MTJjLTEuNDY0IDAtMi41ODcgMS42NDQtMy4xMzkgMS43IGMtMC4yODYgMC4wMTItMC43MzctMC40MTMtMS4zMTItMC44MzRjLTAuODQ5LTAuNjI4LTEuOTM4LTEuMjQ2LTMuMDYzLTAuNDY4QzE1My45MjQgOS43IDE1OS41IDE2IDE2MS41IDE2IEMxNjMuNTA4IDE2IDE2OC45IDkuNiAxNjUuOSA3LjU1NHoiLz48cGF0aCBmaWxsPSIjRkREREI1IiBkPSJNNi4xOTQgNi42NjNjLTAuMDg4IDAtMC4xNzYtMC4wMjMtMC4yNTMtMC4wOEM1LjcyIDYuNCA1LjcgNi4xIDUuOCA1LjkgYzAuMDM0LTAuMDU3IDAuODM4LTEuMzI3IDIuNzExLTEuMzM3YzAuMDEyIDAgMCAwIDAgMGMxLjg2MiAwIDIuNiAxLjMgMi43IDEuMyBjMC4xMzIgMC4yIDAuMSAwLjUzOC0wLjE2NiAwLjY4N2MtMC4yMyAwLjE0OS0wLjUxOCAwLjA2OC0wLjY2MS0wLjE3MWMtMC4wMjItMC4wMjMtMC41MjktMC44NDYtMS44My0wLjg0NiBjLTAuMDEgMC0wLjAxIDAtMC4wMjIgMEM3LjE3NSA1LjYgNi42IDYuNCA2LjYgNi40MzZDNi41MTQgNi42IDYuNCA2LjcgNi4yIDYuNyIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik0xMi44NSA3LjU1NGMtMC40NDEtMC4yOTctMC44NTktMC40MTItMS4yNDUtMC40MTJjLTEuNDY1IDAtMi41ODkgMS42NDQtMy4xNCAxLjcgQzguMTc4IDguOCA3LjcgOC40IDcuMiA3Ljk2N0M2LjMwNCA3LjMgNS4yIDYuNyA0LjEgNy40OTlDMC44OTQgOS43IDYuNCAxNiA4LjUgMTYgQzEwLjQ4IDE2IDE1LjggOS42IDEyLjggNy41NTR6Ii8+PHBhdGggZmlsbD0iI0ZERERCNSIgZD0iTTIwLjM5OSA1Ljc2Yy0wLjA4OCAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjItMC4xNDgtMC4yODctMC40NTgtMC4xNDMtMC42ODUgYzAuMDY1LTAuMTE1IDEuNjg2LTIuNjc0IDUuNTQyLTIuNjk4YzAuMDIxIDAgMCAwIDAuMSAwYzMuODIzIDAgNS4zIDIuNSA1LjQgMi43IGMwLjEzMiAwLjIgMC4xIDAuNTM3LTAuMTY2IDAuNjg3Yy0wLjIzMSAwLjEzNy0wLjUxOCAwLjA2OC0wLjY2MS0wLjE3MUMzMC4xMjkgNS40IDI4LjkgMy4zIDI1LjYgMy4zIGMtMC4wMTEgMC0wLjAzMyAwLTAuMDQ0IDBjLTMuMzI3IDAuMDIzLTQuNzE1IDIuMjE2LTQuNzM3IDIuMjM5QzIwLjcwOSA1LjcgMjAuNiA1LjggMjAuNCA1LjgiLz48cGF0aCBmaWxsPSIjRkFCQTZBIiBkPSJNMjMuMTk3IDYuNjYzYy0wLjA4NyAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjItMC4xNDktMC4yODYtMC40NTgtMC4xNDMtMC42ODYgYzAuMDMzLTAuMDU3IDAuODM3LTEuMzI3IDIuNzEtMS4zMzdjMC4wMTIgMCAwIDAgMCAwYzEuODYxIDAgMi42IDEuMyAyLjcgMS4zMjVjMC4xMzEgMC4yIDAuMSAwLjUzOC0wLjE2NiAwLjcgYy0wLjIzMSAwLjE0OS0wLjUxOSAwLjA2OC0wLjY2MS0wLjE3MWMtMC4wMjItMC4wMjMtMC41MjktMC44NDYtMS44MjktMC44NDZjLTAuMDExIDAtMC4wMTEgMC0wLjAyMiAwIGMtMS4zMzMgMC4wMTItMS44OTUgMC44NjktMS45MDYgMC44ODFDMjMuNTE4IDYuNiAyMy40IDYuNyAyMy4yIDYuNyIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik0yOS44NTMgNy41NTRjLTAuNDQxLTAuMjk3LTAuODYtMC40MTItMS4yNDYtMC40MTJjLTEuNDY1IDAtMi41ODggMS42NDQtMy4xNCAxLjcgYy0wLjI4NiAwLjAxMi0wLjczNy0wLjQxMy0xLjMxMS0wLjgzNGMtMC44NDktMC42MjgtMS45MzktMS4yNDYtMy4wNjMtMC40NjhDMTcuODk4IDkuNyAyMy41IDE2IDI1LjUgMTYgUzMyLjgzIDkuNiAyOS45IDcuNTU0eiIvPjxwYXRoIGZpbGw9IiNGREREQjUiIGQ9Ik0zNC40ODIgNC44NjljLTAuMDg4IDAtMC4xNzctMC4wMjMtMC4yNTQtMC4wOGMtMC4yMi0wLjE0OS0wLjI4Ni0wLjQ1Ny0wLjE1NC0wLjY4NyBjMC4xMTEtMC4xNiAyLjU4LTQuMDY4IDguNDg1LTQuMTAzYzAuMDMzIDAgMC4xIDAgMC4xIDBjNS44NTEgMCA4LjIgMy45IDguMyA0LjAzNmMwLjEzMiAwLjIgMC4xIDAuNTM2LTAuMTY2IDAuNyBjLTAuMjMgMC4xMzctMC41MTggMC4wNjktMC42NjEtMC4xNzJDNDkuOTk2IDQuNCA0Ny45IDEgNDIuNiAwLjk5NUMzNy4xNyAxIDM0LjkgNC42IDM0LjkgNC43IEMzNC44MDIgNC44IDM0LjYgNC45IDM0LjUgNC45Ii8+PHBhdGggZmlsbD0iI0ZBQkE2QSIgZD0iTTM3LjQwMyA1Ljc2Yy0wLjA4OCAwLTAuMTc3LTAuMDIzLTAuMjU0LTAuMDhjLTAuMjItMC4xNDgtMC4yODctMC40NTgtMC4xNDMtMC42ODUgYzAuMDY1LTAuMTE1IDEuNjg2LTIuNjc0IDUuNTQyLTIuNjk4YzAuMDIxIDAgMCAwIDAuMSAwYzMuODIzIDAgNS4zIDIuNSA1LjQgMi43IGMwLjEzMyAwLjIgMC4xIDAuNTM3LTAuMTY2IDAuNjg3Yy0wLjIzMSAwLjEzNy0wLjUxOCAwLjA2OC0wLjY2MS0wLjE3MWMtMC4wNTUtMC4wOTItMS4zMzMtMi4xNzItNC41ODQtMi4xNzIgYy0wLjAxMSAwLTAuMDMzIDAtMC4wNDMgMGMtMy4zMjggMC4wMjMtNC43MTUgMi4yMTYtNC43MzggMi4yMzlDMzcuNzEyIDUuNyAzNy42IDUuOCAzNy40IDUuOCIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik00MC4yIDYuNjYzYy0wLjA4NyAwLTAuMTc1LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjIxLTAuMTQ5LTAuMjg2LTAuNDU4LTAuMTQzLTAuNjg2IGMwLjAzMy0wLjA1NyAwLjgzNy0xLjMyNyAyLjcxLTEuMzM3YzAuMDEyIDAgMCAwIDAgMGMxLjg2MSAwIDIuNiAxLjMgMi43IDEuMzI1YzAuMTMxIDAuMiAwLjEgMC41MzgtMC4xNjYgMC43IGMtMC4yMzEgMC4xNDktMC41MTkgMC4wNjgtMC42NjEtMC4xNzFjLTAuMDIyLTAuMDIzLTAuNTI5LTAuODQ2LTEuODI5LTAuODQ2Yy0wLjAxMSAwLTAuMDExIDAtMC4wMjMgMCBjLTEuMzMzIDAuMDEyLTEuODk1IDAuODY5LTEuOTA2IDAuODgxQzQwLjUyMSA2LjYgNDAuNCA2LjcgNDAuMiA2LjciLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNNDYuODU2IDcuNTU0Yy0wLjQ0MS0wLjI5Ny0wLjg2LTAuNDEyLTEuMjQ2LTAuNDEyYy0xLjQ2NSAwLTIuNTg5IDEuNjQ0LTMuMTQgMS43IGMtMC4yODYgMC4wMTItMC43MzgtMC40MTMtMS4zMTEtMC44MzRjLTAuODQ5LTAuNjI4LTEuOTM5LTEuMjQ2LTMuMDYzLTAuNDY4QzM0LjkwMSA5LjcgNDAuNSAxNiA0Mi41IDE2IEM0NC40ODcgMTYgNDkuOCA5LjYgNDYuOSA3LjU1NHoiLz48cGF0aCBmaWxsPSIjRkFCQTZBIiBkPSJNNTEuNDg1IDQuODY5Yy0wLjA4OCAwLTAuMTc2LTAuMDIzLTAuMjUzLTAuMDhjLTAuMjItMC4xNDktMC4yODYtMC40NTctMC4xNTQtMC42ODcgYzAuMTExLTAuMTYgMi41NzktNC4wNjggOC40ODQtNC4xMDNjMC4wMzMgMCAwLjEgMCAwLjEgMGM1Ljg1MiAwIDguMiAzLjkgOC4zIDQuMDM2YzAuMTMzIDAuMiAwLjEgMC41MzYtMC4xNjYgMC43IGMtMC4yMyAwLjEzNy0wLjUxOCAwLjA2OS0wLjY2MS0wLjE3MkM2Ni45OTkgNC40IDY0LjkgMSA1OS42IDAuOTk1Yy01LjM4OSAwLjAzNS03LjY0NiAzLjYyMi03LjY2OSAzLjcgQzUxLjgwNSA0LjggNTEuNyA0LjkgNTEuNSA0LjkiLz48cGF0aCBmaWxsPSIjRjg5NzFEIiBkPSJNNTQuNDA2IDUuNzZjLTAuMDg4IDAtMC4xNzYtMC4wMjMtMC4yNTMtMC4wOGMtMC4yMi0wLjE0OC0wLjI4Ni0wLjQ1OC0wLjE0My0wLjY4NSBjMC4wNjUtMC4xMTUgMS42ODYtMi42NzQgNS41NDItMi42OThjMC4wMjEgMCAwIDAgMC4xIDBjMy44MjMgMCA1LjMgMi41IDUuNCAyLjY1MmMwLjEzMyAwLjIgMC4xIDAuNTM3LTAuMTY2IDAuNyBjLTAuMjMxIDAuMTM3LTAuNTE4IDAuMDY4LTAuNjYxLTAuMTcxYy0wLjA1NS0wLjA5Mi0xLjMzMy0yLjE3Mi00LjU4NC0yLjE3MmMtMC4wMTEgMC0wLjAzNCAwLTAuMDQ0IDAgYy0zLjMyNyAwLjAyMy00LjcxNSAyLjIxNi00LjczNyAyLjIzOUM1NC43MTYgNS43IDU0LjYgNS44IDU0LjQgNS44Ii8+PHBhdGggZmlsbD0iI0Y4OTcxRCIgZD0iTTU3LjIwNCA2LjY2M2MtMC4wODcgMC0wLjE3Ni0wLjAyMy0wLjI1My0wLjA4Yy0wLjIyMS0wLjE0OS0wLjI4Ni0wLjQ1OC0wLjE0My0wLjY4NiBjMC4wMzQtMC4wNTcgMC44MzctMS4zMjcgMi43MTEtMS4zMzdjMC4wMTIgMCAwIDAgMCAwYzEuODYxIDAgMi42IDEuMyAyLjcgMS4zIGMwLjEzMSAwLjIgMC4xIDAuNTM4LTAuMTY2IDAuNjg3Yy0wLjIzMSAwLjE0OS0wLjUxOSAwLjA2OC0wLjY2MS0wLjE3MWMtMC4wMjItMC4wMjMtMC41MjktMC44NDYtMS44MjktMC44NDYgYy0wLjAxMSAwLTAuMDExIDAtMC4wMjIgMGMtMS4zMzMgMC4wMTItMS44OTUgMC44NjktMS45MDYgMC44ODFDNTcuNTI0IDYuNiA1Ny40IDYuNyA1Ny4yIDYuNyIvPjxwYXRoIGZpbGw9IiNGODk3MUQiIGQ9Ik02My44NTkgNy41NTRDNjMuNDE4IDcuMyA2MyA3LjEgNjIuNiA3LjE0MmMtMS40NjUgMC0yLjU4OSAxLjY0NC0zLjE0IDEuNyBjLTAuMjg2IDAuMDEyLTAuNzM4LTAuNDEzLTEuMzExLTAuODM0Yy0wLjg0OS0wLjYyOC0xLjkzOS0xLjI0Ni0zLjA2My0wLjQ2OEM1MS45MDQgOS43IDU3LjUgMTYgNTkuNSAxNiBTNjYuODM2IDkuNiA2My45IDcuNTU0eiIvPjwvc3ZnPg==');
-}
-
-@-webkit-keyframes amping {
-  /* line 39, ../sass/global/_cb-spinner.scss */
-  0% {
-    background-position: 0px 0;
-  }
-
-  /* line 42, ../sass/global/_cb-spinner.scss */
-  100% {
-    background-position: -170px 0;
-  }
-}
-
-@keyframes amping {
-  /* line 47, ../sass/global/_cb-spinner.scss */
-  0% {
-    background-position: 0px 0;
-  }
-
-  /* line 50, ../sass/global/_cb-spinner.scss */
-  100% {
-    background-position: -170px 0;
-  }
-}
-
 /*
  * This is the "orange bar" treatment applied to page-level headings on V5 sites and a handful of other pages
  */
@@ -11197,40 +11187,40 @@ $zindex-modal:             1050 !default;
  */
 @font-face {
   font-family: "Locator Display";
-  src: url('/fonts/../fonts/LocatorDisplayWebRegular.eot');
-  src: url('/fonts/../fonts/LocatorDisplayWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorDisplayWebRegular.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebRegular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Locator Display";
-  src: url('/fonts/../fonts/LocatorDisplayWebBold.eot');
-  src: url('/fonts/../fonts/LocatorDisplayWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorDisplayWebBold.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorDisplayWebBold.woff') format('woff');
   font-weight: bold;
 }
 
 @font-face {
   font-family: "Locator";
-  src: url('/fonts/../fonts/LocatorWebRegular.eot');
-  src: url('/fonts/../fonts/LocatorWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorWebRegular.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebRegular.woff') format('woff');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Locator";
-  src: url('/fonts/../fonts/LocatorWebBold.eot');
-  src: url('/fonts/../fonts/LocatorWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../fonts/LocatorWebBold.woff') format('woff');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.eot');
+  src: url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.eot?#iefix') format('embedded-opentype'), url('/fonts/../wp-content/themes/Uplift/fonts/LocatorWebBold.woff') format('woff');
   font-weight: bold;
 }
 
 /* line 33, ../sass/global/_typography.scss */
-h1, h2, .h2, h3, .h3, h4, .h4, h5, h6,
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: Locator;
   font-weight: bold;
 }
 /* line 36, ../sass/global/_typography.scss */
-h1 > a, h1 > a:hover, h2 > a, .h2 > a, h2 > a:hover, .h2 > a:hover, h3 > a, .h3 > a, h3 > a:hover, .h3 > a:hover, h4 > a, .h4 > a, h4 > a:hover, .h4 > a:hover, h5 > a, h5 > a:hover, h6 > a, h6 > a:hover,
+h1 > a, h1 > a:hover, h2 > a, h2 > a:hover, h3 > a, h3 > a:hover, h4 > a, h4 > a:hover, h5 > a, h5 > a:hover, h6 > a, h6 > a:hover,
 .h1 > a,
 .h1 > a:hover, .h2 > a, .h2 > a:hover, .h3 > a, .h3 > a:hover, .h4 > a, .h4 > a:hover, .h5 > a, .h5 > a:hover, .h6 > a, .h6 > a:hover {
   text-decoration: none;
@@ -11243,20 +11233,20 @@ h1, .h1 {
 }
 
 /* line 46, ../sass/global/_typography.scss */
-h2, .h2, .h2 {
+h2, .h2 {
   font-size: 28px;
   line-height: 32px;
 }
 
 /* line 51, ../sass/global/_typography.scss */
-h3, .h3, .h3 {
+h3, .h3 {
   font-size: 20px;
   line-height: 24px;
   margin: 9px 0;
 }
 
 /* line 58, ../sass/global/_typography.scss */
-h4, .h4, h5, h6,
+h4, h5, h6,
 .h4, .h5, .h6 {
   font-family: Arial, Verdana, sans-serif;
   font-size: 14px;
@@ -11340,17 +11330,17 @@ h4, h4 > a, h4 > a:hover {
 }
 
 /* line 9, ../sass/global/_buttons.scss */
-.btn-toolbar .btn {
+.btn-toolbar .btn, .btn-toolbar .form-submit #submit, .form-submit .btn-toolbar #submit {
   margin-bottom: 1em;
 }
 
 /* line 16, ../sass/global/_buttons.scss */
-.btn.pull-right {
+.btn.pull-right, .form-submit .pull-right#submit {
   margin-left: 1em;
 }
 
 /* line 19, ../sass/global/_buttons.scss */
-.btn.pull-left {
+.btn.pull-left, .form-submit .pull-left#submit {
   margin-right: 1em;
 }
 
@@ -11423,7 +11413,7 @@ label[for], [for].control-label, .btn-link {
  * Log in / Sign up pages
  */
 /* line 5, ../sass/global/_auth.scss */
-.social-btns .btn {
+.social-btns .btn, .social-btns .form-submit #submit, .form-submit .social-btns #submit {
   margin-bottom: 1em;
 }
 
@@ -11445,7 +11435,7 @@ label[for], [for].control-label, .btn-link {
 }
 
 /* line 9, ../sass/global/_panel.scss */
-.panel-footer .btn-toolbar .btn {
+.panel-footer .btn-toolbar .btn, .panel-footer .btn-toolbar .form-submit #submit, .form-submit .panel-footer .btn-toolbar #submit {
   margin-bottom: 0;
 }
 
@@ -11489,270 +11479,263 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
 }
 
 @media (min-width: 600px) and (max-width: 767px) {
-  /* line 12, ../sass/cms/_layout.scss */
-  .container {
-    width: 630px;
-  }
-}
-
-@media (min-width: 600px) and (max-width: 767px) {
   /* line 812, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-12, .col-xxs-11, .col-xxs-10, .col-xxs-9, .col-xxs-8, .col-xxs-7, .col-xxs-6, .col-xxs-5, .col-xxs-4, .col-xxs-3, .col-xxs-2, .col-xxs-1 {
+  .col-supp-12, .col-supp-11, .col-supp-10, .col-supp-9, .col-supp-8, .col-supp-7, .col-supp-6, .col-supp-5, .col-supp-4, .col-supp-3, .col-supp-2, .col-supp-1 {
     float: left;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-1 {
+  .col-supp-1 {
     width: 8.3333333333%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-2 {
+  .col-supp-2 {
     width: 16.6666666667%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-3 {
+  .col-supp-3 {
     width: 25%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-4 {
+  .col-supp-4 {
     width: 33.3333333333%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-5 {
+  .col-supp-5 {
     width: 41.6666666667%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-6 {
+  .col-supp-6 {
     width: 50%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-7 {
+  .col-supp-7 {
     width: 58.3333333333%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-8 {
+  .col-supp-8 {
     width: 66.6666666667%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-9 {
+  .col-supp-9 {
     width: 75%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-10 {
+  .col-supp-10 {
     width: 83.3333333333%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-11 {
+  .col-supp-11 {
     width: 91.6666666667%;
   }
 
   /* line 820, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-12 {
+  .col-supp-12 {
     width: 100%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-0 {
+  .col-supp-pull-0 {
     right: 0%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-1 {
+  .col-supp-pull-1 {
     right: 8.3333333333%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-2 {
+  .col-supp-pull-2 {
     right: 16.6666666667%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-3 {
+  .col-supp-pull-3 {
     right: 25%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-4 {
+  .col-supp-pull-4 {
     right: 33.3333333333%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-5 {
+  .col-supp-pull-5 {
     right: 41.6666666667%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-6 {
+  .col-supp-pull-6 {
     right: 50%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-7 {
+  .col-supp-pull-7 {
     right: 58.3333333333%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-8 {
+  .col-supp-pull-8 {
     right: 66.6666666667%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-9 {
+  .col-supp-pull-9 {
     right: 75%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-10 {
+  .col-supp-pull-10 {
     right: 83.3333333333%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-11 {
+  .col-supp-pull-11 {
     right: 91.6666666667%;
   }
 
   /* line 830, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-pull-12 {
+  .col-supp-pull-12 {
     right: 100%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-0 {
+  .col-supp-push-0 {
     left: 0%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-1 {
+  .col-supp-push-1 {
     left: 8.3333333333%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-2 {
+  .col-supp-push-2 {
     left: 16.6666666667%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-3 {
+  .col-supp-push-3 {
     left: 25%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-4 {
+  .col-supp-push-4 {
     left: 33.3333333333%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-5 {
+  .col-supp-push-5 {
     left: 41.6666666667%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-6 {
+  .col-supp-push-6 {
     left: 50%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-7 {
+  .col-supp-push-7 {
     left: 58.3333333333%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-8 {
+  .col-supp-push-8 {
     left: 66.6666666667%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-9 {
+  .col-supp-push-9 {
     left: 75%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-10 {
+  .col-supp-push-10 {
     left: 83.3333333333%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-11 {
+  .col-supp-push-11 {
     left: 91.6666666667%;
   }
 
   /* line 825, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-push-12 {
+  .col-supp-push-12 {
     left: 100%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-0 {
+  .col-supp-offset-0 {
     margin-left: 0%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-1 {
+  .col-supp-offset-1 {
     margin-left: 8.3333333333%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-2 {
+  .col-supp-offset-2 {
     margin-left: 16.6666666667%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-3 {
+  .col-supp-offset-3 {
     margin-left: 25%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-4 {
+  .col-supp-offset-4 {
     margin-left: 33.3333333333%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-5 {
+  .col-supp-offset-5 {
     margin-left: 41.6666666667%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-6 {
+  .col-supp-offset-6 {
     margin-left: 50%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-7 {
+  .col-supp-offset-7 {
     margin-left: 58.3333333333%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-8 {
+  .col-supp-offset-8 {
     margin-left: 66.6666666667%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-9 {
+  .col-supp-offset-9 {
     margin-left: 75%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-10 {
+  .col-supp-offset-10 {
     margin-left: 83.3333333333%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-11 {
+  .col-supp-offset-11 {
     margin-left: 91.6666666667%;
   }
 
   /* line 835, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-  .col-xxs-offset-12 {
+  .col-supp-offset-12 {
     margin-left: 100%;
   }
 }
@@ -12016,7 +11999,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
   }
 }
 /* line 85, ../sass/cms/_templates.scss */
-.cta-bar .cta-button .btn {
+.cta-bar .cta-button .btn, .cta-bar .cta-button .form-submit #submit, .form-submit .cta-bar .cta-button #submit {
   font-family: locator;
   font-size: 18px;
   padding: .5em 0;
@@ -12084,17 +12067,12 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
 }
 
 /* line 155, ../sass/cms/_templates.scss */
-.chapter h2 small, .chapter .h2 small,
+.chapter h2 small,
 .chapter h3 small,
-.chapter .h3 small,
 .copy-block h2 small,
-.copy-block .h2 small,
 .copy-block h3 small,
-.copy-block .h3 small,
 .item h2 small,
-.item .h2 small,
-.item h3 small,
-.item .h3 small {
+.item h3 small {
   display: block;
 }
 
@@ -12168,7 +12146,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
   clear: both;
 }
 /* line 11, ../sass/cms/_v5-site-panel.scss */
-.helpful-tip h4, .helpful-tip .h4 {
+.helpful-tip h4 {
   margin-top: 0;
 }
 /* line 14, ../sass/cms/_v5-site-panel.scss */
@@ -12934,7 +12912,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
 }
 
 /* line 4, ../sass/profile/_layout.scss */
-.life-cycle h1, .life-cycle .h1, .life-cycle h2, .life-cycle .h2, .life-cycle .h2, .life-cycle h3, .life-cycle .h3, .life-cycle .h3, .life-cycle h4, .life-cycle .h4, .life-cycle .h4 {
+.life-cycle h1, .life-cycle .h1, .life-cycle h2, .life-cycle .h2, .life-cycle h3, .life-cycle .h3, .life-cycle h4, .life-cycle .h4 {
   margin-top: 0;
 }
 /* line 8, ../sass/profile/_layout.scss */
@@ -12959,11 +12937,11 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
   height: 35px;
 }
 /* line 17, ../sass/profile/_sites.scss */
-#profile-sites .site h3 a, #profile-sites .site .h3 a {
+#profile-sites .site h3 a {
   color: #004990;
 }
 /* line 19, ../sass/profile/_sites.scss */
-#profile-sites .site h3 a small, #profile-sites .site .h3 a small {
+#profile-sites .site h3 a small {
   color: #a21984;
 }
 /* line 24, ../sass/profile/_sites.scss */
@@ -13025,7 +13003,7 @@ footer .navbar-default .navbar-nav.social-media-links > li > a:active {
   cursor: pointer;
 }
 /* line 18, ../sass/profile/_manage-notifications.scss */
-#site-notifications .panel-heading .site-toggle-container, #site-notifications .panel-heading .img-site, #site-notifications .panel-heading h4, #site-notifications .panel-heading .h4 {
+#site-notifications .panel-heading .site-toggle-container, #site-notifications .panel-heading .img-site, #site-notifications .panel-heading h4 {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -13490,7 +13468,7 @@ table.notifications .category {
 }
 
 /* line 190, ../sass/profile/_shame.scss */
-.btn-primary .profile-photo {
+.btn-primary .profile-photo, .form-submit #submit .profile-photo {
   background: rgba(0, 0, 0, 0.25);
   padding: 1px;
   border: none;
@@ -13703,7 +13681,7 @@ img.profile-photo.profile-photo-medium {
  * Site image in alert message when logging into a medium / high site
  */
 /* line 59, ../sass/site/_layout.scss */
-.alert .img-site {
+.alert .img-site, .logged-in-as .img-site {
   max-height: 150px;
   margin-right: 1em;
   margin-bottom: 1em;
@@ -13954,7 +13932,7 @@ img.profile-photo.profile-photo-medium {
   background-image: linear-gradient(#fdf0fa, #f6c4eb);
 }
 /* line 25, ../sass/site/_tribute.scss */
-.tribute-header h1, .tribute-header h2, .tribute-header .h2, .tribute-header h3, .tribute-header .h3, .tribute-header h4, .tribute-header .h4, .tribute-header h5 {
+.tribute-header h1, .tribute-header h2, .tribute-header h3, .tribute-header h4, .tribute-header h5 {
   color: #a21984;
 }
 
@@ -14660,7 +14638,7 @@ ol.ol-todo > li > a:active:before {
 }
 
 /* line 533, ../sass/calendar/_shame.scss */
-.heading-link-combo h1, .heading-link-combo h2, .heading-link-combo .h2, .heading-link-combo h3, .heading-link-combo .h3, .heading-link-combo h4, .heading-link-combo .h4, .heading-link-combo h5, .heading-link-combo form, .heading-link-combo p, .heading-link-combo a, .heading-link-combo input {
+.heading-link-combo h1, .heading-link-combo h2, .heading-link-combo h3, .heading-link-combo h4, .heading-link-combo h5, .heading-link-combo form, .heading-link-combo p, .heading-link-combo a, .heading-link-combo input {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -14857,18 +14835,18 @@ form#task #end-date, form#task .show-end-date {
 }
 
 /* line 2, ../sass/site/_privacy.scss */
-.site-privacy .btn {
+.site-privacy .btn, .site-privacy .form-submit #submit, .form-submit .site-privacy #submit {
   vertical-align: baseline;
   white-space: normal;
   margin-bottom: 1em;
   padding: 6px 12px;
 }
 /* line 7, ../sass/site/_privacy.scss */
-.site-privacy .btn .h1, .site-privacy .btn .h2, .site-privacy .btn .h3, .site-privacy .btn .h4, .site-privacy .btn .h5, .site-privacy .btn .h6 {
+.site-privacy .btn .h1, .site-privacy .form-submit #submit .h1, .form-submit .site-privacy #submit .h1, .site-privacy .btn .h2, .site-privacy .form-submit #submit .h2, .form-submit .site-privacy #submit .h2, .site-privacy .btn .h3, .site-privacy .form-submit #submit .h3, .form-submit .site-privacy #submit .h3, .site-privacy .btn .h4, .site-privacy .form-submit #submit .h4, .form-submit .site-privacy #submit .h4, .site-privacy .btn .h5, .site-privacy .form-submit #submit .h5, .form-submit .site-privacy #submit .h5, .site-privacy .btn .h6, .site-privacy .form-submit #submit .h6, .form-submit .site-privacy #submit .h6 {
   display: block;
 }
 /* line 10, ../sass/site/_privacy.scss */
-.site-privacy .btn .privacy-details {
+.site-privacy .btn .privacy-details, .site-privacy .form-submit #submit .privacy-details, .form-submit .site-privacy #submit .privacy-details {
   display: block;
   min-height: 4em;
 }
@@ -15284,216 +15262,83 @@ form#create > fieldset legend .badge {
   padding-left: 17px;
 }
 
-/* line 1, ../sass/blog/_blog.scss */
-#content {
-  padding: 0 1em;
-}
-/* line 3, ../sass/blog/_blog.scss */
-#content .uplift-logo-container {
-  line-height: 68px;
-  vertical-align: baseline;
-  margin: 2em 0;
+/* line 2, ../sass/blog/_blog.scss */
+.pull-left .img-thumbnail, .pull-left .wp-post-image,
+.pull-left .attachment-post-thumbnail {
+  margin: 0 10px 10px 0;
 }
 
-/* line 10, ../sass/blog/_blog.scss */
-.well, .ugc-message, .well-orange, .well-green, .well-blue, .well-red, .well-teal, .well-purple {
-  background-color: rgba(237, 227, 204, 0.7);
-  border: 1px solid rgba(232, 211, 162, 0.7);
-}
-
-/* line 15, ../sass/blog/_blog.scss */
-hr {
-  border-top: #eae4e0 1px solid;
-}
-
-/* line 22, ../sass/blog/_blog.scss */
-.wp-post-image {
-  margin: 0 0 1em 0;
-}
-
-/* line 27, ../sass/blog/_blog.scss */
+/* line 9, ../sass/blog/_blog.scss */
+.wp-post-image,
 .attachment-post-thumbnail {
   margin: 0 0 1em 0;
 }
 
-/* line 37, ../sass/blog/_blog.scss */
-h1 > a:hover, h3 > a:hover, .h3 > a:hover {
-  color: #c26f06;
-  text-decoration: undeline;
-}
-
-/* line 42, ../sass/blog/_blog.scss */
-h2 > a:hover, .h2 > a:hover {
-  color: #600f4e;
-  text-decoration: underline;
-}
-
-/* line 47, ../sass/blog/_blog.scss */
-h4 > a:hover, .h4 > a:hover {
-  color: #131314;
-  text-decoration: underline;
-}
-
-@media (max-width: 767px) {
-  /* line 64, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail {
-    min-height: 40px;
-  }
-  /* line 66, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail > img {
-    display: inline-block;
-    width: 41.6%;
-    vertical-align: top;
-  }
-  /* line 71, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail .caption {
-    display: inline-block;
-    width: 52.4%;
-    padding: 0 0 0 1em;
-    vertical-align: top;
-  }
-}
-@media (max-width: 600px) {
-  /* line 84, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail .caption {
-    padding: 0 0 0 1em;
-  }
-}
-@media (max-width: 500px) {
-  /* line 94, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail > img {
-    display: block;
-    margin: 0;
-    width: auto;
-    vertical-align: middle;
-  }
-  /* line 100, ../sass/blog/_blog.scss */
-  .row-fluid .thumbnail .caption {
-    display: inline-block;
-    width: 100%;
-    padding: 1px;
-    vertical-align: middle;
-  }
-}
-/* line 111, ../sass/blog/_blog.scss */
-#happy-little-trees {
-  background: white url(../img/blog-BG-repeater.png) bottom left repeat-x;
-  background: url(../img/blog-BG-repeater.png) bottom left repeat-x, white;
-  height: 309px;
-}
-@media (max-width: 768px) {
-  /* line 111, ../sass/blog/_blog.scss */
-  #happy-little-trees {
-    display: none;
-  }
-}
-
-/* line 129, ../sass/blog/_blog.scss */
+/* line 14, ../sass/blog/_blog.scss */
 p.form-allowed-tags {
   display: none;
 }
 
-/* line 134, ../sass/blog/_blog.scss */
-.alert-info {
-  border-color: #006990;
-  background-color: #e8f2f2;
-  background-image: url("../img/icon_information.png");
-}
-
-/* line 140, ../sass/blog/_blog.scss */
-.alert-error {
-  border-color: #f15d40;
-  background-color: #fdeae3;
-  background-image: url("../img/icon_error.png");
-}
-
-/* line 146, ../sass/blog/_blog.scss */
-.alert {
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding: 13px 35px 4px 42px;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  margin-bottom: 18px;
-  background-position: 1em 1em;
-  background-repeat: no-repeat;
-  text-shadow: none;
-  color: #333333;
-  margin: 0;
-  line-height: 1.5em;
-}
-
-/* line 1, ../sass/blog/_sidebar.scss */
-.rss {
-  margin-bottom: 20px;
-}
-
-/* line 4, ../sass/blog/_sidebar.scss */
-.panel.panel-author {
+/* line 2, ../sass/blog/_sidebar.scss */
+.panel.panel-author,
+.panel.panel-related,
+.yarpp-related {
   background: #faf9fc;
   border-color: #a21984;
 }
 /* line 409, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.panel.panel-author > .panel-heading {
+.panel.panel-author > .panel-heading,
+.panel.panel-related > .panel-heading,
+.yarpp-related > .panel-heading {
   color: white;
   background-color: #a21984;
   border-color: #a21984;
 }
 /* line 414, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.panel.panel-author > .panel-heading + .panel-collapse .panel-body {
+.panel.panel-author > .panel-heading + .panel-collapse .panel-body,
+.panel.panel-related > .panel-heading + .panel-collapse .panel-body,
+.yarpp-related > .panel-heading + .panel-collapse .panel-body {
   border-top-color: #a21984;
 }
 /* line 419, ../../../../../../../../.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/bootstrap-sass-3.1.0.0/vendor/assets/stylesheets/bootstrap/_mixins.scss */
-.panel.panel-author > .panel-footer + .panel-collapse .panel-body {
+.panel.panel-author > .panel-footer + .panel-collapse .panel-body,
+.panel.panel-related > .panel-footer + .panel-collapse .panel-body,
+.yarpp-related > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #a21984;
 }
-/* line 11, ../sass/blog/_sidebar.scss */
-.panel.panel-author > .panel-heading {
+/* line 9, ../sass/blog/_sidebar.scss */
+.panel.panel-author > .panel-heading,
+.panel.panel-related > .panel-heading,
+.yarpp-related > .panel-heading {
   background-image: -webkit-linear-gradient(top, #a21984 0%, #8c1672 100%);
   background-image: linear-gradient(to bottom, #a21984 0%, #8c1672 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFA21984', endColorstr='#FF8C1672', GradientType=0);
 }
-/* line 14, ../sass/blog/_sidebar.scss */
-.panel.panel-author .author-thumb {
-  margin: 0 15px 0 0;
-}
-/* line 17, ../sass/blog/_sidebar.scss */
-.panel.panel-author hr {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
 
-/* line 23, ../sass/blog/_sidebar.scss */
+/* line 17, ../sass/blog/_sidebar.scss */
 #sidebar > ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 27, ../sass/blog/_sidebar.scss */
+/* line 21, ../sass/blog/_sidebar.scss */
 #sidebar > ul > li {
   margin-bottom: 20px;
 }
-/* line 31, ../sass/blog/_sidebar.scss */
-#sidebar .widget {
-  padding-left: 0;
-  padding-right: 0;
-}
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 36, ../sass/blog/_sidebar.scss */
+  /* line 26, ../sass/blog/_sidebar.scss */
   #sidebar .widget:first-child {
     padding-right: 15px;
     padding-left: 0;
   }
-  /* line 40, ../sass/blog/_sidebar.scss */
+  /* line 30, ../sass/blog/_sidebar.scss */
   #sidebar .widget:last-child {
-    padding-rigfht: 0;
+    padding-right: 0;
     padding-left: 15px;
   }
 }
-/* line 45, ../sass/blog/_sidebar.scss */
+/* line 35, ../sass/blog/_sidebar.scss */
 #sidebar .panel.panel-widget {
   background: #fff9f2;
   border-color: #f8971d;
@@ -15512,52 +15357,89 @@ p.form-allowed-tags {
 #sidebar .panel.panel-widget > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #f8971d;
 }
-/* line 52, ../sass/blog/_sidebar.scss */
+/* line 42, ../sass/blog/_sidebar.scss */
 #sidebar .panel.panel-widget > .panel-heading {
   background-image: -webkit-linear-gradient(top, #faae4e 0%, #f9a236 100%);
   background-image: linear-gradient(to bottom, #faae4e 0%, #f9a236 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFAAE4E', endColorstr='#FFF9A236', GradientType=0);
 }
-/* line 55, ../sass/blog/_sidebar.scss */
+/* line 45, ../sass/blog/_sidebar.scss */
 #sidebar .panel.panel-widget ul {
   list-style: none;
   padding: 15px;
 }
-/* line 58, ../sass/blog/_sidebar.scss */
+/* line 48, ../sass/blog/_sidebar.scss */
 #sidebar .panel.panel-widget ul li {
   margin-bottom: 10px;
 }
-/* line 61, ../sass/blog/_sidebar.scss */
+/* line 51, ../sass/blog/_sidebar.scss */
 #sidebar .panel.panel-widget ul li:last-child {
   margin-bottom: 0;
 }
 
-/* line 3, ../sass/blog/_plugins.scss */
-.social-sharing h2, .social-sharing .h2 {
-  display: inline-block;
+/* line 14, ../sass/blog/_comments.scss */
+ul.children {
+  padding: 0;
 }
-/* line 6, ../sass/blog/_plugins.scss */
-.social-sharing .sharing-buttons {
-  display: inline-block;
+/* line 16, ../sass/blog/_comments.scss */
+ul.children .list-group-item {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-left: 75px;
+  background: #f7f7f7;
 }
 
-/* line 14, ../sass/blog/_plugins.scss */
+/* line 2, ../sass/blog/_plugins.scss */
+.social-sharing {
+  margin: 0 0 10px 0;
+}
+@media screen and (min-width: 768px) {
+  /* line 2, ../sass/blog/_plugins.scss */
+  .social-sharing {
+    float: right;
+  }
+}
+
+/* line 10, ../sass/blog/_plugins.scss */
 .pagingNav {
   text-align: center;
 }
 
-/* line 37, ../sass/blog/_plugins.scss */
-.attachment-post-thumbnail {
-  margin: 0 0 1em 0;
+/* line 19, ../sass/blog/_plugins.scss */
+.panel-related article {
+  margin-bottom: 1em;
+  border-bottom: #eae4e0 1px solid;
+}
+/* line 23, ../sass/blog/_plugins.scss */
+.panel-related article:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
 }
 
-/* line 1, ../sass/blog/_shame.scss */
-.h2 {
-  /** Cheater Class for Blog Titles on index.php and single.php **/
+/* line 29, ../sass/blog/_plugins.scss */
+.strongarm {
+  width: 100px;
+  height: 100px;
 }
 
-/* line 4, ../sass/blog/_shame.scss */
-.h3 {
-  /** Cheater Class for Comments Heading **/
+/* line 2, ../sass/blog/_shame.scss */
+#reply-title {
+  display: none;
+}
+
+/* line 8, ../sass/blog/_shame.scss */
+header p {
+  margin: 0 0 0 0;
+}
+
+/* line 14, ../sass/blog/_shame.scss */
+.social-sharing p {
+  margin: 0 0 0 0;
+}
+
+/* line 21, ../sass/blog/_shame.scss */
+.comment-form .media.media-offset .pull-left {
+  margin-top: 2em;
 }

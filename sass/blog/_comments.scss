@@ -1,48 +1,21 @@
-#comments {
-  font-family: locator, Arial, Helvetica, Verdana, sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-    ol {
-      @include border-radius(4px);
-      background-color: $downy;
-      border: 1px solid darken($downy, 10%);
-      padding: 1em;
-      margin: 0;
-      list-style: none;
-      li {
-        h4, time {
-          display: inline;
-          font-size: 18px;
-          line-height: 24px;
-          color: #fff;
-          font-weight: normal;
-          font-style: italic;
-        }
-        .commentBody {
-          background-color: #fff;
-          padding: 1em;
-        }
-      }
-    }
-    .comment-respond {
-      display:block;
-      label {
-        @include inline-block;
-      }
-      .required {
-        @include inline-block;
-      }
-      input {
-        display: block;
-        @include border-radius(4px);
-        width: 100%
-      }
-      .form-submit {
-        float: right;
-        input {
-        @extend .btn;
-        @extend .btn-primary;
-      }
-    }
+.logged-in-as {
+  @extend .alert;
+  @extend .alert-info;
+  a {
+    @extend .alert-link;
+  }
+}
+.form-submit {
+  #submit {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+ul.children {
+  padding: 0;
+  .list-group-item {
+    @include border-radius(0);
+    padding-left: 75px;
+    background: #f7f7f7;
   }
 }

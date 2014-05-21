@@ -55,16 +55,31 @@ function mytheme_remove_url($arg) {
  * @author Olaf - http://stackoverflow.com/questions/4082662/multiple-excerpt-lengths-in-wordpress
  */
 function custom_excerpt_length( $length ) {
-    return (is_front_page()) ? 50 : 20;
+    return (is_front_page()) ? 60 : 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 
+/**
+ * Check to see if Author email has a Gravatar
+ *
+ * @return void
+ * @author Wordpress - http://codex.wordpress.org/Using_Gravatars
+ */
+function validate_gravatar($email) {
+    // Craft a potential url and test its headers
+    $hash = md5(strtolower(trim($email)));
+    $uri = 'http://www.gravatar.com/avatar/' . $hash . '?d=404';
+    $headers = @get_headers($uri);
+    if (!preg_match("|200|", $headers[0])) {
+        $has_valid_avatar = FALSE;
+    } else {
+        $has_valid_avatar = TRUE;
+    }
+    return $has_valid_avatar;
 
-
-
-
+};
 
 
 
@@ -78,16 +93,20 @@ function starkers_comment( $comment, $args, $depth ) {
     $GLOBALS['comment'] = $comment;
     ?>
 
-    <li class="comment-reply list-group-item">
-       <?php if ( $comment->comment_approved == '1' ): ?>
+    <?php if ( $comment->comment_approved == '1' ): ?>
+        <li class="comment-reply list-group-item">
             <article id="comment-<?php comment_ID() ?>">
                 <div class="media">
                     <span class="pull-left">
-                        <!-- avatar thumbnail here?-->
+                        <?php if (validate_gravatar(get_the_author_email())): ?>
+                            <img class="author-thumb" <?php echo get_avatar( $comment, 30); ?>
+                        <?php else: ?>
+                            <img class="author-thumb" src="<?php bloginfo('template_directory'); ?>/img/no-30x30.png"/>
+                        <?php endif; ?>
                     </span>
                     <div class="media-body">
                         <header>
-                            <h5 class="media-heading"><?php comment_author_link() ?>
+                            <h5 class="media-heading">By <?php comment_author_link() ?>
                                 <span class="text-muted">&mdash; <time><?php comment_date() ?> at <?php comment_time() ?></time></span>
                             </h5>
                         </header>
@@ -95,26 +114,27 @@ function starkers_comment( $comment, $args, $depth ) {
                             <?php comment_text() ?>
                         </div>
                     </div>
+                </div>
             </article>
-        <?php elseif ($comment->comment_approved == '0') : ?>
+        </li>
+    <?php elseif ($comment->comment_approved == '0') : ?>
+        <li class="comment-reply list-group-item list-group-item-warning">
             <article id="comment-<?php comment_ID() ?>">
                 <div class="media">
                     <span class="pull-left">
-                        <!-- avatar thumbnail here?-->
+                        <?php if (validate_gravatar(get_the_author_email())): ?>
+                            <img class="author-thumb" <?php echo get_avatar( $comment, 30); ?>
+                        <?php else: ?>
+                            <img class="author-thumb" src="<?php bloginfo('template_directory'); ?>/img/no-30x30.png"/>
+                        <?php endif; ?>
                     </span>
                     <div class="media-body">
-                        <header>
-                            <h5 class="media-heading"><?php comment_author_link() ?>
-                                <span class="text-muted">&mdash; <time><?php comment_date() ?> at <?php comment_time() ?></time></span>
-                            </h5>
-                        </header>
-                        <div class="user-generated">
-                            <?php comment_text() ?>
-                        </div>
+                        <p>Comment awaiting approval.</p>
                     </div>
+                </div>
             </article>
-       <?php endif; ?>
-    </li>
+        </li>
+    <?php endif; ?>
     <?php
 }
 
@@ -124,8 +144,8 @@ function starkers_comment( $comment, $args, $depth ) {
  */
 if (function_exists('register_sidebar')) {
     register_sidebar( array(
-        'before_widget' => '<div class="widget col-xs-12 col-sm-6 col-md-12"><div class="panel panel-widget">',
-        'after_widget'  => '</div></div>',
+        'before_widget' => '<div class="panel panel-widget">',
+        'after_widget'  => '</div>',
         'before_title'  =>  '<div class="panel-heading"><h3 class="panel-title">',
         'after_title'   =>  '</h3></div>'
     ) );
