@@ -55,7 +55,7 @@ function mytheme_remove_url($arg) {
  * @author Olaf - http://stackoverflow.com/questions/4082662/multiple-excerpt-lengths-in-wordpress
  */
 function custom_excerpt_length( $length ) {
-    return (is_front_page()) ? 60 : 30;
+    return (is_front_page() || is_archive() || is_author() || is_category() || is_search() || is_tag()) ? 60 : 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
@@ -81,8 +81,6 @@ function validate_gravatar($email) {
 
 };
 
-
-
 /**
  * Custom callback for outputting comments
  *
@@ -97,13 +95,6 @@ function starkers_comment( $comment, $args, $depth ) {
         <li class="comment-reply list-group-item">
             <article id="comment-<?php comment_ID() ?>">
                 <div class="media">
-                    <span class="pull-left">
-                        <?php if (validate_gravatar(get_the_author_email())): ?>
-                            <img class="author-thumb" <?php echo get_avatar( $comment, 30); ?>
-                        <?php else: ?>
-                            <img class="author-thumb" src="<?php bloginfo('template_directory'); ?>/img/no-30x30.png"/>
-                        <?php endif; ?>
-                    </span>
                     <div class="media-body">
                         <header>
                             <h5 class="media-heading">By <?php comment_author_link() ?>
@@ -137,7 +128,6 @@ function starkers_comment( $comment, $args, $depth ) {
     <?php endif; ?>
     <?php
 }
-
 
 /**
  * Enable sidebar widgets
@@ -190,7 +180,6 @@ function db_filter_authors_search( $posts_search ) {
     error_log( $posts_search );
     return $posts_search;
 }
-
 
 /**
  * Modify get_users() to search display_name instead of user_nicename

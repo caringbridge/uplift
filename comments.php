@@ -33,13 +33,6 @@ endif; ?>
 <?php else: ?>
 	<div class="comment-form">
     	<div class="media media-offset">
-        	<span class="pull-left">
-        		<?php if (validate_gravatar(get_the_author_email())): ?>
-          			<img class="author-thumb" <?php echo get_avatar( $comment, 50); ?>
-        		<?php else: ?>
-          			<img class="img-profile media-object" src="<?php bloginfo('template_directory'); ?>/img/no-50x50.png"/>
-        		<?php endif; ?>
-        	</span>
         	<div class="media-body">
 				<?php
   					$comments_args = array(

@@ -8,7 +8,7 @@
                     <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
-                <h2>No posts to display</h2>
+                <h1>No posts to display</h1>
             <?php endif; ?>
             <div class="pagingNav">
                 <?php wp_paginate() ?>

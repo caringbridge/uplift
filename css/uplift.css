@@ -15262,19 +15262,24 @@ form#create > fieldset legend .badge {
   padding-left: 17px;
 }
 
-/* line 2, ../sass/blog/_blog.scss */
-.pull-left .img-thumbnail, .pull-left .wp-post-image,
-.pull-left .attachment-post-thumbnail {
-  margin: 0 10px 10px 0;
+/* line 1, ../sass/blog/_blog.scss */
+.uplift-logo-container {
+  padding-top: 10px;
 }
 
-/* line 9, ../sass/blog/_blog.scss */
+/* line 5, ../sass/blog/_blog.scss */
+.pull-left .img-thumbnail, .pull-left .wp-post-image,
+.pull-left .attachment-post-thumbnail {
+  margin: 0 10px 20px 0;
+}
+
+/* line 12, ../sass/blog/_blog.scss */
 .wp-post-image,
 .attachment-post-thumbnail {
   margin: 0 0 1em 0;
 }
 
-/* line 14, ../sass/blog/_blog.scss */
+/* line 17, ../sass/blog/_blog.scss */
 p.form-allowed-tags {
   display: none;
 }
@@ -15402,23 +15407,23 @@ ul.children .list-group-item {
   }
 }
 
-/* line 10, ../sass/blog/_plugins.scss */
+/* line 9, ../sass/blog/_plugins.scss */
 .pagingNav {
   text-align: center;
 }
 
-/* line 19, ../sass/blog/_plugins.scss */
+/* line 17, ../sass/blog/_plugins.scss */
 .panel-related article {
   margin-bottom: 1em;
   border-bottom: #eae4e0 1px solid;
 }
-/* line 23, ../sass/blog/_plugins.scss */
+/* line 21, ../sass/blog/_plugins.scss */
 .panel-related article:last-child {
   margin-bottom: 0;
   border-bottom: 0;
 }
 
-/* line 29, ../sass/blog/_plugins.scss */
+/* line 27, ../sass/blog/_plugins.scss */
 .strongarm {
   width: 100px;
   height: 100px;
@@ -15429,17 +15434,17 @@ ul.children .list-group-item {
   display: none;
 }
 
-/* line 8, ../sass/blog/_shame.scss */
+/* line 7, ../sass/blog/_shame.scss */
 header p {
   margin: 0 0 0 0;
 }
 
-/* line 14, ../sass/blog/_shame.scss */
+/* line 13, ../sass/blog/_shame.scss */
 .social-sharing p {
   margin: 0 0 0 0;
 }
 
-/* line 21, ../sass/blog/_shame.scss */
+/* line 19, ../sass/blog/_shame.scss */
 .comment-form .media.media-offset .pull-left {
   margin-top: 2em;
 }

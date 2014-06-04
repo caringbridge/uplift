@@ -9,7 +9,7 @@
                     <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
-                <h2>No results found for '<?php echo get_search_query(); ?>'</h2>
+                <h1>No results found for '<?php echo get_search_query(); ?>'</h1>
             <?php endif; ?>
             <div class="pagingNav">
                 <?php wp_paginate() ?>

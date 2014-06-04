@@ -4,26 +4,18 @@
     <div class="row">
         <section class="col-md-8">
             <?php if ( have_posts() ): the_post(); ?>
-
-
                 <?php if ( get_the_author_meta( 'description' ) ) : ?>
                     <section class="author-info">
-                        <div class="media">
-                            <img class="media-object pull-left img-polaroid" <?php echo get_avatar( get_the_author_email(), 120 ); ?>
-                            <div class="media-body">
-                                <h1><?php echo get_the_author(); ?></h1>
-                                <p><?php the_author_meta( 'description' ); ?></p>
-                            </div>
-                        </div>
+                        <h1>About <?php echo get_the_author(); ?></h1>
+                        <p><?php the_author_meta( 'description' ); ?></p>
                     </section>
                 <?php endif; ?>
-
-
+                <h2><?php the_author_meta('first_name'); ?>'s Posts:</h2> 
                 <?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
                     <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
-                <h2>No posts to display for <?php echo get_the_author() ; ?></h2>
+                <h1>No posts to display for <?php echo get_the_author() ; ?></h1>
             <?php endif; ?>
             <div class="pagingNav">
                 <p><?php wp_paginate() ?></p>

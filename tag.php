@@ -4,12 +4,12 @@
     <div class="row">
         <section class="col-md-8">
             <?php if ( have_posts() ): ?>
-                <h1>Tag Archive: <?php echo single_tag_title( '', false ); ?></h1>
+                <h1>Posts tagged with '<?php echo single_tag_title( '', false ); ?>'</h1>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
-                <h2>No posts to display in <?php echo single_tag_title( '', false ); ?></h2>
+                <h1>No posts tagged with '<?php echo single_tag_title( '', false ); ?>'</h1>
             <?php endif; ?>
             <div class="pagingNav">
                 <?php wp_paginate() ?>

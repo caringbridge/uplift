@@ -13,8 +13,8 @@ Author: CaringBridge's Ridiculously Awesome Technology Team
             <?php while (have_posts()) : the_post(); ?>
                 <article class="clearfix">
                     <div class="pull-left">
-                        <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to &lt;?php the_title(); ?&gt;" rel="bookmark">
-                            <img class="img-thumbnail strongarm" <?php the_post_thumbnail('thumbnail'); ?>
+                        <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>" rel="bookmark">
+                            <?php the_post_thumbnail('thumbnail', array('class' => 'strongarm')); ?>
                         </a>
                     </div>
                     <a href="<?php the_permalink() ?>">

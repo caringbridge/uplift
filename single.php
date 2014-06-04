@@ -22,17 +22,15 @@
                     <?php the_post_thumbnail('full'); ?>
                     <?php the_content(); ?>
                     <div class="row">
-                        <div class="col-sm-4 col-sm-push-8">
+                        <div class="col-md-12">
                             <section class="social-sharing">
                                 <?php get_template_parts(array('parts/sharing') ); ?>
                             </section>
                         </div>
-                        <div class="col-sm-8 col-sm-pull-4">
-                            <?php if (get_the_author_meta('description')): ?>
-                                <?php get_template_parts(array('parts/about-author') ); ?>
-                            <?php endif; ?>
-                        </div>
                     </div>
+                    <?php if (get_the_author_meta('description')): ?>
+                        <?php get_template_parts(array('parts/about-author') ); ?>
+                    <?php endif; ?>
                     <section class="pagingNav">
                         <ul class="pager">
                             <li class="previous">
