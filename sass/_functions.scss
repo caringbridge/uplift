@@ -7,5 +7,5 @@
 }
 
 @function font-path($path) {
-  @return "../wp-content/themes/Uplift/fonts/" + $path;
+  @return $path;
 }

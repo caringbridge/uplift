@@ -18,7 +18,6 @@
 @import "global/navbar";
 @import "global/footer";
 @import "global/list-group";
-//@import "global/cb-spinner";
 @import "global/brooklyn-bar";
 @import "global/colors";
 @import "global/bootstrap-variables";
@@ -34,46 +33,6 @@
 @import "global/media";
 @import "global/images";
 @import "global/shame";
-
-// Corporate CMS styles
-@import "cms/layout";
-@import "cms/homepage";
-@import "cms/templates";
-@import "cms/universal-banner";
-@import "cms/v5-site-panel";
-@import "cms/ugc";
-@import "cms/carecurtain";
-@import "cms/color-palettes";
-@import "cms/buttons";
-@import "cms/shame";
-@import "cms/tour";
-@import "cms/secondary-nav";
-
-// Profile styles
-@import "profile/profile";
-@import "profile/thumbnails";
-@import "profile/layout";
-@import "profile/sites";
-@import "profile/manage-notifications";
-@import "profile/notifications";
-@import "profile/shame";
-
-// V5 sites
-@import "site/layout";
-@import "site/stats";
-@import "site/feed";
-@import "site/tribute-panel";
-@import "site/community-panel";
-@import "site/guestbook";
-@import "site/tribute";
-@import "calendar/shame";
-@import "site/settings";
-@import "site/privacy";
-@import "site/create";
-@import "site/theme-picker";
-@import "site/pages";
-@import "site/invite";
-@import "site/v3-notifications-toggle"; // Ugh
 
 // Blog Specific
 @import "blog/blog";
