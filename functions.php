@@ -60,6 +60,17 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
+/**
+* Make Wordpress SEO plugin use the Thumbnail image instead of Main Post Image
+*
+* @return void
+* @author http://webgilde.com/en/wordpress-seo-facebook-image-open-graph/
+*/
+add_filter('wpseo_opengraph_image_size', 'mysite_opengraph_image_size');
+function mysite_opengraph_image_size($val) {
+return 'thumbnail';
+}
+
 
 /**
  * Check to see if Author email has a Gravatar
