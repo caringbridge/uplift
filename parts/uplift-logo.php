@@ -10,5 +10,5 @@
 </script>
 
 <div class="uplift-logo-container">
-  <a href="/"><img class="img-responsive" src="<?php bloginfo('template_directory'); ?>/img/uplift-logo.png" alt="Uplift Logo" data-svg="<?php bloginfo('template_directory'); ?>/img/uplift-logo.svg"></a>
+  <h1><a href="/">Uplift Blog</a></h1>
 </div>
