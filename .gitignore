@@ -19,3 +19,9 @@ composer.lock
 vendor
 .sass-cache
 *.DS_Store*
+ruby
+staging/*
+dist/*
+bower_components/*
+node_modules/*
+css/*

@@ -2,7 +2,7 @@
     <?php
         /* @todo find a more concise way to render this */
         if (is_front_page()) {
-            echo "<h1>";
+            echo "<h2>";
         }
         elseif (is_author()) {
             echo "<h3>";
@@ -14,7 +14,7 @@
     <a href="<?php esc_url( the_permalink() ); ?>" title="Permalink to <?php the_title(); ?>;" rel="bookmark"><?php the_title(); ?></a>
     <?php
         if (is_front_page()) {
-            echo "</h1>";
+            echo "</h2>";
         }
         elseif (is_author()) {
             echo "</h3>";

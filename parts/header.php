@@ -12,11 +12,7 @@
     <link rel="alternate" type="application/rss xml" title="Subscribe to <?php bloginfo('name'); ?>" href="<?php bloginfo('rss2_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
     <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico"/>
-    <script src="<?php bloginfo('template_directory'); ?>/js/modernizr.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/jquery.ba-throttle-debounce.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/js/navbar-squisher.js"></script>
+    <script src="<?php bloginfo('template_directory'); ?>/uplift.min.js"></script>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
