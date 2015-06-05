@@ -1,0 +1,22 @@
+{
+  "name": "uplift",
+  "version": "0.0.1",
+  "homepage": "https://github.com/caringbridge/uplift",
+  "authors": [
+    "Ryan Rud <ryan.rud@gmail.com>"
+  ],
+  "description": "CaringBridge blog theme",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4",
+    "jquery": "1.11.0",
+    "jquery-throttle-debounce": "*"
+  }
+}
