@@ -1,8 +1,14 @@
+body {
+  background-color: $pampas;
+}
+
 .layout {
-  margin: 0 auto 1em auto;
-  @media screen and (min-width: $screen-xs) {
-    @include box-shadow(0 5px 9px 4px rgba(0,0,0,0.2));
-  }
+  margin: 0 auto;
+}
+
+// General purpose "give content some breathing room" utility wrapper
+.content {
+  padding: 0 ($grid-gutter-width / 2) ($grid-gutter-width / 2) ($grid-gutter-width / 2);
 }
 
 .container-fluid {

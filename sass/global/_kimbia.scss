@@ -1,0 +1,173 @@
+/**
+ * This is a bastardization of some of Bootstap's form styles applied to Kimbia's form markup. I'm sorry.
+ */
+
+// Horizontal field/label widths:
+$labelWidth: 25%; // originally 144px;
+$inputWidth: 75%; // originally 17em;
+$horizontalCutoff: $screen-md-min; // Width to start allowing horizontal field/label layout
+
+// Wrap in extra div to make sure this is more specific than Kimbia's styles
+div {
+  div.kimbiaDiv.columnsPerPage1 {
+
+    // Widget state
+    &.ready {
+      form:after {
+        @extend .small;
+        @extend .muted;
+        content: "* Required field";
+      }
+    }
+    &.submitting {
+      @include transition(opacity 1s);
+      opacity: .75;
+    }
+    &.complete {
+      @include transition(opacity .5s);
+      opacity: 1;
+    }
+
+
+    label {
+      font-size: 1em; // For some reason this is sometimes .9em? Normalize!
+      // For some reason, they were making all spans inside .kimbiaDiv be display: block... sigh
+      span {
+        display: inline;
+      }
+    }
+
+    label.groupLabel.section {
+      @extend h2;
+    }
+
+    label.k_text, label.k_select, label.k_number, label.k_money {
+      @include box-sizing(border-box);
+      margin-left: 0;
+      float: none;
+      width: 100%;
+    }
+    &.two_col {
+      @media (min-width: $horizontalCutoff) {
+        label.k_text, label.k_select, label.k_number, label.k_money {
+          text-align: right;
+          padding-left: $padding-base-horizontal;
+          width: $labelWidth;
+          float: left;
+        }
+      }
+    }
+
+    .fieldCaption,
+    input.k_text, select.k_select, input.k_number, input.k_money,
+    .k_buttonBlock {
+      @include box-sizing(border-box);
+      float: none;
+      margin-left: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    &.two_col {
+      @media (min-width: $horizontalCutoff) {
+        .fieldCaption,
+        input.k_text, select.k_select, input.k_number, input.k_money,
+        .k_buttonBlock {
+          margin-left: $labelWidth;
+          width: $inputWidth;
+          max-width: $inputWidth;
+        }
+      }
+    }
+
+    div.k_column {
+      float: none;
+    }
+
+    .fieldCaption {
+      @extend .help-block;
+    }
+
+    label.k_text, label.k_select, label.k_number, label.k_money {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: ($padding-base-vertical + 1) $padding-base-horizontal ($padding-base-vertical + 1) 0; // Default padding plus a border
+      font-size: $font-size-base;
+    }
+
+    label.k_radioCB {
+      font-weight: normal;
+      font-size: $font-size-base;
+      padding-bottom: 0;
+    }
+
+    label.required:before, label.k_required:before {
+      content: "* "; // This should be done in the markup with visually hidden text for accessibility... EXCEPT when the deals are this good with Kimbia
+    }
+
+    input.k_text, select.k_select, input.k_number, input.k_money, textaream, textarea.k_textarea, textarea.k_textarea.k_required {
+      display: block;
+      padding: $padding-base-vertical $padding-base-horizontal;
+      font-size: $font-size-base;
+      line-height: $line-height-base;
+      color: $input-color;
+      background-color: $input-bg;
+      background-image: none;
+      border: 1px solid $input-border;
+      border-radius: $input-border-radius;
+      @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
+      @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+      @include form-control-focus();
+      @include placeholder();
+
+      &[disabled],
+      &[readonly],
+      fieldset[disabled] & {
+        cursor: not-allowed;
+        background-color: $input-bg-disabled;
+        opacity: 1; // iOS fix for unreadable disabled content
+      }
+    }
+
+    input.k_text, select.k_select, input.k_number, input.k_money {
+      height: $input-height-base;
+    }
+
+    textarea, textarea.k_textarea, textarea.k_textarea.k_required {
+      height: auto;
+      min-height: 5em;
+    }
+
+    .k_buttonBlock {
+      background: transparent;
+      @include box-sizing(border-box);
+      button.k_button.forward {
+        @extend .btn;
+        @extend .btn-primary;
+        text-transform: none;
+      }
+    }
+
+  }
+}
+
+// Wrapper styles on tribute page (commented out because Development wanted the ability to manually type this into the snippet area and change it on a whim)
+/*
+.body-kimbia {
+  &.body-kimbia-general {
+    .layout-kimbia {
+      padding-top: 2em;
+      padding-bottom: 1em;
+    }
+  }
+  .layout-kimbia {
+    background: $white repeat url('/assets/images/heart-pattern.png');
+    .site-content {
+      background: $well-bg;
+      padding: 1em;
+      @include border-radius($border-radius-base);
+      border: 1px solid $gray-lighter;
+      @include box-shadow(0 1px 1px rgba(0,0,0,.1));
+    }
+  }
+}
+*/

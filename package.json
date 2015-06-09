@@ -1,8 +1,12 @@
 {
   "name": "uplift",
   "description": "CaringBridge blog theme",
-  "author": "Ryan Rud <rrud@caringbridge.org>",
   "version": "0.0.1",
+  "license": "MIT",
+  "authors": [
+    "Ryan Rud <rrud@caringbridge.org>",
+    "Craig Gieselman", "githubDOTcomSLASHcwgieselman"
+  ],
   "repository": {},
   "devDependencies": {
     "bower": "^1.4.1",
@@ -16,7 +20,9 @@
     "grunt-contrib-jshint": "^0.11.2",
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "^0.6.1",
-    "time-grunt": "^1.1.1"
+    "time-grunt": "^1.1.1",
+    "grunt-modernizr": "^0.6.0",
+    "jshint-stylish": "^1.0.2"
   },
   "scripts": {
     "postinstall": "bower install",

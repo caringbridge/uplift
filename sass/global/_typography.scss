@@ -2,20 +2,6 @@
  * CaringBridge typography and font-face styles
  */
 @include font-face(
-  "Locator Display",
-  font-files(font-path("LocatorDisplayWebRegular.woff")),
-  font-path("LocatorDisplayWebRegular.eot"),
-  normal
-);
-
-@include font-face(
-  "Locator Display",
-  font-files(font-path("LocatorDisplayWebBold.woff")),
-  font-path("LocatorDisplayWebBold.eot"),
-  bold
-);
-
-@include font-face(
   "Locator",
   font-files(font-path("LocatorWebRegular.woff")),
   font-path("LocatorWebRegular.eot"),
@@ -27,6 +13,13 @@
   font-files(font-path("LocatorWebBold.woff")),
   font-path("LocatorWebBold.eot"),
   bold
+);
+
+@include font-face(
+  "Jubilat",
+  font-files(font-path("jubilat-webfont.woff")),
+  font-path("jubilat-webfont.eot"),
+  normal
 );
 
 h1, h2, h3, h4, h5, h6,
@@ -41,6 +34,7 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 36px;
   line-height: 40px;
+  margin-top: 10px;
 }
 
 h2, .h2 {
@@ -62,8 +56,6 @@ h4, h5, h6,
   font-weight: bold;
 }
 
-
-
 /*
 h1, h1 > a, h3, h3 > a, h1 > a:hover, h3 > a:hover {
   color: $tree-poppy;
@@ -82,4 +74,14 @@ h4, h4 > a, h4 > a:hover {
 // Marketing said we should usually only show the amplifier heart in orange
 .cbicon-heart {
   color: $tree-poppy;
+}
+
+// Undo Bootstrap 3's fancy blockquotes
+.user-generated {
+  blockquote {
+    padding: 0;
+    margin: 14px 40px 14px 40px;
+    font-size: $font-size-base;
+    border-left: none;
+  }
 }

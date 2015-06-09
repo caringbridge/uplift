@@ -1,0 +1,75 @@
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ * This file contians the look and feel of the off-canvas.
+ * Mechanics are in the _off-canvas-mechanics partial
+ */
+$offcanvas-base-color: $pampas;
+$offcanvas-settings-base-color: $violet-eggplant;
+
+.sidebar-offcanvas {
+  background-color: $offcanvas-base-color; // fallback
+  @include background($offcanvas-base-color);
+  border-left: 1px solid darken($offcanvas-base-color, 10%);
+  .list-group {
+    @include border-radius (0);
+    @include box-shadow (none);
+    .list-group-item {
+      background: none;
+      @include border-radius (0);
+      border: none;
+      border-top: 1px solid darken($offcanvas-base-color, 10%);
+      border-bottom: 1px solid darken($offcanvas-base-color, 10%);
+      padding: 15px 0 15px 15px;
+      &:first-child {
+        border-top: none;
+      }
+      &:hover, &:focus, &:active {
+        border-top: 1px solid darken($offcanvas-base-color, 14%);
+        border-bottom: 1px solid darken($offcanvas-base-color, 14%);
+        background-color: darken($offcanvas-base-color, 4%); // fallback
+      }
+      &.active {
+        @include text-shadow(none);
+        color: darken($list-group-link-color, 4%);
+        background-color: darken($offcanvas-base-color, 8%);
+      }
+      &.contains-heading {
+        padding: 15px 0 5px 15px;
+        border-top: none;
+        border-bottom: none;
+      }
+      .list-group-heading {
+          font-family: Jubilat;
+          font-weight: normal;
+      }
+    }
+
+    // Profile settings?
+    .off-canvas-settings {
+      background-color: $offcanvas-settings-base-color; // fallback
+      @include background($offcanvas-settings-base-color);
+      a.list-group-item {
+        color: $white;
+        border-top: 1px solid darken($offcanvas-settings-base-color, 10%);
+        border-bottom: 1px solid darken($offcanvas-settings-base-color, 10%);
+        padding-left: 25px;
+        &:first-child {
+          border-top: none;
+        }
+        &:hover, &:focus, &:active {
+          background-color: darken($offcanvas-settings-base-color, 4%); // fallback
+          @include background(linear-gradient(darken($offcanvas-settings-base-color, 2%), darken($offcanvas-settings-base-color, 4%)));
+        }
+        &.active {
+          background-color: darken($offcanvas-settings-base-color, 8%); // fallback
+          @include background(linear-gradient(darken($offcanvas-settings-base-color, 4%), darken($offcanvas-settings-base-color, 8%)));
+        }
+      }
+    }
+
+    .find-site {
+        padding: 0 10px;
+    }
+  }
+}

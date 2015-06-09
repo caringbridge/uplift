@@ -1,0 +1,60 @@
+/**
+ * Component: Fade Out
+ * Description: Progressive fade/out to white for a block of text. Nice for "read more"
+ *     functionality especially for content with rich text markup.
+ * <div class="fade-out fade-out-(small|medium|large)">
+ *     <div class="read-more"></div>
+ *     Lorem ipsum ...
+ * </div>
+ */
+.fade-out {
+  overflow: hidden;
+  position: relative;
+  &.fade-out-small {
+    max-height: 10em;
+    @media screen and (max-width: $screen-sm) {
+      max-height: 8em;
+    }
+  }
+  &.fade-out-medium {
+    max-height: 15em;
+    @media screen and (max-width: $screen-sm) {
+      max-height: 12em;
+    }
+  }
+  &.fade-out-large {
+    max-height: 20em;
+    @media screen and (max-width: $screen-sm) {
+      max-height: 15em;
+    }
+  }
+  .read-more {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 50px 0 0 0;
+    @include background(linear-gradient(rgba($white, 0), $white));
+    a, .btn {
+      padding: .5em 0 .5em .5em;
+      background: $white;
+      @include border-radius(.5em 0 0 0);
+      @include box-shadow(0 0 .5em rgba($white, .5));
+      margin-bottom: 0;
+    }
+  }
+  &.hide-read-more {
+    .read-more {
+      display: none;
+    }
+  }
+}
+
+// Make sure things don't look goofy up when JS isn't available
+.no-js {
+  .fade-out {
+    min-height: 6em;
+  }
+}

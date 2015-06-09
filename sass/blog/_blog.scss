@@ -1,3 +1,7 @@
+.layout-blog {
+    @include clearfix;
+    background-color: $white;
+}
 .uplift-logo-container {
     padding-top: 10px;
 }

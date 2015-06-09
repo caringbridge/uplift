@@ -14,6 +14,10 @@ form {
   }
 }
 
+#comment-edit-container {
+  margin-top: 1em;
+}
+
 // Non-JS comment editing isn't implemented (yet?), so just hide this mechanism when JS isn't available
 .no-js {
   .comment-replies {

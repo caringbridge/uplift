@@ -14,7 +14,7 @@
 
 // General Global styles
 @import "global/layout";
-@import "global/navbar-global";
+@import "global/global-nav";
 @import "global/navbar";
 @import "global/footer";
 @import "global/list-group";
@@ -32,6 +32,8 @@
 @import "global/alerts";
 @import "global/media";
 @import "global/images";
+@import "global/off-canvas-mechanics";
+@import "global/off-canvas-visual";
 @import "global/shame";
 
 // Blog Specific

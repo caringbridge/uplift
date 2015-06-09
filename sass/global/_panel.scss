@@ -11,3 +11,34 @@
     }
   }
 }
+
+// Tweak contextual panels so footer has a tinge of the context color
+@mixin panel-variant-tweak($border, $heading-text-color, $heading-bg-color, $heading-border) {
+  & > .panel-heading {
+    a {
+      // Make links in panel heading (like accordian toggle) show up in the panel's contextual text color
+      color: inherit;
+    }
+  }
+  & > .panel-footer {
+    border-top-color: $border;
+    background-color: mix($panel-footer-bg, $heading-bg-color);
+  }
+}
+
+// Contextual variations
+.panel-primary {
+  @include panel-variant-tweak($panel-primary-border, $panel-primary-text, $panel-primary-heading-bg, $panel-primary-border);
+}
+.panel-success {
+  @include panel-variant-tweak($panel-success-border, $panel-success-text, $panel-success-heading-bg, $panel-success-border);
+}
+.panel-info {
+  @include panel-variant-tweak($panel-info-border, $panel-info-text, $panel-info-heading-bg, $panel-info-border);
+}
+.panel-warning {
+  @include panel-variant-tweak($panel-warning-border, $panel-warning-text, $panel-warning-heading-bg, $panel-warning-border);
+}
+.panel-danger {
+  @include panel-variant-tweak($panel-danger-border, $panel-danger-text, desaturate(lighten($panel-danger-heading-bg, 48%), 30%), $panel-danger-border);
+}

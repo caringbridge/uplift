@@ -2,7 +2,7 @@
 require 'bootstrap-sass';
 
 # Set this to the root of your project when deployed:
-http_path = ""
+http_path = "/"
 css_dir = "css"
 fonts_dir = "wp-content/themes/Uplift/fonts"
 sass_dir = "sass"

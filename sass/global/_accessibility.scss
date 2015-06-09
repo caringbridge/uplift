@@ -1,6 +1,7 @@
 .visuallyhidden {
   @include visually-hidden;
 }
+
 .visuallyhidden, .sr-only {
   &.focusable {
     &:active, &:focus {

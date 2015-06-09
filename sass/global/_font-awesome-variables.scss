@@ -1,5 +1,5 @@
 // _font-awesome.scss needs to be included *after* this variable is set
-$fontAwesomePath:   "/wp-content/themes/Uplift/fonts";
+$fontAwesomePath: font-path('');
 
 // Selector for any icons from Font Awesome or CaringBridge icon font
 $icon-selector: '[class^="icon-"], [class*=" icon-"], [class^="cbicon-"], [class*=" cbicon-"]';

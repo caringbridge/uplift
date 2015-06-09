@@ -14,9 +14,15 @@ header {
     margin: 0 0 0 0;
   }
 }
-//Comment Form Pattern from v5 hangs this margin on <form>, which we can;t do in WP because of how the Comment Form in rendered by Core.
+//Comment Form Pattern from v5 hangs this margin on <form>, which we can't do in WP because of how the Comment Form in rendered by Core.
 .comment-form {
   .media.media-offset .pull-left {
     margin-top: 2em;
+  }
+}
+
+.comment-form {
+  .media-body {
+    display: block;
   }
 }

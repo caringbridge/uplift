@@ -1,89 +1,64 @@
-// Make footer bulge out of its container to fill out to the edge of the page
-.navbar-footer {
-  @include bulge($grid-gutter-width / 2);
-}
-.site-links {
-  margin-left: -15px;
-  > li >a {
-    // Add the hover state to match other Nav links
-    &:active,
-    &:hover,
-    &:focus {
-      @include box-shadow(inset 0 0 7px 3px darken($navbar-default-bg, 4%));
+footer.fat-footer, footer.kimbia-footer {
+  background-color: $pampas;
+  padding: 1em 1em 4em 1em;
+  .fat-footer-lists {
+    a {
+      padding: 5px;
+    }
+    a:hover,
+    a:active,
+    a:focus {
+      @include background-image(linear-gradient(darken($pampas, 1%), darken($pampas, 3%)));
     }
   }
 }
-.social-media-links {
-  > li {
-    display: inline-block;
-    @media screen and (min-width: $grid-float-breakpoint) {
-      display: block;
-    }
-    > a {
-      padding: 0px 5px 11px 5px;
-      &:active,
-      &:hover,
-      &:focus {
-        @include background(none);
-      }
-      > i {
-        font-size: 3.5em;
-        @media screen and (min-width: $grid-float-breakpoint) {
-          font-size: 2.5em;
-        }
-      }
+h2.footer-heading {
+  font-family: Jubilat;
+  font-weight: normal;
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  a {
+    display: block;
+    width: 100%;
+  }
+}
+.email-sign-up {
+  .row {
+    div[class*="col-"] {
+      padding-left:2px;
+      padding-right:2px
     }
   }
 }
-#footer-youtube {
-//add "not as important" SM icon when room allows for it
-  display: none;
-  @media screen and (min-width: 420px) and (max-width: $screen-sm - 1) {
-    display: inline-block;
-  }
-  @media screen and (min-width: $screen-md) {
-    display: inline-block;
-  }
-}
-#footer-linkedin {
-//add "really not as important" SM icon when room allows for it
-  display: none;
-  @media screen and (min-width: 490px) and (max-width: $screen-sm - 1) {
-    display: inline-block;
-  }
-  @media screen and (min-width: $screen-md) {
-    display: inline-block;
-  }
+.fine-print {
+  margin-top: 1em;
+  font-size: .85em;
+  color: $gray;
 }
 .privacy-seal-list {
   a {
     background-repeat: no-repeat;
     display: block;
   }
-  //manually float the privacy seals right when the layout is wide enough for 2 columns of fineprint
-  @media screen and (min-width: $screen-md) {
-    ul {
-      float: right;
-    }
-  }
 }
 .truste-seal {
-  width: 100px;
-  height: 27px;
+  width: 78px;
+  height: 25px;
   background-image: image-path('seal-truste.svg');
-  background-size: 100px 27px;
+  background-size: 78px 25px;
 }
 .charitynav-seal {
-  width: 60px;
-  height: 30px;
+  width: 50px;
+  height: 25px;
   background-image: image-path('seal-charityNav.svg');
-  background-size: 60px 30px;
+  background-size: 50px 25px;
 }
 .bbb-seal {
-  width: 80px;
-  height: 30px;
+  width: 67px;
+  height: 25px;
   background-image: image-path('seal-bbb.svg');
-  background-size: 80px 30px;
+  background-size: 67px 25px;
 }
 .no-js, .no-svg {
   .truste-seal {
@@ -94,5 +69,16 @@
   }
   .bbb-seal {
     background-image: image-path('seal-bbb.png');
+  }
+}
+
+// Kimbia Footer is a stripped down version of the Fat Footer. Also Includes a special Disclosure Doc link.
+// This is mimicking the way the .fine-print partial in the old Footer was styled.
+.kimbia-footer {
+  margin-top: 1em;
+  .privacy-seal-list {
+    ul {
+      float: right;
+    }
   }
 }
