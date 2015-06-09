@@ -1,4 +1,34 @@
-// We should try to use Bootstrap's pre-defined contexts (of which "error" isn't one), but we have alert-errors in so many freaking places...
+// Mixin for tweaking all the alert contexts
+@mixin alert-variant-tweak($background, $border, $text-color) {
+  hr {
+    border-color: darken($border, 15%);
+  }
+  a:not(.btn), .alert-link {
+    color: $link-color;
+    font-weight: bold;
+  }
+}
+
+// Apply the above tweak mixin to the various alert contexts
+.alert-success {
+  @include alert-variant-tweak($alert-success-bg, $alert-success-border, $alert-success-text);
+}
+.alert-info {
+  @include alert-variant-tweak($alert-info-bg, $alert-info-border, $alert-info-text);
+}
+.alert-warning {
+  @include alert-variant-tweak($alert-warning-bg, $alert-warning-border, $alert-warning-text);
+}
+.alert-danger {
+  @include alert-variant-tweak($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+  // Light text on dark background gets sunken-in shadow effect
+  @include text-shadow(0 -1px 0 rgba(0, 0, 0, 0.2));
+  a:not(.btn), .alert-link {
+    color: mix($link-color, $alert-danger-text, 25%);
+  }
+}
+
+// .alert-error is a stupid legacy alias. Always use .alert-danger when possible.
 .alert-error {
   @extend .alert-danger;
 }

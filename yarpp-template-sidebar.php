@@ -4,7 +4,7 @@ YARPP Template: Brooklyn Sidebar
 Description: Requires a theme which supports post thumbnails
 Author: CaringBridge's Ridiculously Awesome Technology Team
 */ ?>
-<div class="panel panel-related">
+<div class="panel panel-custom">
     <div class="panel-heading">
         <h3 class="panel-title">Related Content</h3>
     </div>

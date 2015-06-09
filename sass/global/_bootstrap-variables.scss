@@ -69,18 +69,10 @@ $headings-font-family:    $font-family-base !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
-*/
-
-// Iconography
-// -------------------------
-
-$icon-font-path: font-path('');
-$icon-font-name: "cbicons";
 
 // Components
 // -------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
-/*
 $padding-base-vertical:          6px !default;
 $padding-base-horizontal:        12px !default;
 
@@ -128,6 +120,9 @@ $btn-font-weight:                normal !default;
 $btn-default-color:              $mine-shaft;
 $btn-default-bg:                 $white;
 $btn-default-border:             $gray-lighter;
+
+$btn-warning-color:              $btn-default-color;
+$btn-warning-bg:                 desaturate(lighten($brand-warning, 10%), 5%);
 
 /*
 $btn-primary-color:              #fff !default;
@@ -380,16 +375,17 @@ $jumbotron-font-size:            ceil($font-size-base * 1.5) !default;
 */
 
 $state-success-text:             darken($brand-success, 30%);
-$state-success-bg:               lighten($brand-success, 25%);
+$state-success-bg:               desaturate(lighten($brand-success, 50%), 5%);
 
-$state-info-text:                darken($brand-info, 10%);
-$state-info-bg:                  lighten($brand-info, 60%);
+$state-info-text:                desaturate(darken($brand-info, 10%), 10%);
+$state-info-bg:                  desaturate(lighten($brand-info, 70%), 15%);
 
-$state-warning-text:             darken($brand-warning, 75%);
-$state-warning-bg:               lighten($brand-warning, 15%);
+$state-warning-text:             darken($brand-warning, 50%);
+$state-warning-bg:               desaturate(lighten($brand-warning, 32%), 10%);
 
-$state-danger-text:              darken($brand-danger, 10%);
-$state-danger-bg:                lighten($brand-danger, 45%);
+$state-danger-text:              $white;
+$state-danger-bg:                desaturate($brand-danger, 10%);
+
 
 /*
 
@@ -418,6 +414,7 @@ $popover-arrow-outer-fallback-color:  $tree-poppy;
 // List group
 // -------------------------
 $list-group-link-color:               $link-color;
+$list-group-link-heading-color:       $list-group-link-color;
 
 
 /*

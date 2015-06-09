@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "homepage": "https://github.com/caringbridge/uplift",
   "authors": [
-    "Ryan Rud <ryan.rud@gmail.com>"
+    { "name": "Ryan Rud", "email": "ryan.rud@gmail.com" },
+    { "name": "Craig Gieselamn", "email": "cgieselman1@gmail.com", "homepage": "http://github.com/cwgieselman" }
   ],
   "description": "CaringBridge blog theme",
   "license": "MIT",
@@ -17,6 +18,6 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.4",
     "jquery": "1.11.0",
-    "jquery-throttle-debounce": "*"
+    "modernizr": "~2.8.3"
   }
 }

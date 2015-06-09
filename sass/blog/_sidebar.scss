@@ -1,5 +1,5 @@
-.panel.panel-author,
-.panel.panel-related {
+.panel.panel-custom {
+// Custom Panels in the sidebar that live in parts/sidebar.php, not the WP Sidebar
   background: lighten($snuff, 10%);
   @include panel-variant(
     $border: $violet-eggplant,
@@ -11,7 +11,7 @@
   }
 }
 .yarpp-related {
-  @extend .panel.panel-related;
+  @extend .panel.panel-custom;
 }
 #sidebar {
   > ul {

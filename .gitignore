@@ -17,11 +17,59 @@ readme.html
 license.txt
 composer.lock
 vendor
-.sass-cache
-*.DS_Store*
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+nbproject
+Thumbs.db
+
+# Grunt/Yeoman/Bower pieces to ignore
+node_modules/
+bower_components/
+.npm-debug.log
+tmp
+*.log
+build/
+dist/
+
+# Ruby/Ruby Gem pieces to ignore
 ruby
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/test/tmp/
+/test/version_tmp/
+/tmp/
+/.yardoc/
+/_yardoc/
+/doc/
+/rdoc/
+/.bundle/
+/vendor/bundle
+/lib/bundler/man/
+
+# Project Specific to ignore
 staging/*
-dist/*
-bower_components/*
-node_modules/*
 css/*
+js/*
+js-src/modernizr-custom.js
+*.zip

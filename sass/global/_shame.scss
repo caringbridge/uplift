@@ -1,14 +1,9 @@
-//Strong Arm overwrite of the Hover state of Social Media icons in the Global Footer.
-//(background stays transparent becasue thats just the way we do it?)
-footer {
-  .navbar-default .navbar-nav.social-media-links > li > a:hover,
-  .navbar-default .navbar-nav.social-media-links > li > a:focus,
-  .navbar-default .navbar-nav.social-media-links > li > a:active {
-    background-color: transparent;
-  }
-}
-
 // Several places have muted instead of text-muted... replace them in the markup someday
 .muted {
   @extend .text-muted;
+}
+
+// In the Fat Footer, one of the 'Headings' is not a link. So add a little padding to it to match the Headings with links
+.non-link {
+    padding: 5px;
 }

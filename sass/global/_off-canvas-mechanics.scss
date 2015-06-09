@@ -1,0 +1,80 @@
+/*
+ * Off Canvas
+ * Adapted from http://getbootstrap.com/examples/offcanvas/
+ * --------------------------------------------------
+ * This file contians the functionality and alignment styles to make the off-canvas function.
+ * Look and Feel styles are in the _off-canvas-visual partial
+ */
+ // Place where off canvas size variables change
+ $offcanvas-size-breakpoint: 525px;
+
+ // Percentage of the screen width that the sidebar takes up when active
+ $offcanvas-amount-large: 45%;
+ $offcanvas-amount-small: 80%;
+
+ // This is kind of hacky, but without it, things in the sidebar get pushed up to the edge of the screen.
+ // We want to make the padding be the default (half the gutter) plus a little extra (offset percentage of the gutter)
+ // The "/ 100% part" is a hack to convert the percentage into a decimal number that we can multiply pixels by
+ $offcanvas-offset-padding-small: round($grid-gutter-width * ( ($offcanvas-amount-small + 50%)) / 100%);
+ $offcanvas-offset-padding-large: round($grid-gutter-width * ( ($offcanvas-amount-large + 50%)) / 100%);
+
+// Prevent scroll on narrow devices
+html,
+body {
+  overflow-x: hidden;
+}
+
+// isolate the .container-fluid inside the offcanvas from those not inside offcanvas so the widths are correct
+.row-offcanvas {
+  .col-xs-12 {
+    padding: 0;
+    .container-fluid {
+      max-width: 100%;
+    }
+  }
+}
+// Simple way to get rid of the clunky hidden-sm, hidden-md and hidden-lg BS Utility classes on the element
+.sidebar-offcanvas {
+  @media screen and (min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+}
+@media screen and (max-width: $grid-float-breakpoint - 1) {
+  .row-offcanvas {
+    position: relative;
+    @include transition(right .25s ease-out);
+  }
+  .row-offcanvas-right {
+    right: 0;
+    .sidebar-offcanvas {
+      width: $offcanvas-amount-small;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: -$offcanvas-amount-small;
+      @media screen and (min-width: $offcanvas-size-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+        width: $offcanvas-amount-large;
+        right: -$offcanvas-amount-large;
+      }
+      // Pulling 15px off the right side and setting left to 0 because the design is a full-bleed of off-canvas
+      padding-left: 0;
+      padding-right: $offcanvas-offset-padding-small - 15;
+      @media screen and (min-width: $offcanvas-size-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+        padding-right: $offcanvas-offset-padding-large - 15;
+      }
+    }
+  }
+  .offcanvas {
+    .row-offcanvas-right{
+      right: $offcanvas-amount-small;
+      @media screen and (min-width: $offcanvas-size-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+        right: $offcanvas-amount-large;
+      }
+      .sidebar-offcanvas {
+        @media screen and (min-width: $offcanvas-size-breakpoint) and (max-width: $grid-float-breakpoint - 1) {
+          right: -$offcanvas-amount-large;
+        }
+      }
+    }
+  }
+}

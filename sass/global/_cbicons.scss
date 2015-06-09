@@ -1,11 +1,7 @@
 @include font-face(
   "cbicons",
-    font-files(
-      font-path("cbicons.woff"),
-      font-path("cbicons.ttf"),
-      font-path("cbicons.svg")
-    ),
-    font-path("cbicons.eot")
+  font-files(font-path("cbicons.woff"), font-path("cbicons.ttf"), font-path("cbicons.svg")),
+  font-path("cbicons.eot")
 );
 
 /**

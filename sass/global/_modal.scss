@@ -1,0 +1,18 @@
+/**
+ * A handful of tweaks to modal windows throughout the CaringBridge experience
+ */
+.modal-header {
+  min-height: 3em;
+}
+
+@media (max-width: $screen-xs-max) {
+  .modal-dialog {
+    margin: 6px;
+  }
+  .modal-body {
+    padding: 10px 6px;
+  }
+  .modal-footer {
+    padding: 9px 6px 10px 6px;
+  }
+}
