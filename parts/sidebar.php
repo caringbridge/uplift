@@ -31,7 +31,7 @@
                 </div>
             </div>
         </form>
-        <?php if ( is_single() ): ?>
+        <?php if (function_exists('related_posts') && is_single() ): ?>
             <?php related_posts(); ?>
         <?php endif ?>
     </div>

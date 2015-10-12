@@ -54,14 +54,14 @@ endif; ?>
         	                	'<div class="form-group ">
         	                    	<label class="sr-only" for="author">' . __( 'Name', 'domainreference' ) . '</label>
         	                    	<input class="form-control" id="author" type="text" name="author" placeholder="Sign your name..." class="form-control"
-        	                        	value="' . esc_attr( $commenter['comment_author'] ) . '""' . $aria_req . '">
+                                        value="' . esc_attr( $commenter['comment_author'] ) . '""' . (isset($aria_req) ? $aria_req : '') . '">
         	                	</div>',
 
         					'email' =>
         	                	'<div class="form-group ">
         	                    	<label class="sr-only" for="email">' . __( 'Email', 'domainreference' ) . '</label>
         	                    	<input class="form-control" id="email" type="text" name="email"  placeholder="Email Address (Only your name will be displayed with your comment.)"
-        	                        	value="' . esc_attr( $commenter['comment_author_email'] ) . '""' . $aria_req . '">
+                                        value="' . esc_attr( $commenter['comment_author_email'] ) . '""' . (isset($aria_req) ? $aria_req : '') . '">
         	                	</div>',
             				)
         				),

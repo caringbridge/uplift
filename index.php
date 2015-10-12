@@ -10,9 +10,11 @@
             <?php else: ?>
                 <h1>No posts to display</h1>
             <?php endif; ?>
+            <?php if (function_exists('wp_paginate')) : ?>
             <div class="pagingNav">
                 <?php wp_paginate() ?>
             </div>
+            <?php endif; ?>
         </section>
         <aside class="col-md-4">
             <?php get_template_parts(array('parts/sidebar') ); ?>
