@@ -67,12 +67,6 @@
     }
   }
 }
-.truste-seal {
-  width: 100px;
-  height: 27px;
-  background-image: image-path('seal-truste.svg');
-  background-size: 100px 27px;
-}
 .charitynav-seal {
   width: 60px;
   height: 30px;
@@ -86,9 +80,6 @@
   background-size: 80px 30px;
 }
 .no-js, .no-svg {
-  .truste-seal {
-    background-image: image-path('seal-truste.png');
-  }
   .charitynav-seal {
     background-image: image-path('seal-charityNav.png');
   }

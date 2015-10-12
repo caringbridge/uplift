@@ -8,13 +8,6 @@
         <div class="col-sm-12 col-md-5 privacy-seal-list">
             <ul class="list-inline">
                 <li>
-                    <a class="truste-seal"
-                        href="http://clicktoverify.truste.com/pvr.php?page=validate&url=www.caringbridge.org&sealid=101"
-                        target="_blank">
-                        <img src="<?php bloginfo('template_directory'); ?>/img/ph.gif" alt="Validate TRUSTe Privacy Certification"/>
-                    </a>
-                </li>
-                <li>
                     <a class="charitynav-seal"
                         href="http://www.charitynavigator.org/index.cfm?bay=search.summary&orgid=10519"
                         target="_blank">
