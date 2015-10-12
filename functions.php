@@ -145,6 +145,7 @@ function starkers_comment( $comment, $args, $depth ) {
  */
 if (function_exists('register_sidebar')) {
     register_sidebar( array(
+        'id' => 'sidebar-1',
         'before_widget' => '<div class="panel panel-widget">',
         'after_widget'  => '</div>',
         'before_title'  =>  '<div class="panel-heading"><h3 class="panel-title">',
