@@ -25,3 +25,4 @@ dist/*
 bower_components/*
 node_modules/*
 css/*
+*.min.js
