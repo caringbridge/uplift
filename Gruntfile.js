@@ -17,7 +17,7 @@ module.exports = function(grunt) {
          */
         clean: {
             // Clean out the temporary build directory
-            js: ['staging', 'dist']
+            js: ['staging', 'dist', '*.js', '!Gruntfile.js']
         },
 
         /**
@@ -163,7 +163,8 @@ module.exports = function(grunt) {
             },
             js: {
                 files: {
-                    'dist/uplift.min.js': ['staging/uplift.js']
+                    'dist/uplift.min.js': ['staging/uplift.js'],
+                    'uplift.min.js': ['staging/uplift.js']
                 }
             }
         },

@@ -11,9 +11,11 @@
             <?php else: ?>
                 <h1>No posts categorized in <?php echo single_cat_title( '', false ); ?></h1>
             <?php endif; ?>
+            <?php if (function_exists('wp_paginate')) : ?>
             <div class="pagingNav">
                 <p><?php wp_paginate() ?></p>
             </div>
+            <?php endif; ?>
         </section>
         <aside class="col-md-4">
             <?php get_template_parts(array('parts/sidebar') ); ?>

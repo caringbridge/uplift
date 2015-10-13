@@ -10,16 +10,18 @@
                         <p><?php the_author_meta( 'description' ); ?></p>
                     </section>
                 <?php endif; ?>
-                <h2><?php the_author_meta('first_name'); ?>'s Posts:</h2> 
+                <h2><?php the_author_meta('first_name'); ?>'s Posts:</h2>
                 <?php rewind_posts(); while ( have_posts() ) : the_post(); ?>
                     <?php get_template_parts(array('parts/article-preview') ); ?>
                 <?php endwhile; ?>
             <?php else: ?>
                 <h1>No posts to display for <?php echo get_the_author() ; ?></h1>
             <?php endif; ?>
+            <?php if (function_exists('wp_paginate')) : ?>
             <div class="pagingNav">
                 <p><?php wp_paginate() ?></p>
             </div>
+            <?php endif; ?>
         </section>
         <aside class="col-md-4">
             <?php get_template_parts(array('parts/sidebar') ); ?>

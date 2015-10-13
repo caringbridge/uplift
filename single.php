@@ -34,10 +34,10 @@
                     <section class="pagingNav">
                         <ul class="pager">
                             <li class="previous">
-                                <?php next_post('%','&laquo; previous', 'no'); ?>
+                                <?php next_post_link('%','&laquo; previous', 'no'); ?>
                             </li>
                             <li class="next">
-                                <?php previous_post('%','next &raquo;', 'no'); ?>
+                                <?php previous_post_link('%','next &raquo;', 'no'); ?>
                             </li>
                         </ul>
                     </section>
