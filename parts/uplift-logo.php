@@ -10,5 +10,5 @@
 </script>
 
 <div class="uplift-logo-container">
-  <h1><a href="/">Uplift Blog</a></h1>
+  <h1><a href="/resources/">Uplift Blog</a></h1>
 </div>
